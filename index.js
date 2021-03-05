@@ -112,6 +112,136 @@ app.get('/Captain-America-Civil-War', (req, res) => {
     });
 });
 
+app.get('/Avengers', (req, res) => {
+    res.render('dynamic', {
+        title: "Avengers",
+        src: "https://player.voxzer.org/view/1b57642b04f68556cc5005e0",
+        img: "https://img.vxdn.net/cover/1440/the-avengers-1717.jpg",
+        desc: "Nick Fury is compelled to launch the Avengers Initiative when Loki poses a threat to planet Earth. His squad of superheroes put their minds together to accomplish the task.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/Avengers-Age-Of-Ultron', (req, res) => {
+    res.render('dynamic', {
+        title: "Avengers: Age of Ultron",
+        src: "https://player.voxzer.org/view/ceb7692b04f685561c57e5e0",
+        img: "https://img.vxdn.net/cover/1440/avengers-age-of-ultron-4632.jpg",
+        desc: "Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/Avengers-Infinity-War', (req, res) => {
+    res.render('dynamic', {
+        title: "Avengers: Infinity War",
+        src: "https://player.voxzer.org/view/9307602b04f685581c4b05e0",
+        img: "https://img.vxdn.net/cover/1440/avengers-infinity-war-24689.jpg",
+        desc: "The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/Avengers-Endgame', (req, res) => {
+    res.render('dynamic', {
+        title: "Avengers: Endgame",
+        src: "https://player.voxzer.org/view/08c76a2b04f685544c5835e0",
+        img: "https://img.vxdn.net/cover/1440/avengers-endgame-28501.jpg",
+        desc: "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/GotG', (req, res) => {
+    res.render('dynamic', {
+        title: "Guardians of the Galaxy",
+        src: "https://player.voxzer.org/view/9007622b04f6855d4c4dd5e0",
+        img: "https://img.vxdn.net/cover/1440/guardians-of-the-galaxy-1608.jpg",
+        desc: "Peter escapes from the planet Morag with a valuable orb that Ronan the Accuser wants. He eventually forms a group with unwilling heroes to stop Ronan.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/GotG2', (req, res) => {
+    res.render('dynamic', {
+        title: "Guardians of the Galaxy Vol. 2",
+        src: "https://player.voxzer.org/view/7bc7672b04f685564c54b5e0",
+        img: "https://img.vxdn.net/cover/1440/guardians-of-the-galaxy-vol-2-20525.jpg",
+        desc: "After a successful mission, Quill and his team of galactic defenders meet Ego, a man claiming to be Quill's father. However, they soon learn some disturbing truths about Ego.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get("/Ant-Man", (req, res) => {
+    res.render('dynamic', {
+        title: "Ant-Man",
+        src: "https://player.voxzer.org/view/a597662b04f6855e5c5385e0",
+        img: "https://img.vxdn.net/cover/1440/ant-man-4408.jpg",
+        desc: "Scott, a master thief, gains the ability to shrink in scale with the help of a futuristic suit. Now he must rise to the occasion of his superhero status and protect his secret from unsavoury elements.",
+        genre: "Action, Sci-Fi, Drama"
+    });
+});
+
+app.get("/Ant-Man-And-The-Wasp", (req, res) => {
+    res.render('dynamic', {
+        title: "Ant-Man",
+        src: "https://player.voxzer.org/view/ee67602b04f6855d3c4b85e0",
+        img: "https://img.vxdn.net/cover/1440/ant-man-and-the-wasp-25534.jpg",
+        desc: "Despite being under house arrest, Scott Lang, along with the Wasp, sets out to help Dr Hank Pym to enter the quantum realm as they face new enemies along the way.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Doctor-Strange', (req, res) => {
+    res.render('dynamic', {
+        title: "Doctor Strange",
+        src: "https://player.voxzer.org/view/ec27602b04f6855a7c4b85e0",
+        img: "https://img.vxdn.net/cover/1440/doctor-strange-17530.jpg",
+        desc: "In an accident, Stephen Strange, a famous neurosurgeon, loses the ability to use his hands. He goes to visit the mysterious Ancient One to heal himself and becomes a great sorcerer under her tutelage.",
+        genre: "Action, Fantasy"
+    });
+});
+
+app.get('/Spider-Man-Homecoming', (req, res) => {
+    res.render('dynamic', {
+        title: "Spider-Man: Homecoming",
+        src: "https://player.voxzer.org/view/b667692b04f685553c57c5e0",
+        img: "https://img.vxdn.net/cover/1440/spider-man-homecoming-21248.jpg",
+        desc: "Peter Parker tries to stop the Vulture from selling weapons made with advanced Chitauri technology while trying to balance his life as an ordinary high school student.",
+        genre: "Action, Adventure"
+    });
+});
+
+app.get('/Spider-Man-Far-From-Home', (req, res) => {
+    res.render('dynamic', {
+        title: "Spider-Man: Far From Home",
+        src: "https://player.voxzer.org/view/aab3c1e7c333d79ff15b25e0",
+        img: "https://img.vxdn.net/cover/1440/spider-man-far-from-home-28904.jpg",
+        desc: "Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins.",
+        genre: "Action, Adventure"
+    });
+});
+
+app.get('/Black-Panther', (req, res) => {
+    res.render('dynamic', {
+        title: "Black Panther",
+        src: "https://player.voxzer.org/view/0d4ee8b9f52338a9515a25e0",
+        img: "https://img.vxdn.net/cover/1440/black-panther-23800.jpg",
+        desc: "After his father's death, T'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
+app.get('/Captain-Marvel', (req, res) => {
+    res.render('dynamic', {
+        title: "Captain Marvel",
+        src: "https://player.voxzer.org/view/8656add4d760606e488f55e6",
+        img: "https://img.vxdn.net/cover/1440/captain-marvel-28165.jpg",
+        desc: "Amidst a mission, Vers, a Kree warrior, gets separated from her team and is stranded on Earth. However, her life takes an unusual turn after she teams up with Fury, a S.H.I.E.L.D. agent.",
+        genre: "Action, Adventure, Sci-Fi"
+    });
+});
+
 // Animated Movies
 app.get('/Kung-Fu-Panda', (req, res) => {
     res.render('dynamic', {
