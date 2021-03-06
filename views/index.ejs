@@ -11,10 +11,17 @@
     <title>AyeMovies</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="AyeAreEm.png" />
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="header">
         <h1 onclick="window.location = '/'">AyeMovies</h1>
+        <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
+        <datalist id="moviesList">
+            <% all.forEach(item => {%>
+                <option value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+        </datalist>
     </div>
 
     <div class="category" style="margin-top: 85px;">
@@ -72,7 +79,7 @@
         <a href="/Shrek2"><img src="https://img.vxdn.net/poster/200/shrek-2-4609.jpg" alt="Shrek 2"></a>
         <a href="/Shrek3"><img src="https://img.vxdn.net/poster/200/shrek-the-third-4610.jpg" alt="Shrek 3"></a>
         <a href="/Shrek4"><img src="https://img.vxdn.net/poster/200/shrek-forever-after-4611.jpg" alt="Shrek Forever After"></a>
-        <a href="/Spider-Man:-Into-the-Spider-Verse"><img src="https://img.vxdn.net/poster/200/spider-man-into-the-spider-verse-27208.jpg" alt="Spider-Man: Into the Spider-Verse"></a>
+        <a href="/Spider-Man-Into-the-Spider-Verse"><img src="https://img.vxdn.net/poster/200/spider-man-into-the-spider-verse-27208.jpg" alt="Spider-Man: Into the Spider-Verse"></a>
         <a href="/Big-Hero-6"><img src="https://img.vxdn.net/poster/200/big-hero-6-2043.jpg" alt="Big Hero 6"></a>
         <a href="/How-To-Train-Your-Dragon"><img src="https://img.moviesjoy.to/resize/188x288/ec/35/ec359f4bfd201710f78d41d381c9eeda/ec359f4bfd201710f78d41d381c9eeda.jpg" alt="How To Train Your Dragon"></a>
         <a href="/How-To-Train-Your-Dragon2"><img src="https://img.moviesjoy.to/resize/188x288/72/3a/723adc6446687ea09ff1ae657c64ce0b/723adc6446687ea09ff1ae657c64ce0b.jpg" alt="How To Train Your Dragon 2"></a>

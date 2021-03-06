@@ -5,11 +5,35 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+const allLink = [
+    // Marvel Movies
+    {title: "Iron Man", link: "/Iron-Man"}, {title: "Iron Man 2", link: "/Iron-Man2"}, {title: "Iron Man 3", link: "/Iron-Man3"},
+    {title: "The Incredible Hulk", link: "/Incredible-Hulk"},
+    {title: "Thor", link: "/Thor"}, {title: "Thor: The Dark World", link: "/Thor-The-Dark-World"}, {title: "Thor: Ragnarok", link: "/Thor-Ragnarok"},
+    {title: "Captain America: The First Avenger", link: "/Captain-America"}, {title: "Captain America: The Winter Soldier", link: "/Captain-America-Winter-Soldier"}, {title: "Captain America: Civil War", link: "/Captain-America-Civil-War"},
+    {title: "Avengers", link: "/Avengers"}, {title: "Avengers: Age of Ultron", link: "/Avengers-Age-Of-Ultron"}, {title: "Avengers: Infinity War", link: "/Avengers-Infinity-War"}, {title: "Avengers: Endgame", link: "/Avengers-Endgame"},
+    {title: "Guardians of the Galaxy", link: "/GotG"}, {title: "Guardians of the Galaxy Vol. 2", link: "/GotG2"},
+    {title: "Ant-Man", link: "/Ant-Man"}, {title: "Ant-Man and the Wasp", link: "/Ant-Man-And-The-Wasp"},
+    {title: "Doctor Strange", link: "/Doctor-Strange"},
+    {title: "Spider-Man: Homecoming", link: "/Spider-Man-Homecoming"}, {title: "Spider-Man: Far From Home", link: "/Spider-Man-Far-From-Home"},
+    {title: "Black Panther", link: "/Black-Panther"},
+    {title: "Captain Marvel", link: "/Captain-Marvel"},
+    // NetFlix Originals
+    {title: "The Witcher", link: "/The-Witcher"},
+    {title: "Sex Education", link: "/Sex-Education"},
+    // Star Wars
+    {title: "Star Wars: The Phantom Menace", link: "/Star-Wars-The-Phantom-Menace"}, {title: "Star Wars: Attack of the Clones", link: "/Star-Wars-Attack-Of-The-Clones"}, {title: "Star Wars: Revenge of the Sith", link: "/Star-Wars-Revenge-Of-The-Sith"}, {title: "Star Wars: A New Hope", link: "/Star-Wars-A-New-Hope"}, {title: "Star Wars: The Empire Strikes Back", link: "/Star-Wars-The-Empire-Strikes-Back"}, {title: "Star Wars: Return of the Jedi", link: "/Star-Wars-Return-Of-The-Jedi"}, {title: "Star Wars: The Force Awakens", link: "/Star-Wars-The-Force-Awakens"}, {title: "Star Wars: The Last Jedi", link: "/Star-Wars-The-Last-Jedi"}, {title: "Star Wars: The Rise of Skywalker", link: "/Star-Wars-The-Rise-Of-Skywalker"},
+    // Animated Movies
+    {title: "Kung Fu Panda", link: "/Kung-Fu-Panda"}, {title: "Kung Fu Panda 2", link: "/Kung-Fu-Panda2"}, {title: "Kung Fu Panda 3", link: "/Kung-Fu-Panda3"},
+    {title: "Shrek", link: "/Shrek"}, {title: "Shrek 2", link: "/Shrek2"}, {title: "Shrek the Third", link: "/Shrek3"}, {title: "Shrek Forever After", link: "/Shrek4"},
+    {title: "Spider-Man: Into the Spider-Verse", link: "/Spider-Man-Into-the-Spider-Verse"},
+    {title: "Big Hero 6", link: "/Big-Hero-6"},
+    {title: "How To Train Your Dragon", link: "/How-To-Train-Your-Dragon"}, {title: "How To Train Your Dragon 2", link: "/How-To-Train-Your-Dragon2"}, {title: "How To Train Your Dragon: The Hidden World", link: "/How-To-Train-Your-Dragon3"}
+];
 
-// const all = ["iron man", "iron man 2", "iron man 3", "incredible hulk", "thor", "thor dark world", "thor ragnarok", "captain america", "captain america winter soldier", "captain america civil war", "avengers", "avengers age of ultron", "avengers infinity war", "avengers endgame", "guardians of the galaxy", "guardians of the galaxy vol. 2", "ant-man", "ant-man and the wasp", "doctor strange", "spider-man homecoming", "spider-man far from home", "black panther", "captain marvel", "the witcher", "star wars a new hope", "star wars the empire strikes back", "star wars return of the jedi", "star wars the phantom menace", "star wars revenge of the sith", "star wars the force awakens", "star wars the last jedi", "star wars the rise of skywalker", "kung fu panda", "kung fu panda 2", "kung fu panda 3", "shrek", "shrek 2", "shrek the third", "shrek forever after", "spider-man into the spider-verse", "big hero 6", "how to train your dragon", "how to train your dragon 2", "how to train your dragon the hidden world"]
+app.get('/', (req, res) => {
+    res.render('index', {all: allLink});
+});
 
 // MCU Movies
 app.get('/Iron-Man', (req, res) => {
@@ -184,7 +208,7 @@ app.get("/Ant-Man", (req, res) => {
 
 app.get("/Ant-Man-And-The-Wasp", (req, res) => {
     res.render('dynamic', {
-        title: "Ant-Man",
+        title: "Ant-Man and the Wasp",
         src: "https://player.voxzer.org/view/ee67602b04f6855d3c4b85e0",
         img: "https://img.vxdn.net/cover/1440/ant-man-and-the-wasp-25534.jpg",
         desc: "Despite being under house arrest, Scott Lang, along with the Wasp, sets out to help Dr Hank Pym to enter the quantum realm as they face new enemies along the way.",
@@ -425,7 +449,7 @@ app.get('/Shrek4', (req, res) => {
     });
 });
 
-app.get('/Spider-Man:-Into-the-Spider-Verse', (req, res) => {
+app.get('/Spider-Man-Into-the-Spider-Verse', (req, res) => {
     res.render('dynamic', {
         title: "Spider-Man: Into the Spider-Verse",
         src: "https://player.voxzer.org/view/8646add4d760606e388f55e6",
@@ -467,7 +491,7 @@ app.get('/How-To-Train-Your-Dragon2', (req, res) => {
 
 app.get('/How-To-Train-Your-Dragon3', (req, res) => {
     res.render('dynamic', {
-        title: "How To Train Your Dragon 3",
+        title: "How To Train Your Dragon: The Hidden World",
         src: "https://player.voxzer.org/view/c1900b023ea48b6907b3c5e7",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-the-hidden-world-27688.jpg",
         desc: "Hiccup aims to unite the vikings and the dragons in order to bring peace on the island of Berk. However, he must stop the evil Grimmel and his devious plans to wipe out all dragons.",
