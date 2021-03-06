@@ -253,6 +253,16 @@ app.get('/The-Witcher', (req, res) => {
     });
 });
 
+app.get('/Sex-Education', (req, res) => {
+    res.render('shows', {
+        title: "Sex Education",
+        img: "https://img.vxdn.net/cover/1440/sex-education-season-1-27675.jpg",
+        desc: "Socially awkward high school student Otis may not have much experience in the lovemaking department, but he gets good guidance on the topic in his personal sex ed course -- living with mom Jean, who is a sex therapist. Being surrounded by manuals, videos and tediously open conversations about sex, Otis has become a reluctant expert on the subject. When his classmates learn about his home life, Otis decides to use his insider knowledge to improve his status at school, so he teams with whip-smart bad girl Maeve to set up an underground sex therapy clinic to deal with their classmates' problems. But through his analysis of teenage sexuality, Otis realizes that he may need some therapy of his own.",
+        genre: "Drama",
+        eps: ["https://player.voxzer.org/view/73e06f0d0714b6f10ac625e0", "https://player.voxzer.org/view/1850710d0714b6fc6adba5e0", "https://vidcloud9.com/streaming.php?id=MjM0ODYx", "https://vidcloud9.com/streaming.php?id=MjM0ODYy", "https://vidcloud9.com/streaming.php?id=MjM0ODYz", "https://vidcloud9.com/streaming.php?id=MjM0ODY0", "https://vidcloud9.com/streaming.php?id=MjM0ODY1", "https://vidcloud9.com/streaming.php?id=MjM0ODY2"]
+    });
+});
+
 // Star Wars
 app.get('/Star-Wars-A-New-Hope', (req, res) => {
     res.render('dynamic', {
