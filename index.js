@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-// const all = ["iron man", "iron man 2", "iron man 3", "incredible hulk", "thor", "thor dark world", "thor ragnarok", "captain america", "captain america winter soldier", "captain america civil war", "avengers", "avengers age of ultron", "avengers infinity war", "avengers endgame", "guardians of the galaxy", "guardians of the galaxy vol. 2", "ant-man", "ant-man and the wasp", "doctor strange", "spider-man homecoming", "spider-man far from home", "black panther", "captain marvel", "kung fu panda", "kung fu panda 2", "kung fu panda 3", "shrek", "shrek 2", "shrek the third", "shrek forever after", "spider-man into the spider-verse", "big hero 6", "how to train your dragon", "how to train your dragon 2", "how to train your dragon the hidden world"]
+// const all = ["iron man", "iron man 2", "iron man 3", "incredible hulk", "thor", "thor dark world", "thor ragnarok", "captain america", "captain america winter soldier", "captain america civil war", "avengers", "avengers age of ultron", "avengers infinity war", "avengers endgame", "guardians of the galaxy", "guardians of the galaxy vol. 2", "ant-man", "ant-man and the wasp", "doctor strange", "spider-man homecoming", "spider-man far from home", "black panther", "captain marvel", "the witcher", "star wars a new hope", "star wars the empire strikes back", "star wars return of the jedi", "star wars the phantom menace", "star wars revenge of the sith", "star wars the force awakens", "star wars the last jedi", "star wars the rise of skywalker", "kung fu panda", "kung fu panda 2", "kung fu panda 3", "shrek", "shrek 2", "shrek the third", "shrek forever after", "spider-man into the spider-verse", "big hero 6", "how to train your dragon", "how to train your dragon 2", "how to train your dragon the hidden world"]
 
 // MCU Movies
 app.get('/Iron-Man', (req, res) => {
@@ -242,17 +242,6 @@ app.get('/Captain-Marvel', (req, res) => {
     });
 });
 
-// Animated Movies
-app.get('/Kung-Fu-Panda', (req, res) => {
-    res.render('dynamic', {
-        title: "Kung Fu Panda",
-        src: "https://player.voxzer.org/view/92c76a2b04f6855f9c58e5e0",
-        img: "https://fanart.tv/fanart/movies/9502/moviethumb/kung-fu-panda-54c14183a8693.jpg",
-        desc: "When Po the Panda, a kung fu enthusiast, gets selected as the Dragon Warrior, he decides to team up with the Furious Five and destroy the evil forces that threaten the Valley of Peace.",
-        genre: "Animation, Action, Comedy",
-    });
-});
-
 // Netflix Origins
 app.get('/The-Witcher', (req, res) => {
     res.render('shows', {
@@ -261,6 +250,108 @@ app.get('/The-Witcher', (req, res) => {
         desc: "The Witcher Geralt, a mutated monster hunter, struggles to find his place in a world in which people often prove more wicked than beasts.",
         genre: "Action, Fantasy",
         eps: ["https://player.voxzer.org/view/1b40710d0714b6f35adbb5e0", "https://player.voxzer.org/view/2ee0700d0714b6fd3ad985e0", "https://player.voxzer.org/view/9b60700d0714b6f7eada85e0", "https://player.voxzer.org/view/8730710d0714b6feaadcb5e0", "https://player.voxzer.org/view/5770710d0714b6facadc35e0", "https://player.voxzer.org/view/72c0700d0714b6fb1ada25e0", "https://player.voxzer.org/view/a1506f0d0714b6f38ad845e0", "https://player.voxzer.org/view/5960700d0714b6f13ad9f5e0"]
+    });
+});
+
+// Star Wars
+app.get('/Star-Wars-A-New-Hope', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: A New Hope",
+        src: "https://player.voxzer.org/view/f6d75f2b04f685570c4a25e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-iv-a-new-hope-2229.jpg",
+        desc: "After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-The-Empire-Strikes-Back', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: The Empire Strikes Back",
+        src: "https://player.voxzer.org/view/dec7682b04f685505c56a5e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-v-the-empire-strikes-back-2233.jpg",
+        desc: "Darth Vader is adamant about turning Luke Skywalker to the dark side. Master Yoda trains Luke to become a Jedi Knight while his friends try to fend off the Imperial fleet.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-Return-Of-The-Jedi', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: Return of the Jedi",
+        src: "https://player.voxzer.org/view/613ee8b9f52338aa415a95e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-vi-return-of-the-jedi-2238.jpg",
+        desc: "Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-The-Phantom-Menace', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: The Phantom Menace",
+        src: "https://player.voxzer.org/view/403ee8b9f52338ae415a65e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-i-the-phantom-menace-1915.jpg",
+        desc: "Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi set out to stop the Trade Federation from invading Naboo. While travelling, they come across a gifted boy, Anakin, and learn that the Sith have returned.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-Attack-Of-The-Clones', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: Attack of the Clones",
+        src: "https://player.voxzer.org/view/2df7682b04f6855d4c55a5e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-ii-attack-of-the-clones-1916.jpg",
+        desc: "While pursuing an assassin, Obi Wan uncovers a sinister plot to destroy the Republic. With the fate of the galaxy hanging in the balance, the Jedi must defend the galaxy against the evil Sith.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-Revenge-Of-The-Sith', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: Revenge of the Sith",
+        src: "https://player.voxzer.org/view/8637602b04f685567c4af5e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-episode-iii-revenge-of-the-sith-2197.jpg",
+        desc: "Anakin joins forces with Obi-Wan and sets Palpatine free from the evil clutches of Count Doku. However, he falls prey to Palpatine and the Jedis' mind games and gives into temptation.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-The-Force-Awakens', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: The Force Awakens",
+        src: "https://player.voxzer.org/view/da30710d0714b6f09add75e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-the-force-awakens-7292.jpg",
+        desc: "A new order threatens to destroy the New Republic. Finn, Rey and Poe, backed by the Resistance and the Republic, must find a way to stop them and find Luke, the last surviving Jedi.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-The-Last-Jedi', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: The Last Jedi",
+        src: "https://player.voxzer.org/view/0e47602b04f68559ec4a45e0",
+        img: "https://img.vxdn.net/cover/1440/star-wars-the-last-jedi-23033.jpg",
+        desc: "Rey seeks to learn the ways of the Jedi under Luke Skywalker, its remaining member, to reinvigorate the Resistance's war against the First Order.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+app.get('/Star-Wars-The-Rise-Of-Skywalker', (req, res) => {
+    res.render('dynamic', {
+        title: "Star Wars: The Rise of Skywalker",
+        src: "https://player.voxzer.org/view/84be8f023ea48b6dd71d75e7",
+        img: "https://img.vxdn.net/cover/1440/star-wars-the-rise-of-skywalker-100243.jpg",
+        desc: "The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.",
+        genre: "Sci-Fi, Action, Adventure",
+    });
+});
+
+// Animated Movies
+app.get('/Kung-Fu-Panda', (req, res) => {
+    res.render('dynamic', {
+        title: "Kung Fu Panda",
+        src: "https://player.voxzer.org/view/92c76a2b04f6855f9c58e5e0",
+        img: "https://fanart.tv/fanart/movies/9502/moviethumb/kung-fu-panda-54c14183a8693.jpg",
+        desc: "When Po the Panda, a kung fu enthusiast, gets selected as the Dragon Warrior, he decides to team up with the Furious Five and destroy the evil forces that threaten the Valley of Peace.",
+        genre: "Animation, Action, Comedy",
     });
 });
 
