@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-// const all = ["iron man", "iron man 2", "iron man 3", "incredible hulk", "thor", "thor dark world", "thor ragnarok", "captain america", "captain america winter soldier", "captain america civil war", "kung fu panda", "kung fu panda 2", "kung fu panda 3", "shrek", "shrek 2", "shrek the third", "shrek forever after", "spider-man into the spider-verse", "big hero 6", "how to train your dragon", "how to train your dragon 2", "how to train your dragon the hidden world"]
+// const all = ["iron man", "iron man 2", "iron man 3", "incredible hulk", "thor", "thor dark world", "thor ragnarok", "captain america", "captain america winter soldier", "captain america civil war", "avengers", "avengers age of ultron", "avengers infinity war", "avengers endgame", "guardians of the galaxy", "guardians of the galaxy vol. 2", "ant-man", "ant-man and the wasp", "doctor strange", "spider-man homecoming", "spider-man far from home", "black panther", "captain marvel", "kung fu panda", "kung fu panda 2", "kung fu panda 3", "shrek", "shrek 2", "shrek the third", "shrek forever after", "spider-man into the spider-verse", "big hero 6", "how to train your dragon", "how to train your dragon 2", "how to train your dragon the hidden world"]
 
 // MCU Movies
 app.get('/Iron-Man', (req, res) => {
@@ -35,7 +35,7 @@ app.get('/Iron-Man2', (req, res) => {
 app.get('/Iron-Man3', (req, res) => {
     res.render('dynamic', {
         title: "Iron Man 3",
-        src: "https://vidcloud.msk.ru/embed4/y9324l5uhoia5?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1613442",
+        src: "https://vidnext.net/streaming.php?id=ODc5MA",
         img: "https://img.vxdn.net/cover/1440/iron-man-3-1712.jpg",
         desc: "Tony Stark encounters a formidable foe called the Mandarin. After failing to defeat his enemy, Tony embarks on a journey of self-discovery as he fights against the powerful Mandarin.",
         genre: "Action, Adventure, Sci-Fi",
@@ -65,7 +65,7 @@ app.get('/Thor', (req, res) => {
 app.get('/Thor-The-Dark-World', (req, res) => {
     res.render('dynamic', {
         title: "Thor: The Dark World",
-        src: "https://vidcloud.msk.ru/embed4/bm9u6miohenke?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1615644",
+        src: "https://vidnext.net/streaming.php?id=ODY3Ng",
         img: "https://img.vxdn.net/cover/1440/thor-the-dark-world-1843.jpg",
         desc: "Thor sets out on a journey to defeat Malekith, the leader of the Dark Elves when he returns to Asgard to retrieve a dangerous weapon and fulfill his desire of destroying the Nine Realms.",
         genre: "Fantasy, Action",
@@ -95,7 +95,7 @@ app.get('/Captain-America', (req, res) => {
 app.get('/Captain-America-Winter-Soldier', (req, res) => {
     res.render('dynamic', {
         title: "Captain America: The Winter Soldier",
-        src: "https://vidcloud.msk.ru/embed4/qn6vuxvsi4ea4?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1613346",
+        src: "https://vidnext.net/streaming.php?id=ODgyOQ",
         img: "https://img.vxdn.net/cover/1440/captain-america-the-winter-soldier-1632.jpg",
         desc: "As Steve Rogers adapts to the complexities of a contemporary world, he joins Natasha Romanoff and Sam Wilson in his mission to uncover the secret behind a deadly, mysterious assassin.",
         genre: "Action, Adventure",
@@ -105,7 +105,7 @@ app.get('/Captain-America-Winter-Soldier', (req, res) => {
 app.get('/Captain-America-Civil-War', (req, res) => {
     res.render('dynamic', {
         title: "Captain America: Civil War",
-        src: "https://vidcloud.msk.ru/embed4/846ozpql66k66?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1613343",
+        src: "https://vidcloud9.com/streaming.php?id=NDUw",
         img: "https://img.vxdn.net/cover/1440/captain-america-civil-war-latino-audio-11797.jpg",
         desc: "Friction arises between the Avengers when one group supports the government's decision to implement a law to control their powers while the other opposes it.",
         genre: "Action, Adventure",
@@ -266,7 +266,7 @@ app.get('/Kung-Fu-Panda2', (req, res) => {
 app.get('/Kung-Fu-Panda3', (req, res) => {
     res.render('dynamic', {
         title: "Kung Fu Panda 3",
-        src: "https://vidcloud.msk.ru/embed4/l9lftawgdjewz?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1613457",
+        src: "https://vidnext.net/streaming.php?id=MzE2NA",
         img: "https://img.vxdn.net/cover/1440/kung-fu-panda-3-9053.jpg",
         desc: "The Dragon Warrior, Po, has to deal with challenges galore when circumstances compel him to train a bunch of awkward pandas in martial arts so that they can trounce Kai, a wicked supernatural warrior.",
         genre: "Animation, Action, Comedy",
@@ -306,7 +306,7 @@ app.get('/Shrek3', (req, res) => {
 app.get('/Shrek4', (req, res) => {
     res.render('dynamic', {
         title: "Shrek Forever After",
-        src: "https://vidcloud.msk.ru/embed4/lpvazdk0702to?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1613504",
+        src: "https://vidnext.net/streaming.php?id=NjQ3Ng",
         img: "https://img.vxdn.net/cover/1440/shrek-forever-after-4611.jpg",
         desc: "When Shrek realises that no one fears him, Rumpel offers him a shady deal. Thereafter, Shrek gets cast in an alternate reality where everybody is afraid of him but Fiona does not remember him.",
         genre: "Animation, Adventure, Comedy",
@@ -336,7 +336,7 @@ app.get('/Big-Hero-6', (req, res) => {
 app.get('/How-To-Train-Your-Dragon', (req, res) => {
     res.render('dynamic', {
         title: "How To Train Your Dragon",
-        src: "https://vidcloud.msk.ru/embed4/dz3nflp0yb6w0?i=8613ac97fa6ea10bf9f20dba222ce8a5&el=1615681",
+        src: "https://vidnext.net/streaming.php?id=ODc1NA",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-1750.jpg",
         desc: "Hiccup, a Viking, must kill a dragon to mark his passage into manhood and be initiated into his tribe. However, he ends up doing the exact opposite by befriending a deadly dragon, Night Fury.",
         genre: "Family, Adventure, Fantasy",
