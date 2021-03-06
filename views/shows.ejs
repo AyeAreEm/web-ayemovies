@@ -13,11 +13,17 @@
         <h1 onclick="window.location = '/'">AyeMovies</h1>
     </div>
 
-    <a href="<%= src %>"><img class="preview" src="<%= img %>" alt="<%= title %>"></a>
+    <img class="preview" src="<%= img %>" alt="<%= title %>">
 
     <div class="desc">
+        <div class="episodeList">
+            <% eps.forEach((ep, index) => {%>
+                <a class="eps" href="<%= ep %>">Episode <%= index+1 %></a>
+            <%})%>
+        </div><br>
+
         <h1 style="text-align: center;"><%= title %></h1><br>
-        <h3 style="margin-left: 30px; margin-right: 30px;"><%= desc %></h3><br>
+        <h3 style="margin-left: 30px; margin-right: 30px;"><%= desc %></h3>
         <h5>Genre: <%= genre %></h5>
     </div>
 </body>

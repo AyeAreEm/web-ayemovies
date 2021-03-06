@@ -253,6 +253,17 @@ app.get('/Kung-Fu-Panda', (req, res) => {
     });
 });
 
+// Netflix Origins
+app.get('/The-Witcher', (req, res) => {
+    res.render('shows', {
+        title: "The Witcher",
+        img: "https://assets.hardwarezone.com/img/2019/06/netflix-witcher.jpg",
+        desc: "The Witcher Geralt, a mutated monster hunter, struggles to find his place in a world in which people often prove more wicked than beasts.",
+        genre: "Action, Fantasy",
+        eps: ["https://player.voxzer.org/view/1b40710d0714b6f35adbb5e0", "https://player.voxzer.org/view/2ee0700d0714b6fd3ad985e0", "https://player.voxzer.org/view/9b60700d0714b6f7eada85e0", "https://player.voxzer.org/view/8730710d0714b6feaadcb5e0", "https://player.voxzer.org/view/5770710d0714b6facadc35e0", "https://player.voxzer.org/view/72c0700d0714b6fb1ada25e0", "https://player.voxzer.org/view/a1506f0d0714b6f38ad845e0", "https://player.voxzer.org/view/5960700d0714b6f13ad9f5e0"]
+    });
+});
+
 app.get('/Kung-Fu-Panda2', (req, res) => {
     res.render('dynamic', {
         title: "Kung Fu Panda 2",

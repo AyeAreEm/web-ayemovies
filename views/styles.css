@@ -61,3 +61,24 @@ img {
 .desc h5 {
     margin-left: 30px;
 }
+
+.episodeList {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.eps {
+    background: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.eps:hover, .eps:active {
+    background: rgb(212, 35, 79);
+    color: white;
+}
