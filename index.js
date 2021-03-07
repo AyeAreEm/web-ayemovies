@@ -20,7 +20,7 @@ const allLink = [
     {title: "Captain Marvel", link: "/Captain-Marvel"},
     // NetFlix Originals
     {title: "The Witcher", link: "/The-Witcher"},
-    {title: "Sex Education", link: "/Sex-Education"},
+    {title: "Sex Education", link: "/Sex-Education"}, {title: "Sex Education S2", link: "/Sex-Education2"},
     // Star Wars
     {title: "Star Wars: The Phantom Menace", link: "/Star-Wars-The-Phantom-Menace"}, {title: "Star Wars: Attack of the Clones", link: "/Star-Wars-Attack-Of-The-Clones"}, {title: "Star Wars: Revenge of the Sith", link: "/Star-Wars-Revenge-Of-The-Sith"}, {title: "Star Wars: A New Hope", link: "/Star-Wars-A-New-Hope"}, {title: "Star Wars: The Empire Strikes Back", link: "/Star-Wars-The-Empire-Strikes-Back"}, {title: "Star Wars: Return of the Jedi", link: "/Star-Wars-Return-Of-The-Jedi"}, {title: "Star Wars: The Force Awakens", link: "/Star-Wars-The-Force-Awakens"}, {title: "Star Wars: The Last Jedi", link: "/Star-Wars-The-Last-Jedi"}, {title: "Star Wars: The Rise of Skywalker", link: "/Star-Wars-The-Rise-Of-Skywalker"},
     // Animated Movies
@@ -504,7 +504,7 @@ app.get('/How-To-Train-Your-Dragon2', (req, res) => {
 app.get('/How-To-Train-Your-Dragon3', (req, res) => {
     res.render('dynamic', {
         title: "How To Train Your Dragon: The Hidden World",
-        src: "https://player.voxzer.org/view/c1900b023ea48b6907b3c5e7",
+        src: "https://vidnext.net/streaming.php?id=MjM1MjY0",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-the-hidden-world-27688.jpg",
         desc: "Hiccup aims to unite the vikings and the dragons in order to bring peace on the island of Berk. However, he must stop the evil Grimmel and his devious plans to wipe out all dragons.",
         genre: "Family, Adventure, Fantasy",
