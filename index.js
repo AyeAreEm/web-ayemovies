@@ -266,6 +266,26 @@ app.get('/Captain-Marvel', (req, res) => {
     });
 });
 
+app.get('/Deadpool', (req, res) => {
+    res.render('dynamic', {
+        title: "Deadpool",
+        src: "https://player.voxzer.org/view/b410690d0714b6f2ba5bf5e0",
+        img: "https://img.vxdn.net/cover/1440/deadpool-9802.jpg",
+        desc: "Ajax, a twisted scientist, experiments on Wade Wilson, a mercenary, to cure him of cancer and give him healing powers. However, the experiment leaves Wade disfigured and he decides to exact revenge.",
+        genre: "Action, Comedy"
+    });
+});
+
+app.get('/Deadpool2', (req, res) => {
+    res.render('dynamic', {
+        title: "Deadpool 2",
+        src: "https://player.voxzer.org/view/e0f7652b04f6855ebc5275e0",
+        img: "https://img.vxdn.net/cover/1440/deadpool-2-24922.jpg",
+        desc: "Deadpool protects a young mutant Russell from the authorities and gets thrown in prison. However, he escapes and forms a team of mutants to prevent a time-travelling mercenary from killing Russell",
+        genre: "Action, Comedy"
+    });
+});
+
 // Netflix Origins
 app.get('/The-Witcher', (req, res) => {
     res.render('shows', {
@@ -296,6 +316,16 @@ app.get('/Sex-Education2', (req, res) => {
         genre: "Drama",
         eps: ["https://vidcloud9.com/streaming.php?id=MzA2NjY5", "https://vidcloud9.com/streaming.php?id=MzA2Njcw", "https://vidcloud9.com/streaming.php?id=MzA2Njcx", "https://vidcloud9.com/streaming.php?id=MzA2Njcy", "https://vidcloud9.com/streaming.php?id=MzA2Njcz", "https://vidcloud9.com/streaming.php?id=MzA2Njc0", "https://vidcloud9.com/streaming.php?id=MzA2Njc1", "https://vidcloud9.com/streaming.php?id=MzA2Njc2"],
         seasons: ["/Sex-Education", "/Sex-Education2"]
+    });
+});
+
+app.get('/Bird-Box', (req, res) => {
+    res.render('dynamic', {
+        title: "Bird Box",
+        src: "https://player.voxzer.org/view/4420730d0714b6f00aef05e0",
+        img: "https://img.vxdn.net/cover/1440/bird-box-27241.jpg",
+        desc: "When a mysterious force decimates the population, only one thing is certain -- if you see it, you die. The survivors must now avoid coming face to face with an entity that takes the form of their worst fears. Searching for hope and a new beginning, a woman and her children embark on a dangerous journey through the woods and down a river to find the one place that may offer sanctuary. To make it, they'll have to cover their eyes from the evil that chases them -- and complete the trip blindfolded.",
+        genre: "Horror"
     });
 });
 
@@ -507,6 +537,16 @@ app.get('/How-To-Train-Your-Dragon3', (req, res) => {
         src: "https://vidnext.net/streaming.php?id=MjM1MjY0",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-the-hidden-world-27688.jpg",
         desc: "Hiccup aims to unite the vikings and the dragons in order to bring peace on the island of Berk. However, he must stop the evil Grimmel and his devious plans to wipe out all dragons.",
+        genre: "Family, Adventure, Fantasy",
+    });
+});
+
+app.get('/Megamind', (req, res) => {
+    res.render('dynamic', {
+        title: "Megamind",
+        src: "https://player.voxzer.org/view/0967632b04f685572c4e85e0",
+        img: "https://img.vxdn.net/cover/1440/megamind-2469.jpg",
+        desc: "A supervillain named Megamind defeats and kills his enemy. Out of boredom he creates a superhero who becomes evil, forcing Megamind to turn into a hero.",
         genre: "Family, Adventure, Fantasy",
     });
 });
