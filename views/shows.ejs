@@ -26,5 +26,16 @@
         <h3 style="margin-left: 30px; margin-right: 30px;"><%= desc %></h3>
         <h5>Genre: <%= genre %></h5>
     </div>
+
+    <% if (locals.seasons) {%>
+        <div class="desc" style="margin-top: 20px;">
+            <h1 style="text-align: center;">Seasons</h1>
+            <div class="episodeList">
+                <% seasons.forEach((s, index) => {%>
+                    <a class="eps" href="<%= s %>">Seasons <%= index+1 %></a>
+                <%})%>
+            </div>
+        </div>
+    <%}%>
 </body>
 </html>

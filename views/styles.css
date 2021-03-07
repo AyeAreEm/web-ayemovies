@@ -86,6 +86,7 @@ input {
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
+    color: black;
 }
 
 .eps:hover, .eps:active {
