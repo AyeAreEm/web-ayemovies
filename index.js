@@ -21,7 +21,7 @@ const allLink = [
     {title: "Deadpool", link: "/Deadpool"}, {title: "Deadpool 2", link: "/Deadpool2"},
     // NetFlix Originals
     {title: "The Witcher", link: "/The-Witcher"},
-    {title: "Sex Education", link: "/Sex-Education"}, {title: "Sex Education S2", link: "/Sex-Education2"},
+    {title: "Sex Education", link: "/Sex-Education"},
     {title: "Bird Box", link: "/Bird-Box"},
     // Star Wars
     {title: "Star Wars: The Phantom Menace", link: "/Star-Wars-The-Phantom-Menace"}, {title: "Star Wars: Attack of the Clones", link: "/Star-Wars-Attack-Of-The-Clones"}, {title: "Star Wars: Revenge of the Sith", link: "/Star-Wars-Revenge-Of-The-Sith"}, {title: "Star Wars: A New Hope", link: "/Star-Wars-A-New-Hope"}, {title: "Star Wars: The Empire Strikes Back", link: "/Star-Wars-The-Empire-Strikes-Back"}, {title: "Star Wars: Return of the Jedi", link: "/Star-Wars-Return-Of-The-Jedi"}, {title: "Star Wars: The Force Awakens", link: "/Star-Wars-The-Force-Awakens"}, {title: "Star Wars: The Last Jedi", link: "/Star-Wars-The-Last-Jedi"}, {title: "Star Wars: The Rise of Skywalker", link: "/Star-Wars-The-Rise-Of-Skywalker"},
@@ -31,7 +31,8 @@ const allLink = [
     {title: "Spider-Man: Into the Spider-Verse", link: "/Spider-Man-Into-the-Spider-Verse"},
     {title: "Big Hero 6", link: "/Big-Hero-6"},
     {title: "How To Train Your Dragon", link: "/How-To-Train-Your-Dragon"}, {title: "How To Train Your Dragon 2", link: "/How-To-Train-Your-Dragon2"}, {title: "How To Train Your Dragon: The Hidden World", link: "/How-To-Train-Your-Dragon3"},
-    {title: "Megamind", link: "/Megamind"}
+    {title: "Megamind", link: "/Megamind"},
+    {title: "Rick And Morty", link: "/Rick-And-Morty"}
 ];
 
 app.get('/', (req, res) => {
@@ -520,7 +521,7 @@ app.get('/How-To-Train-Your-Dragon', (req, res) => {
         src: "https://vidnext.net/streaming.php?id=ODc1NA",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-1750.jpg",
         desc: "Hiccup, a Viking, must kill a dragon to mark his passage into manhood and be initiated into his tribe. However, he ends up doing the exact opposite by befriending a deadly dragon, Night Fury.",
-        genre: "Family, Adventure, Fantasy",
+        genre: "Family, Adventure, Fantasy, Animation",
     });
 });
 
@@ -530,7 +531,7 @@ app.get('/How-To-Train-Your-Dragon2', (req, res) => {
         src: "https://player.voxzer.org/view/d3706c0d0714b6f92abf85e0",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-2-1751.jpg",
         desc: "Hiccup and Toothless are faced with the threat of Drago, a dragon trapper, bent on capturing and dominating over all dragons. However, they are determined to defeat him and restore peace on Berk.",
-        genre: "Family, Adventure, Fantasy",
+        genre: "Family, Adventure, Fantasy, Animation",
     });
 });
 
@@ -540,7 +541,7 @@ app.get('/How-To-Train-Your-Dragon3', (req, res) => {
         src: "https://vidnext.net/streaming.php?id=MjM1MjY0",
         img: "https://img.vxdn.net/cover/1440/how-to-train-your-dragon-the-hidden-world-27688.jpg",
         desc: "Hiccup aims to unite the vikings and the dragons in order to bring peace on the island of Berk. However, he must stop the evil Grimmel and his devious plans to wipe out all dragons.",
-        genre: "Family, Adventure, Fantasy",
+        genre: "Family, Adventure, Fantasy, Animation",
     });
 });
 
@@ -550,7 +551,51 @@ app.get('/Megamind', (req, res) => {
         src: "https://player.voxzer.org/view/0967632b04f685572c4e85e0",
         img: "https://img.vxdn.net/cover/1440/megamind-2469.jpg",
         desc: "A supervillain named Megamind defeats and kills his enemy. Out of boredom he creates a superhero who becomes evil, forcing Megamind to turn into a hero.",
-        genre: "Family, Adventure, Fantasy",
+        genre: "Family, Comedy, Animation",
+    });
+});
+
+app.get('/Rick-And-Morty', (req, res) => {
+    res.render('shows', {
+        title: "Rick And Morty",
+        img: "https://img.vxdn.net/cover/1440/rick-and-morty-season-1-9011.jpg",
+        desc: "After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion. Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab, Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.",
+        genre: "Sitcom, Comedy, Animation",
+        eps: ["https://player.voxzer.org/view/e6e0710d0714b6fbcadd85e0", "https://player.voxzer.org/view/0ea0740d0714b6fcfaefd5e0", "https://player.voxzer.org/view/8c90720d0714b6f0eaee35e0", "https://vidcloud9.com/streaming.php?id=MjMzNjc", "https://vidcloud9.com/streaming.php?id=MjMzNjg", "https://player.voxzer.org/view/05176a2b04f685500c5835e0", "https://player.voxzer.org/view/1650730d0714b6fcdaeec5e0", "https://vidcloud9.com/streaming.php?id=MjMzNzE", "https://vidcloud9.com/streaming.php?id=MjMzNzI", "https://vidcloud9.com/streaming.php?id=MjMzNzM", "https://vidcloud9.com/streaming.php?id=MjMzNzQ"],
+        seasons: ["/Rick-And-Morty", "/Rick-And-Morty2", "/Rick-And-Morty3", "/Rick-And-Morty4"]
+    });
+});
+
+app.get('/Rick-And-Morty2', (req, res) => {
+    res.render('shows', {
+        title: "Rick And Morty S2",
+        img: "https://img.vxdn.net/cover/1440/rick-and-morty-season-2-5636.jpg",
+        desc: "After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion. Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab, Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.",
+        genre: "Sitcom, Comedy, Animation",
+        eps: ["https://vidcloud9.com/streaming.php?id=MzkyNzI", "https://vidcloud9.com/streaming.php?id=MzkyNzM", "https://vidcloud9.com/streaming.php?id=MzkyNzQ", "https://vidcloud9.com/streaming.php?id=MzkyNzU", "https://vidcloud9.com/streaming.php?id=MzkyNzY", "https://vidcloud9.com/streaming.php?id=MzkyNzc", "https://vidcloud9.com/streaming.php?id=MzkyNzg", "https://player.voxzer.org/view/06d7652b04f6855eec5145e0", "https://vidcloud9.com/streaming.php?id=MzkyODA", "https://vidcloud9.com/streaming.php?id=MzkyODE"],
+        seasons: ["/Rick-And-Morty", "/Rick-And-Morty2", "/Rick-And-Morty3", "/Rick-And-Morty4"]
+    });
+});
+
+app.get('/Rick-And-Morty3', (req, res) => {
+    res.render('shows', {
+        title: "Rick And Morty S3",
+        img: "https://img.vxdn.net/cover/1440/rick-and-morty-season-3-20109.jpg",
+        desc: "After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion. Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab, Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.",
+        genre: "Sitcom, Comedy, Animation",
+        eps: ["https://player.voxzer.org/view/0427682b04f685533c5575e0", "https://player.voxzer.org/view/70c7682b04f685595c5605e0", "https://player.voxzer.org/view/eb60690d0714b6fa7ab9c5e0", "https://player.voxzer.org/view/77a7602b04f68550fc4ae5e0", "https://player.voxzer.org/view/0417612b04f6855c5c4ba5e0", "https://player.voxzer.org/view/66506b0d0714b6f2aabc35e0", "https://player.voxzer.org/view/18806e0d0714b6f44ac285e0", "https://player.voxzer.org/view/efb0690d0714b6ffeab9c5e0", "https://vidcloud9.com/streaming.php?id=MTE0ODEx", "https://player.voxzer.org/view/6407632b04f685558c4f05e0"],
+        seasons: ["/Rick-And-Morty", "/Rick-And-Morty2", "/Rick-And-Morty3", "/Rick-And-Morty4"]
+    });
+});
+
+app.get('/Rick-And-Morty4', (req, res) => {
+    res.render('shows', {
+        title: "Rick And Morty S4",
+        img: "https://releasedate.me/wp-content/uploads/2018/10/rick-and-morty-poster.jpg",
+        desc: "After having been missing for nearly 20 years, Rick Sanchez suddenly arrives at daughter Beth's doorstep to move in with her and her family. Although Beth welcomes Rick into her home, her husband, Jerry, isn't as happy about the family reunion. Jerry is concerned about Rick, a sociopathic scientist, using the garage as his personal laboratory. In the lab, Rick works on a number of sci-fi gadgets, some of which could be considered dangerous. But that's not all Rick does that concerns Jerry. He also goes on adventures across the universe that often involve his grandchildren, Morty and Summer.",
+        genre: "Sitcom, Comedy, Animation",
+        eps: ["https://vidcloud9.com/streaming.php?id=MjkyODE1", "https://player.voxzer.org/view/0b706e0d0714b6f56ac265e0", "https://player.voxzer.org/view/03006d0d0714b6fa3abff5e0", "https://player.voxzer.org/view/c4e7652b04f685576c5255e0", "https://player.voxzer.org/view/e1106a0d0714b6f14abb05e0", "https://player.voxzer.org/view/ee7eee3ef9933bd18eff85ea", "https://player.voxzer.org/view/a1c1a83ef9933bd27e8da5eb", "https://player.voxzer.org/view/50b9778636a0afa1e52265ec", "https://player.voxzer.org/view/19b058d3c451722bc1b845ec", "https://player.voxzer.org/view/4986225485b2fe48bd4c85ed"],
+        seasons: ["/Rick-And-Morty", "/Rick-And-Morty2", "/Rick-And-Morty3", "/Rick-And-Morty4"]
     });
 });
 

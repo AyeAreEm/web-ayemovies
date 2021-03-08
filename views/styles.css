@@ -3,6 +3,7 @@
 html, * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,6 +29,15 @@ input {
     border: none;
 }
 
+select {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    height: 3vh;
+    border: none;
+    border-radius: 5px;
+}
+
 .header {
     background-color: rgb(212, 35, 79);
     position: fixed;
@@ -37,8 +47,8 @@ input {
 
 .header h1 {
     font-size: 40px;
-    display: inline-block;
     margin-left: 1%;
+    float: left;
 }
 
 .category {

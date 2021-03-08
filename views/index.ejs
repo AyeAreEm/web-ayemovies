@@ -11,11 +11,15 @@
     <title>AyeMovies</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="AyeAreEm.png" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="header">
         <h1 onclick="window.location = '/'">AyeMovies</h1>
+        <select name="titles" id="titles" onchange="search(this.value)" style="margin-right: 10px;">
+            <option value disabled selected>-- select a category --</option>
+        </select>
+
         <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
         <datalist id="moviesList">
             <% all.forEach(item => {%>
@@ -24,7 +28,7 @@
         </datalist>
     </div>
 
-    <div class="category" style="margin-top: 85px;">
+    <div id="Marvel" class="category" style="margin-top: 85px;">
         <h1>Marvel</h1>
         <a href="/Iron-Man"><img src="https://img.vxdn.net/poster/200/iron-man-1710.jpg" alt="Iron Man"></a>
         <a href="/Iron-Man2"><img src="https://img.vxdn.net/poster/200/iron-man-2-1711.jpg" alt="Iron Man 2"></a>
@@ -53,14 +57,14 @@
         <a href="/Deadpool2"><img src="https://img.vxdn.net/poster/200/deadpool-2-24922.jpg" alt="Deadpool 2"></a>
     </div>
 
-    <div class="category">
+    <div id="Netflix-Originals" class="category">
         <h1>Netflix Originals</h1>
         <a href="/The-Witcher"><img src="https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg" alt="The-Witcher"></a>
         <a href="/Sex-Education"><img src="https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg" alt="Sex Education"></a>
         <a href="/Bird-Box"><img src="https://img.vxdn.net/poster/200/bird-box-27241.jpg" alt="Bird Box"></a>
     </div>
 
-    <div class="category">
+    <div id="Star-Wars" class="category">
         <h1>Star Wars</h1>
         <a href="/Star-Wars-The-Phantom-Menace"><img src="https://img.vxdn.net/poster/200/star-wars-episode-i-the-phantom-menace-1915.jpg" alt="Star Wars: The Phantom Menace"></a>
         <a href="/Star-Wars-Attack-Of-The-Clones"><img src="https://img.vxdn.net/poster/200/star-wars-episode-ii-attack-of-the-clones-1916.jpg" alt="Star Wars: Attack of the Clones"></a>
@@ -73,8 +77,8 @@
         <a href="/Star-Wars-The-Rise-Of-Skywalker"><img src="https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg" alt="Star Wars: The Rise of Skywalker"></a>
     </div>
 
-    <div class="category">
-        <h1>Animated Movies</h1>
+    <div id="Animated" class="category">
+        <h1>Animated</h1>
         <a href="/Kung-Fu-Panda"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-2420.jpg" alt="Kung Fu Panda"></a>
         <a href="/Kung-Fu-Panda2"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-2-2248.jpg" alt="Kung Fu Panda 2"></a>
         <a href="/Kung-Fu-Panda3"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-3-9053.jpg" alt="Kung Fu Panda 3"></a>
@@ -88,6 +92,7 @@
         <a href="/How-To-Train-Your-Dragon2"><img src="https://img.moviesjoy.to/resize/188x288/72/3a/723adc6446687ea09ff1ae657c64ce0b/723adc6446687ea09ff1ae657c64ce0b.jpg" alt="How To Train Your Dragon 2"></a>
         <a href="/How-To-Train-Your-Dragon3"><img src="https://img.vxdn.net/poster/200/how-to-train-your-dragon-the-hidden-world-27688.jpg" alt="How-To-Train-Your-Dragon 3"></a>
         <a href="/Megamind"><img src="https://img.vxdn.net/poster/200/megamind-2469.jpg" alt="Megamind"></a>
+        <a href="/Rick-And-Morty"><img src="https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg" alt="Rick And Morty"></a>
     </div>
 </body>
 </html>

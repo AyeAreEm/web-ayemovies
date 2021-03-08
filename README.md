@@ -12,7 +12,6 @@
     - Legend of Korra
     - Rio
     - Mr. Peabody and Sherman
-    - Rick and Morty
 
 ## Marvel
     - X-Men
@@ -24,3 +23,9 @@
     - Lucifer
     - You
     - Apostle (maybe)
+
+## Fast and Furious
+
+## ToDo
+    - Change the system for getting all movies and putting them into options
+        (probably can be done with giving each link an id and using vanilla js to get the href and text content using the id. then iterate through the list of objects)
