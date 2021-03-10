@@ -16,13 +16,24 @@
 <body>
     <div class="header">
         <h1 onclick="window.location = '/'">AyeMovies</h1>
+        <!-- select categories -->
         <select name="titles" id="titles" onchange="search(this.value)" style="margin-right: 10px;">
             <option value disabled selected>-- select a category --</option>
         </select>
 
+        <!-- input for movies and tv shows -->
         <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
         <datalist id="moviesList">
-            <% all.forEach(item => {%>
+            <% marvel.forEach(item => {%>
+                <option value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% netflix.forEach(item => {%>
+                <option value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% starWars.forEach(item => {%>
+                <option value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% animation.forEach(item => {%>
                 <option value="<%= item.link %>"><%= item.title %></option>
             <%})%>
         </datalist>
@@ -30,69 +41,30 @@
 
     <div id="Marvel" class="category" style="margin-top: 85px;">
         <h1>Marvel</h1>
-        <a href="/Iron-Man"><img src="https://img.vxdn.net/poster/200/iron-man-1710.jpg" alt="Iron Man"></a>
-        <a href="/Iron-Man2"><img src="https://img.vxdn.net/poster/200/iron-man-2-1711.jpg" alt="Iron Man 2"></a>
-        <a href="/Iron-Man3"><img src="https://img.vxdn.net/poster/200/iron-man-3-1712.jpg" alt="Iron Man 3"></a>
-        <a href="/Incredible-Hulk"><img src="https://img.vxdn.net/poster/200/the-incredible-hulk-3342.jpg" alt="The Incredible Hulk"></a>
-        <a href="/Thor"><img src="https://img.vxdn.net/poster/200/thor-3351.jpg" alt="Thor"></a>
-        <a href="/Thor-The-Dark-World"><img src="https://img.vxdn.net/poster/200/thor-the-dark-world-1843.jpg" alt="Thor: The Dark World"></a>
-        <a href="/Thor-Ragnarok"><img src="https://img.vxdn.net/poster/200/thor-ragnarok-22466.jpg" alt="Thor: Ragnarok"></a>
-        <a href="/Captain-America"><img src="https://img.vxdn.net/poster/200/captain-america-the-first-avenger-3352.jpg" alt="Captain America: The First Avenger"></a>
-        <a href="/Captain-America-Winter-Soldier"><img src="https://img.vxdn.net/poster/200/captain-america-the-winter-soldier-1632.jpg" alt="Captain America: The Winter Soldier"></a>
-        <a href="/Captain-America-Civil-War"><img src="https://img.vxdn.net/poster/200/captain-america-civil-war-latino-audio-11797.jpg" alt="Captain America: Civil War"></a>
-        <a href="/Avengers"><img src="https://img.vxdn.net/poster/200/the-avengers-1717.jpg" alt="Marvel's The Avengers"></a>
-        <a href="/Avengers-Age-Of-Ultron"><img src="https://img.vxdn.net/poster/200/avengers-age-of-ultron-4632.jpg" alt="Avengers: Age of Ultron"></a>
-        <a href="/Avengers-Infinity-War"><img src="https://img.vxdn.net/poster/200/avengers-infinity-war-24689.jpg" alt="Avengers: Infinity War"></a>
-        <a href="/Avengers-Endgame"><img src="https://img.vxdn.net/poster/200/avengers-endgame-28501.jpg" alt="Avengers: Endgame"></a>
-        <a href="/GotG"><img src="https://img.vxdn.net/poster/200/guardians-of-the-galaxy-1608.jpg" alt="Guardians of the Galaxy"></a>
-        <a href="/GotG2"><img src="https://img.vxdn.net/poster/200/guardians-of-the-galaxy-vol-2-20525.jpg" alt="Guardians of the Galaxy Vol. 2"></a>
-        <a href="/Ant-Man"><img src="https://img.vxdn.net/poster/200/ant-man-4408.jpg" alt="Ant-Man"></a>
-        <a href="/Ant-Man-And-The-Wasp"><img src="https://img.vxdn.net/poster/200/ant-man-and-the-wasp-25534.jpg" alt="Ant-Man and the Wasp"></a>
-        <a href="/Doctor-Strange"><img src="https://img.vxdn.net/poster/200/doctor-strange-17530.jpg" alt="Doctor Strange"></a>
-        <a href="/Spider-Man-Homecoming"><img src="https://img.vxdn.net/poster/200/spider-man-homecoming-21248.jpg" alt="Spider-Man: Homecoming"></a>
-        <a href="/Spider-Man-Far-From-Home"><img src="https://img.vxdn.net/poster/200/spider-man-far-from-home-28904.jpg" alt="Spider-Man: Far From Home"></a>
-        <a href="/Black-Panther"><img src="https://img.vxdn.net/poster/200/black-panther-23800.jpg" alt="Black Panther"></a>
-        <a href="/Captain-Marvel"><img src="https://img.vxdn.net/poster/200/captain-marvel-28165.jpg" alt="Captain Marvel"></a>
-        <a href="/Deadpool"><img src="https://img.vxdn.net/poster/200/deadpool-9802.jpg" alt="Deadpool"></a>
-        <a href="/Deadpool2"><img src="https://img.vxdn.net/poster/200/deadpool-2-24922.jpg" alt="Deadpool 2"></a>
+        <% marvel.forEach(item => { %>
+            <a href="<%= item.link%>"><img src="<%= item.image %>" alt="<%= item.title %>"></a>
+        <%})%>
     </div>
 
     <div id="Netflix-Originals" class="category">
         <h1>Netflix Originals</h1>
-        <a href="/The-Witcher"><img src="https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg" alt="The-Witcher"></a>
-        <a href="/Sex-Education"><img src="https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg" alt="Sex Education"></a>
-        <a href="/Bird-Box"><img src="https://img.vxdn.net/poster/200/bird-box-27241.jpg" alt="Bird Box"></a>
+        <% netflix.forEach(item => { %>
+            <a href="<%= item.link %>"><img src="<%= item.image %>" alt="<%= item.title %>"></a>
+        <%})%>
     </div>
 
     <div id="Star-Wars" class="category">
         <h1>Star Wars</h1>
-        <a href="/Star-Wars-The-Phantom-Menace"><img src="https://img.vxdn.net/poster/200/star-wars-episode-i-the-phantom-menace-1915.jpg" alt="Star Wars: The Phantom Menace"></a>
-        <a href="/Star-Wars-Attack-Of-The-Clones"><img src="https://img.vxdn.net/poster/200/star-wars-episode-ii-attack-of-the-clones-1916.jpg" alt="Star Wars: Attack of the Clones"></a>
-        <a href="/Star-Wars-Revenge-Of-The-Sith"><img src="https://img.vxdn.net/poster/200/star-wars-episode-iii-revenge-of-the-sith-2197.jpg" alt="Star Wars: Revenge Of The Sith"></a>
-        <a href="/Star-Wars-A-New-Hope"><img src="https://img.vxdn.net/poster/200/star-wars-episode-iv-a-new-hope-2229.jpg" alt="Star Wars: A New Hope"></a>
-        <a href="/Star-Wars-The-Empire-Strikes-Back"><img src="https://img.vxdn.net/poster/200/star-wars-episode-v-the-empire-strikes-back-2233.jpg" alt="Star Wars: The Empire Strikes Back"></a>
-        <a href="/Star-Wars-Return-Of-The-Jedi"><img src="https://img.vxdn.net/poster/200/star-wars-episode-vi-return-of-the-jedi-2238.jpg" alt="Star Wars: Return of the Jedi"></a>
-        <a href="/Star-Wars-The-Force-Awakens"><img src="https://img.vxdn.net/poster/200/star-wars-the-force-awakens-7292.jpg" alt="Star Wars: The Force Awakens"></a>
-        <a href="/Star-Wars-The-Last-Jedi"><img src="https://img.vxdn.net/poster/200/star-wars-the-last-jedi-23033.jpg" alt="Star Wars: The Last Jedi"></a>
-        <a href="/Star-Wars-The-Rise-Of-Skywalker"><img src="https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg" alt="Star Wars: The Rise of Skywalker"></a>
+        <% starWars.forEach(item => { %>
+            <a href="<%= item.link%>"><img src="<%= item.image%>" alt="<%= item.title%>"></a>
+        <%})%>
     </div>
 
     <div id="Animated" class="category">
         <h1>Animated</h1>
-        <a href="/Kung-Fu-Panda"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-2420.jpg" alt="Kung Fu Panda"></a>
-        <a href="/Kung-Fu-Panda2"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-2-2248.jpg" alt="Kung Fu Panda 2"></a>
-        <a href="/Kung-Fu-Panda3"><img src="https://img.vxdn.net/poster/200/kung-fu-panda-3-9053.jpg" alt="Kung Fu Panda 3"></a>
-        <a href="/Shrek"><img src="https://img.vxdn.net/poster/200/shrek-4608.jpg" alt="Shrek"></a>
-        <a href="/Shrek2"><img src="https://img.vxdn.net/poster/200/shrek-2-4609.jpg" alt="Shrek 2"></a>
-        <a href="/Shrek3"><img src="https://img.vxdn.net/poster/200/shrek-the-third-4610.jpg" alt="Shrek 3"></a>
-        <a href="/Shrek4"><img src="https://img.vxdn.net/poster/200/shrek-forever-after-4611.jpg" alt="Shrek Forever After"></a>
-        <a href="/Spider-Man-Into-the-Spider-Verse"><img src="https://img.vxdn.net/poster/200/spider-man-into-the-spider-verse-27208.jpg" alt="Spider-Man: Into the Spider-Verse"></a>
-        <a href="/Big-Hero-6"><img src="https://img.vxdn.net/poster/200/big-hero-6-2043.jpg" alt="Big Hero 6"></a>
-        <a href="/How-To-Train-Your-Dragon"><img src="https://img.moviesjoy.to/resize/188x288/ec/35/ec359f4bfd201710f78d41d381c9eeda/ec359f4bfd201710f78d41d381c9eeda.jpg" alt="How To Train Your Dragon"></a>
-        <a href="/How-To-Train-Your-Dragon2"><img src="https://img.moviesjoy.to/resize/188x288/72/3a/723adc6446687ea09ff1ae657c64ce0b/723adc6446687ea09ff1ae657c64ce0b.jpg" alt="How To Train Your Dragon 2"></a>
-        <a href="/How-To-Train-Your-Dragon3"><img src="https://img.vxdn.net/poster/200/how-to-train-your-dragon-the-hidden-world-27688.jpg" alt="How-To-Train-Your-Dragon 3"></a>
-        <a href="/Megamind"><img src="https://img.vxdn.net/poster/200/megamind-2469.jpg" alt="Megamind"></a>
-        <a href="/Rick-And-Morty"><img src="https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg" alt="Rick And Morty"></a>
+        <% animation.forEach(item => { %>
+            <a href="<%= item.link %>"><img src="<%= item.image %>" alt="<%= item.title %>"></a>
+        <%})%>
     </div>
 </body>
 </html>
