@@ -37,7 +37,10 @@ const animation = [
     {title: "Big Hero 6", link: "/Big-Hero-6", image: "https://img.vxdn.net/poster/200/big-hero-6-2043.jpg"},
     {title: "How To Train Your Dragon", link: "/How-To-Train-Your-Dragon", image: "https://img.moviesjoy.to/resize/188x288/ec/35/ec359f4bfd201710f78d41d381c9eeda/ec359f4bfd201710f78d41d381c9eeda.jpg"}, {title: "How To Train Your Dragon 2", link: "/How-To-Train-Your-Dragon2", image: "https://img.moviesjoy.to/resize/188x288/72/3a/723adc6446687ea09ff1ae657c64ce0b/723adc6446687ea09ff1ae657c64ce0b.jpg"}, {title: "How To Train Your Dragon: The Hidden World", link: "/How-To-Train-Your-Dragon3", image: "https://img.vxdn.net/poster/200/how-to-train-your-dragon-the-hidden-world-27688.jpg"},
     {title: "Megamind", link: "/Megamind", image: "https://img.vxdn.net/poster/200/megamind-2469.jpg"},
-    {title: "Rick And Morty", link: "/Rick-And-Morty", image: "https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg"}
+    {title: "Rick And Morty", link: "/Rick-And-Morty", image: "https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg"},
+    {title: "Rio", link: "/Rio", image: "https://img.vxdn.net/poster/200/rio-2057.jpg"},
+    {title: "Rio", link: "/Rio2", image: "https://img.vxdn.net/poster/200/rio-2-2060.jpg"},
+    {title: "Mr. Peabody & Sherman", link: "/Mr-Peabody-And-Sherman", image: "https://img.vxdn.net/poster/200/mr-peabody-sherman-1960.jpg"}
 ]
 
 app.get('/', (req, res) => {
@@ -606,6 +609,36 @@ app.get('/Rick-And-Morty4', (req, res) => {
         genre: "Sitcom, Comedy, Animation",
         eps: ["https://vidcloud9.com/streaming.php?id=MjkyODE1", "https://player.voxzer.org/view/0b706e0d0714b6f56ac265e0", "https://player.voxzer.org/view/03006d0d0714b6fa3abff5e0", "https://player.voxzer.org/view/c4e7652b04f685576c5255e0", "https://player.voxzer.org/view/e1106a0d0714b6f14abb05e0", "https://player.voxzer.org/view/ee7eee3ef9933bd18eff85ea", "https://player.voxzer.org/view/a1c1a83ef9933bd27e8da5eb", "https://player.voxzer.org/view/50b9778636a0afa1e52265ec", "https://player.voxzer.org/view/19b058d3c451722bc1b845ec", "https://player.voxzer.org/view/4986225485b2fe48bd4c85ed"],
         seasons: ["/Rick-And-Morty", "/Rick-And-Morty2", "/Rick-And-Morty3", "/Rick-And-Morty4"]
+    });
+});
+
+app.get('/Rio', (req, res) => {
+    res.render('dynamic', {
+        title: "Rio",
+        src: "https://player.voxzer.org/view/bfd7652b04f685506c5255e0",
+        img: "https://img.vxdn.net/cover/1440/rio-2057.jpg",
+        desc: "A bookshop owner, Linda, nurtures Blu, a macaw, after smugglers lose him in Minnesota. When she takes him to Rio, to help review his dying species, Blu is again abducted by a few smugglers.",
+        genre: "Family, Comedy, Animation",
+    });
+});
+
+app.get('/Rio2', (req, res) => {
+    res.render('dynamic', {
+        title: "Rio2",
+        src: "https://vidcloud9.com/streaming.php?id=ODQ3Mw",
+        img: "https://img.vxdn.net/cover/1440/rio-2-2060.jpg",
+        desc: "After moving out of Rio de Janeiro, Blu, Jewel and their children try to cope with the new surroundings in the Amazon. But Blu encounters the revengeful Nigel who further complicates the situation.",
+        genre: "Family, Comedy, Animation",
+    });
+});
+
+app.get('/Mr-Peabody-And-Sherman', (req, res) => {
+    res.render('dynamic', {
+        title: "Mr. Peabody & Sherman",
+        src: "https://player.voxzer.org/view/4ff06c0d0714b6f61abe55e0",
+        img: "https://img.vxdn.net/cover/1440/mr-peabody-sherman-1960.jpg",
+        desc: "A talking dog, Mr. Peabody, embarks on a life dedicated to science, technology and athletics after being rejected by a potential owner. He adopts a son, Sherman.",
+        genre: "Family, Comedy, Animation, Adventure",
     });
 });
 
