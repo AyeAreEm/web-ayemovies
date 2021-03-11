@@ -521,7 +521,7 @@ app.get('/Spider-Man-Into-the-Spider-Verse', (req, res) => {
 app.get('/Big-Hero-6', (req, res) => {
     res.render('dynamic', {
         title: "Big Hero 6",
-        src: "https://player.voxzer.org/view/a6b7672b04f685516c54f5e0",
+        src: "https://vidnext.net/streaming.php?id=ODQ4OQ",
         img: "https://img.vxdn.net/cover/1440/big-hero-6-2043.jpg",
         desc: "Hiro, a robotics prodigy, joins hands with Baymax in order to avenge his brother's death. They then team up with Hiro's friends to form a team of high-tech heroes.",
         genre: "Animation, Action, Adventure, Comedy, Family",
