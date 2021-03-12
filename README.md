@@ -14,6 +14,8 @@
     - X-Men
     - WandaVision
 
+## DC
+
 ## Netflix Originals
     - Stranger Things
     - Lucifer
@@ -28,10 +30,3 @@
 
 ## ToDo
     - Report a bug system
-    - Analytic System
-
-## Analytics
-    - Add an eventListener to check when the website is loaded
-    - Once it is loaded, sent a post request to the backend with certain parameters (e.g. the time)
-    - On the backend, send the data received and store it in a database
-    - Then write a function that checks for the number of entries entered into the database today.
