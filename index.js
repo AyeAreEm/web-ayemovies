@@ -18,12 +18,15 @@ const marvel = [
     {title: "Black Panther", link: "/Black-Panther", image: "https://img.vxdn.net/poster/200/black-panther-23800.jpg"},
     {title: "Captain Marvel", link: "/Captain-Marvel", image: "https://img.vxdn.net/poster/200/captain-marvel-28165.jpg"},
     {title: "Deadpool", link: "/Deadpool", image: "https://img.vxdn.net/poster/200/deadpool-9802.jpg"}, {title: "Deadpool 2", link: "/Deadpool2", image: "https://img.vxdn.net/poster/200/deadpool-2-24922.jpg"},
+    {title: "Spider-Man", link: "/Spider-Man", image: "https://img.vxdn.net/poster/200/spider-man-3337.jpg"}, {title: "Spider-Man 2", link: "/Spider-Man2", image: "https://img.vxdn.net/poster/200/spider-man-2-3338.jpg"}, {title: "Spider-Man 3", link: "/Spider-Man3", image: "https://img.vxdn.net/poster/200/spider-man-3-3339.jpg"},
+    {title: "The Amazing Spider-Man", link: "The-Amazing-Spider-Man", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-1753.jpg"}, {title: "The Amazing Spider-Man 2", link: "/The-Amazing-Spider-Man2", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-2-1754.jpg"}
 ]
 
 const netflix = [
     {title: "The Witcher", link: "/The-Witcher", image: "https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg"},
     {title: "Sex Educatioe", link: "/Sex-Education", image: "https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg"},
-    {title: "Bird Box", link: "/Bird-Box", image: "https://img.vxdn.net/poster/200/bird-box-27241.jpg"},
+    {title: "Bird Box", link: "/Bird-Box", image: "https://img.vxdn.net/poster/200/bird-box-27241.jpg"},,
+    {title: "The Queen's Gambit", link: "/Queens-Gambit", image: "https://images.123movieshub.tc/2020/10/qIITtEn253x1x7UTVb4g288xcxI.jpg"}
 ]
 
 const starWars = [
@@ -40,7 +43,10 @@ const animation = [
     {title: "Rick And Morty", link: "/Rick-And-Morty", image: "https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg"},
     {title: "Rio", link: "/Rio", image: "https://img.vxdn.net/poster/200/rio-2057.jpg"},
     {title: "Rio", link: "/Rio2", image: "https://img.vxdn.net/poster/200/rio-2-2060.jpg"},
-    {title: "Mr. Peabody & Sherman", link: "/Mr-Peabody-And-Sherman", image: "https://img.vxdn.net/poster/200/mr-peabody-sherman-1960.jpg"}
+    {title: "Mr. Peabody & Sherman", link: "/Mr-Peabody-And-Sherman", image: "https://img.vxdn.net/poster/200/mr-peabody-sherman-1960.jpg"},
+    {title: "Despicable Me", link: "Despicable-Me", image: "https://img.vxdn.net/poster/200/despicable-me-4327.jpg"},
+    {title: "Despicable Me 2", link: "Despicable-Me2", image: "https://img.vxdn.net/poster/200/despicable-me-2-4328.jpg"},
+    {title: "Despicable Me 3", link: "Despicable-Me3", image: "https://img.vxdn.net/poster/200/despicable-me-3-21195.jpg"}
 ]
 
 app.get('/', (req, res) => {
@@ -303,6 +309,56 @@ app.get('/Deadpool2', (req, res) => {
     });
 });
 
+app.get('/Spider-Man', (req, res) => {
+    res.render('dynamic', {
+        title: "Spider-Man",
+        src: "https://player.voxzer.org/view/8467662b04f68550ac5365e0",
+        img: "https://img.vxdn.net/cover/1440/spider-man-3337.jpg",
+        desc: "Peter Parker's life changes when he is bitten by a genetically altered spider and gains superpowers. He uses his powers to help people and finds himself facing the Green Goblin, an evil maniac.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Spider-Man2', (req, res) => {
+    res.render('dynamic', {
+        title: "Spider-Man 2",
+        src: "https://vidcloud9.com/streaming.php?id=NzM5MQ",
+        img: "https://img.vxdn.net/cover/1440/spider-man-2-3338.jpg",
+        desc: "Peter Parker is dissatisfied with life when he loses his job, the love of his life, Mary Jane, and his powers. Amid all the chaos, he must fight Doctor Octavius who threatens to destroy New York City.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Spider-Man3', (req, res) => {
+    res.render('dynamic', {
+        title: "Spider-Man 3",
+        src: "https://player.voxzer.org/view/1ea7612b04f685524c4bd5e0",
+        img: "https://img.vxdn.net/cover/1440/spider-man-3-3339.jpg",
+        desc: "Peter Parker becomes one with a symbiotic alien that bolsters his Spider-Man avatar and affects his psyche. He also has to deal with Sandman and maintain a fragmented relationship with Mary Jane.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/The-Amazing-Spider-Man', (req, res) => {
+    res.render('dynamic', {
+        title: "The Amazing Spider-Man",
+        src: "https://player.voxzer.org/view/28b7662b04f68551ec52e5e0",
+        img: "https://img.vxdn.net/cover/1440/the-amazing-spider-man-1753.jpg",
+        desc: "Peter Parker, an outcast high school student, gets bitten by a radioactive spider and attains superpowers. Soon, he is forced to use his abilities to fight a monstrous foe.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/The-Amazing-Spider-Man2', (req, res) => {
+    res.render('dynamic', {
+        title: "The Amazing Spider-Man 2",
+        src: "https://vidcloud9.com/streaming.php?id=ODc1MA",
+        img: "https://img.vxdn.net/cover/1440/the-amazing-spider-man-2-1754.jpg",
+        desc: "Spider-Man embarks on a mission to protect his loved ones when OsCorp, owned by his childhood friend Harry Osborn, unleashes a slew of genetically-modified villains against him",
+        genre: "Action, Sci-Fi"
+    });
+});
+
 // Netflix Origins
 app.get('/The-Witcher', (req, res) => {
     res.render('shows', {
@@ -343,6 +399,16 @@ app.get('/Bird-Box', (req, res) => {
         img: "https://img.vxdn.net/cover/1440/bird-box-27241.jpg",
         desc: "When a mysterious force decimates the population, only one thing is certain -- if you see it, you die. The survivors must now avoid coming face to face with an entity that takes the form of their worst fears. Searching for hope and a new beginning, a woman and her children embark on a dangerous journey through the woods and down a river to find the one place that may offer sanctuary. To make it, they'll have to cover their eyes from the evil that chases them -- and complete the trip blindfolded.",
         genre: "Horror"
+    });
+});
+
+app.get('/Queens-Gambit', (req, res) => {
+    res.render('shows', {
+        title: "The Queen's Gambit",
+        img: "https://images.123movieshub.tc/2020/10/5N5dSOrysuquExvn8Gpp5jMEf6u.jpg",
+        desc: "The Queen's Gambit is a 2020 American coming-of-age period drama miniseries based on Walter Tevis's 1983 novel of the same name. The title refers to 'Queen's Gambit', a chess opening. It was written and directed by Scott Frank, who created it with Allan Scott.",
+        genre: "Drama",
+        eps: ["https://firesonic.sc/streaming.php?id=MzMwNzk4", "https://firesonic.sc/streaming.php?id=MzMwNzk5", "https://firesonic.sc/streaming.php?id=MzMwODAw", "https://firesonic.sc/streaming.php?id=MzMwODAx", "https://firesonic.sc/streaming.php?id=MzMwODAy", "https://firesonic.sc/streaming.php?id=MzMwODAz6", "https://firesonic.sc/streaming.php?id=MzMwODA0"],
     });
 });
 
@@ -639,6 +705,36 @@ app.get('/Mr-Peabody-And-Sherman', (req, res) => {
         img: "https://img.vxdn.net/cover/1440/mr-peabody-sherman-1960.jpg",
         desc: "A talking dog, Mr. Peabody, embarks on a life dedicated to science, technology and athletics after being rejected by a potential owner. He adopts a son, Sherman.",
         genre: "Family, Comedy, Animation, Adventure",
+    });
+});
+
+app.get('/Despicable-Me', (req, res) => {
+    res.render('dynamic', {
+        title: "Despicable Me",
+        src: "https://player.voxzer.org/view/c260710d0714b6fe1add35e0",
+        img: "https://img.vxdn.net/cover/1440/despicable-me-4327.jpg",
+        desc: "Gru, a criminal mastermind, adopts three orphans as pawns to carry out the biggest heist in history. His life takes an unexpected turn when the little girls see him as their potential father.",
+        genre: "Family, Comedy, Animation",
+    });
+});
+
+app.get('/Despicable-Me2', (req, res) => {
+    res.render('dynamic', {
+        title: "Despicable Me 2",
+        src: "https://vidcloud9.com/streaming.php?id=NjY5Mg",
+        img: "https://img.vxdn.net/cover/1440/despicable-me-2-4328.jpg",
+        desc: "When a new criminal comes to town, the Anti-Villain League decides to hire Gru in order to fight him off. While Gru initially refuses, he eventually agrees after his aide goes back to his evil ways.",
+        genre: "Family, Comedy, Animation",
+    });
+});
+
+app.get('/Despicable-Me3', (req, res) => {
+    res.render('dynamic', {
+        title: "Despicable Me 3",
+        src: "https://player.voxzer.org/view/7d97672b04f68558dc54b5e0",
+        img: "https://img.vxdn.net/cover/1440/despicable-me-3-21195.jpg",
+        desc: "Gru meets his long-lost twin brother Dru, after getting fired from the Anti-Villain League. However, the siblings find themselves at loggerheads with a child actor-turned-villain.",
+        genre: "Family, Comedy, Animation",
     });
 });
 

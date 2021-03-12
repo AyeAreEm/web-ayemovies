@@ -7,19 +7,15 @@
 
 # Movies and Tv Shows that I plan to add
 ## Animated
-    - Despicable Me (next)
     - Avatar
     - Legend of Korra
 
 ## Marvel
     - X-Men
-    - Tobey Spider-Man
-    - The Amazing Spider-Man
     - WandaVision
 
 ## Netflix Originals
     - Stranger Things
-    - The Queen's Gambit (next)
     - Lucifer
     - You
     - Apostle (maybe)
@@ -27,6 +23,8 @@
     - Outer Banks
 
 ## Fast and Furious
+
+## Harry Potter
 
 ## ToDo
     - Report a bug system
