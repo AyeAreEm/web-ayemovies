@@ -22,6 +22,18 @@ const marvel = [
     {title: "The Amazing Spider-Man", link: "The-Amazing-Spider-Man", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-1753.jpg"}, {title: "The Amazing Spider-Man 2", link: "The-Amazing-Spider-Man2", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-2-1754.jpg"}
 ]
 
+const dc = [
+    {title: "Man of Steel", link: "Man-Of-Steel", image: "https://img.vxdn.net/poster/200/man-of-steel-2164.jpg"},
+    {title: "Batman v Superman: Dawn of Justice", link: "Batman-V-Superman", image: "https://img.vxdn.net/poster/200/batman-v-superman-dawn-of-justice-11024.jpg"},
+    {title: "Suicide Squad", link: "Suicide-Squad", image: "https://img.vxdn.net/poster/200/suicide-squad--15185.jpg"},
+    {title: "Wonder Woman", link: "Wonder-Woman", image: "https://img.vxdn.net/poster/200/wonder-woman-20963.jpg"},
+    {title: "Wonder Woman 1984", link: "Wonder-Woman-1984", image: "https://img.vxdn.net/poster/200/wonder-woman-1984-101915.jpg"},
+    {title: "Justice League", link: "Justice-League", image: "https://img.vxdn.net/poster/200/justice-league-22756.jpg"},
+    {title: "Aquaman", link: "Aquaman", image: "https://img.vxdn.net/poster/200/aquaman-27124.jpg"},
+    {title: "Shazam!", link: "Shazam!", image: "https://img.vxdn.net/poster/200/shazam-28369.jpg"},
+    {title: "Harley Quinn: Birds of Prey", link: "Birds-Of-Prey", image: "https://img.vxdn.net/poster/200/birds-of-prey-100453.jpg"}
+]
+
 const netflix = [
     {title: "The Witcher", link: "The-Witcher", image: "https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg"},
     {title: "Sex Educatioe", link: "Sex-Education", image: "https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg"},
@@ -49,6 +61,7 @@ const animation = [
 app.get('/', (req, res) => {
     res.render('index', {
         marvel: marvel,
+        dc: dc,
         netflix: netflix,
         starWars: starWars,
         animation: animation
@@ -353,6 +366,97 @@ app.get('/The-Amazing-Spider-Man2', (req, res) => {
         img: "https://img.vxdn.net/cover/1440/the-amazing-spider-man-2-1754.jpg",
         desc: "Spider-Man embarks on a mission to protect his loved ones when OsCorp, owned by his childhood friend Harry Osborn, unleashes a slew of genetically-modified villains against him",
         genre: "Action, Sci-Fi"
+    });
+});
+
+// DC
+app.get('/Man-Of-Steel', (req, res) => {
+    res.render('dynamic', {
+        title: "Man of Steel",
+        src: "https://player.voxzer.org/view/c8506d0d0714b6f66ac1c5e0",
+        img: "https://img.vxdn.net/cover/1440/man-of-steel-2164.jpg",
+        desc: "Clark learns about the source of his abilities and his real home when he enters a Kryptonian ship in the Artic. However, an old enemy follows him to Earth in search of a codex and brings destruction.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Batman-V-Superman', (req, res) => {
+    res.render('dynamic', {
+        title: "Batman v Superman: Dawn of Justice",
+        src: "https://vidcloud9.com/streaming.php?id=MTM0OA",
+        img: "https://img.vxdn.net/cover/1440/batman-v-superman-dawn-of-justice-11024.jpg",
+        desc: "Bruce Wayne, a billionaire, believes that Superman is a threat to humanity after his battle in Metropolis. Thus, he decides to adopt his mantle of Batman and defeat him once and for all.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Suicide-Squad', (req, res) => {
+    res.render('dynamic', {
+        title: "Suicide Squad",
+        src: "https://player.voxzer.org/view/e027652b04f6855ddc5275e0",
+        img: "https://img.vxdn.net/cover/1440/suicide-squad--15185.jpg",
+        desc: "Amanda Waller assembles a team of imprisoned supervillains to execute dangerous black ops missions. When an ancient witch threatens to destroy mankind the squad is sent to stop her.",
+        genre: "Action, Sci-Fi"
+    });
+});
+
+app.get('/Wonder-Woman', (req, res) => {
+    res.render('dynamic', {
+        title: "Wonder Woman",
+        src: "https://player.voxzer.org/view/5da7672b04f6855bec5485e0",
+        img: "https://img.vxdn.net/cover/1440/wonder-woman-20963.jpg",
+        desc: "Princess Diana of an all-female Amazonian race rescues US pilot Steve. Upon learning of a war, she ventures into the world of men to stop Ares, the god of war, from destroying mankind.",
+        genre: "Action, Fantasy"
+    });
+});
+
+app.get('/Wonder-Woman-1984', (req, res) => {
+    res.render('dynamic', {
+        title: "Wonder Woman 1984",
+        src: "https://player.voxzer.org/view/85be4b3e1593fac3236f25fe",
+        img: "https://img.vxdn.net/cover/1440/wonder-woman-1984-101915.jpg",
+        desc: "Diana Prince lives quietly among mortals in the vibrant, sleek 1980s -- an era of excess driven by the pursuit of having it all. Though she's come into her full powers, she maintains a low profile by curating ancient artifacts, and only performing heroic acts incognito. But soon, Diana will have to muster all of her strength, wisdom and courage as she finds herself squaring off against Maxwell Lord and the Cheetah, a villainess who possesses superhuman strength and agility.",
+        genre: "Action, Fantasy"
+    });
+});
+
+app.get('/Justice-League', (req, res) => {
+    res.render('dynamic', {
+        title: "Justice League",
+        src: "https://vidnext.net/streaming.php?id=MTMwNjkw",
+        img: "https://img.vxdn.net/cover/1440/justice-league-22756.jpg",
+        desc: "Steppenwolf and his Parademons return after eons to capture Earth. However, Batman seeks the help of Wonder Woman to recruit and assemble Flash, Cyborg and Aquaman to fight the powerful new enemy.",
+        genre: "Action, Adventure"
+    });
+});
+
+app.get('/Aquaman', (req, res) => {
+    res.render('dynamic', {
+        title: "Aquaman",
+        src: "https://vidnext.net/streaming.php?id=MjMwNTM3",
+        img: "https://img.vxdn.net/cover/1440/aquaman-27124.jpg",
+        desc: "Half-human, half-Atlantean Arthur is born with the ability to communicate with marine creatures. He goes on a quest to retrieve the legendary Trident of Atlan and protect the water world.",
+        genre: "Action, Adventure"
+    });
+});
+
+app.get('/Shazam!', (req, res) => {
+    res.render('dynamic', {
+        title: "Shazam!",
+        src: "https://player.voxzer.org/view/0607652b04f6855e0c5145e0",
+        img: "https://img.vxdn.net/cover/1440/shazam-28369.jpg",
+        desc: "After being abandoned at a fair, Billy constantly searches for his mother. His life, however, takes a huge turn when he inherits the superpowers of a powerful wizard.",
+        genre: "Action, Comedy"
+    });
+});
+
+app.get('/Birds-Of-Prey', (req, res) => {
+    res.render('dynamic', {
+        title: "Birds of Prey",
+        src: "https://player.voxzer.org/view/747f97023ea48b6ab775a5e7",
+        img: "https://img.vxdn.net/cover/1440/birds-of-prey-100453.jpg",
+        desc: "After being thrown out in the streets by Joker, Harley struggles to pick herself up. However, Harley teams up with Huntress, Black Canary and Renee Montoya to defeat a gangster and protect a girl.",
+        genre: "Action, Comedy"
     });
 });
 

@@ -46,6 +46,13 @@
         <%})%>
     </div>
 
+    <div id="DC" class="category" style="margin-top: 85px;">
+        <h1>DC</h1>
+        <% dc.forEach(item => { %>
+            <a href="<%= item.link%>"><img src="<%= item.image %>" alt="<%= item.title %>"></a>
+        <%})%>
+    </div>
+
     <div id="Netflix-Originals" class="category">
         <h1>Netflix Originals</h1>
         <% netflix.forEach(item => { %>

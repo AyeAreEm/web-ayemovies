@@ -15,6 +15,11 @@
     - WandaVision
 
 ## DC
+    - Joker
+    - The Dark Night
+    - Green Lantern
+    - Superman
+    - Watchmen
 
 ## Netflix Originals
     - Stranger Things
