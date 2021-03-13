@@ -1,6 +1,4 @@
 const express = require('express');
-const moment = require('moment');
-
 const app = express();
 
 app.set('views', './views');
@@ -48,36 +46,13 @@ const animation = [
     {title: "Despicable Me", link: "Despicable-Me", image: "https://img.vxdn.net/poster/200/despicable-me-4327.jpg"}, {title: "Despicable Me 2", link: "Despicable-Me2", image: "https://img.vxdn.net/poster/200/despicable-me-2-4328.jpg"}, {title: "Despicable Me 3", link: "Despicable-Me3", image: "https://img.vxdn.net/poster/200/despicable-me-3-21195.jpg"}
 ]
 
-let users = 0;
-
-function timeToMidnight() {
-    let now = new Date();
-    let end = moment().endOf("day");
-
-    return end - now + 1000;
-}
-
-function roundMidnight() {
-    users = 0;
-    setTimeout(roundMidnight, timeToMidnight());
-}
-
-setTimeout(roundMidnight, timeToMidnight());
-
 app.get('/', (req, res) => {
-    users += 1;
-
     res.render('index', {
         marvel: marvel,
         netflix: netflix,
         starWars: starWars,
         animation: animation
     });
-});
-
-// stats for number of users in a day
-app.get('/stats', (req, res) => {
-    res.render('stats', {users: users});
 });
 
 // MCU Movies
