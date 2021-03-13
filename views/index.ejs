@@ -11,7 +11,7 @@
     <title>AyeMovies</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="AyeAreEm.png" />
-    <script defer src="script.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -25,19 +25,19 @@
         <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
         <datalist id="moviesList">
             <% marvel.forEach(item => {%>
-                <option value="<%= item.link %>"><%= item.title %></option>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
             <% dc.forEach(item => {%>
-                <option value="<%= item.link %>"><%= item.title %></option>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
             <% netflix.forEach(item => {%>
-                <option value="<%= item.link %>"><%= item.title %></option>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
             <% starWars.forEach(item => {%>
-                <option value="<%= item.link %>"><%= item.title %></option>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
             <% animation.forEach(item => {%>
-                <option value="<%= item.link %>"><%= item.title %></option>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
         </datalist>
     </div>
