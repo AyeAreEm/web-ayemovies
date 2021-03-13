@@ -32,7 +32,7 @@ const dc = [
     {title: "Aquaman", link: "Aquaman", image: "https://img.vxdn.net/poster/200/aquaman-27124.jpg"},
     {title: "Shazam!", link: "Shazam!", image: "https://img.vxdn.net/poster/200/shazam-28369.jpg"},
     {title: "Harley Quinn: Birds of Prey", link: "Birds-Of-Prey", image: "https://img.vxdn.net/poster/200/birds-of-prey-100453.jpg"},
-    {title: "Joker", link: "/Joker", image: "https://img.vxdn.net/poster/200/Joker-2019-29553.jpg"}
+    {title: "Joker", link: "Joker", image: "https://img.vxdn.net/poster/200/Joker-2019-29553.jpg"}
 ]
 
 const netflix = [
