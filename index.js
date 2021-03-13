@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression');
 const netflixRoute = require('./routes/netflix');
 const marvelRoute = require('./routes/marvel');
 const dcRoute = require('./routes/dc')
@@ -6,6 +7,8 @@ const starWarsRoute = require('./routes/starWars')
 const animatedRoute = require('./routes/animated')
 
 const app = express();
+
+app.use(compression());
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
