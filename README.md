@@ -15,14 +15,13 @@
     - WandaVision
 
 ## DC
-    - Joker
     - The Dark Night
     - Green Lantern
     - Superman
     - Watchmen
 
 ## Netflix Originals
-    - Stranger Things
+    - Stranger Things (next)
     - Lucifer
     - You
     - Apostle (maybe)

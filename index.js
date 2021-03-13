@@ -31,7 +31,8 @@ const dc = [
     {title: "Justice League", link: "Justice-League", image: "https://img.vxdn.net/poster/200/justice-league-22756.jpg"},
     {title: "Aquaman", link: "Aquaman", image: "https://img.vxdn.net/poster/200/aquaman-27124.jpg"},
     {title: "Shazam!", link: "Shazam!", image: "https://img.vxdn.net/poster/200/shazam-28369.jpg"},
-    {title: "Harley Quinn: Birds of Prey", link: "Birds-Of-Prey", image: "https://img.vxdn.net/poster/200/birds-of-prey-100453.jpg"}
+    {title: "Harley Quinn: Birds of Prey", link: "Birds-Of-Prey", image: "https://img.vxdn.net/poster/200/birds-of-prey-100453.jpg"},
+    {title: "Joker", link: "/Joker", image: "https://img.vxdn.net/poster/200/Joker-2019-29553.jpg"}
 ]
 
 const netflix = [
@@ -457,6 +458,16 @@ app.get('/Birds-Of-Prey', (req, res) => {
         img: "https://img.vxdn.net/cover/1440/birds-of-prey-100453.jpg",
         desc: "After being thrown out in the streets by Joker, Harley struggles to pick herself up. However, Harley teams up with Huntress, Black Canary and Renee Montoya to defeat a gangster and protect a girl.",
         genre: "Action, Comedy"
+    });
+});
+
+app.get('/Joker', (req, res) => {
+    res.render('dynamic', {
+        title: "Joker",
+        src: "https://player.voxzer.org/view/3b406a0d0714b6feaaba25e0",
+        img: "https://img.vxdn.net/cover/1440/Joker-2019-29553.jpg",
+        desc: "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.",
+        genre: "Crime, Drama"
     });
 });
 
