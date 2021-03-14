@@ -3,9 +3,10 @@ let router = express.Router();
 
 const netflix = [
     {title: "The Witcher", link: "Netflix/The-Witcher", image: "https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg"},
-    {title: "Sex Educatioe", link: "Netflix/Sex-Education", image: "https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg"},
+    {title: "Sex Education", link: "Netflix/Sex-Education", image: "https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg"},
     {title: "Bird Box", link: "Netflix/Bird-Box", image: "https://img.vxdn.net/poster/200/bird-box-27241.jpg"},,
-    {title: "The Queen's Gambit", link: "Netflix/Queens-Gambit", image: "https://images.123movieshub.tc/2020/10/qIITtEn253x1x7UTVb4g288xcxI.jpg"}
+    {title: "The Queen's Gambit", link: "Netflix/Queens-Gambit", image: "https://images.123movieshub.tc/2020/10/qIITtEn253x1x7UTVb4g288xcxI.jpg"},
+    {title: "Stranger Things", link: "Netflix/Stranger-Things", image: "https://img.vxdn.net/poster/200/stranger-things-season-1-14070.jpg"}
 ]
 
 router.get('/The-Witcher', (req, res) => {
@@ -25,7 +26,7 @@ router.get('/Sex-Education', (req, res) => {
         desc: "Socially awkward high school student Otis may not have much experience in the lovemaking department, but he gets good guidance on the topic in his personal sex ed course -- living with mom Jean, who is a sex therapist. Being surrounded by manuals, videos and tediously open conversations about sex, Otis has become a reluctant expert on the subject. When his classmates learn about his home life, Otis decides to use his insider knowledge to improve his status at school, so he teams with whip-smart bad girl Maeve to set up an underground sex therapy clinic to deal with their classmates' problems. But through his analysis of teenage sexuality, Otis realizes that he may need some therapy of his own.",
         genre: "Drama",
         eps: ["https://player.voxzer.org/view/73e06f0d0714b6f10ac625e0", "https://player.voxzer.org/view/1850710d0714b6fc6adba5e0", "https://vidcloud9.com/streaming.php?id=MjM0ODYx", "https://vidcloud9.com/streaming.php?id=MjM0ODYy", "https://vidcloud9.com/streaming.php?id=MjM0ODYz", "https://vidcloud9.com/streaming.php?id=MjM0ODY0", "https://vidcloud9.com/streaming.php?id=MjM0ODY1", "https://vidcloud9.com/streaming.php?id=MjM0ODY2"],
-        seasons: ["/Sex-Education", "/Sex-Education2"]
+        seasons: ["/Netflix/Sex-Education", "/Netflix/Sex-Education2"]
     });
 });
 
@@ -57,6 +58,39 @@ router.get('/Queens-Gambit', (req, res) => {
         desc: "The Queen's Gambit is a 2020 American coming-of-age period drama miniseries based on Walter Tevis's 1983 novel of the same name. The title refers to 'Queen's Gambit', a chess opening. It was written and directed by Scott Frank, who created it with Allan Scott.",
         genre: "Drama",
         eps: ["https://firesonic.sc/streaming.php?id=MzMwNzk4", "https://firesonic.sc/streaming.php?id=MzMwNzk5", "https://firesonic.sc/streaming.php?id=MzMwODAw", "https://firesonic.sc/streaming.php?id=MzMwODAx", "https://firesonic.sc/streaming.php?id=MzMwODAy", "https://firesonic.sc/streaming.php?id=MzMwODAz6", "https://firesonic.sc/streaming.php?id=MzMwODA0"],
+    });
+});
+
+router.get('/Stranger-Things', (req, res) => {
+    res.render('shows', {
+        title: "Stranger Things",
+        img: "https://img.vxdn.net/cover/1440/stranger-things-season-1-14070.jpg",
+        desc: "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+        genre: "Supernatural, Drama, Horror Fiction",
+        eps: ["https://player.voxzer.org/view/9da37ad68d354fec1714f5e1", "https://vidcloud9.com/streaming.php?id=NzYxOTU", "https://vidcloud9.com/streaming.php?id=NzYxOTY", "https://vidcloud9.com/streaming.php?id=NzYxOTc", "https://vidcloud9.com/streaming.php?id=NzYxOTg", "https://vidcloud9.com/streaming.php?id=NzYxOTk", "https://vidcloud9.com/streaming.php?id=NzYyMDA", "https://vidcloud9.com/streaming.php?id=NzYyMDE"],
+        seasons: ["/Netflix/Stranger-Things", "/Netflix/Stranger-Things2", "/Netflix/Stranger-Things3"]
+    });
+});
+
+router.get('/Stranger-Things2', (req, res) => {
+    res.render('shows', {
+        title: "Stranger Things S2",
+        img: "https://img.vxdn.net/cover/1440/stranger-things-season-2-22384.jpg",
+        desc: "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+        genre: "Supernatural, Drama, Horror Fiction",
+        eps: ["https://vidcloud9.com/streaming.php?id=MTIyNzM4", "https://vidcloud9.com/streaming.php?id=MTIyNzM5", "https://vidcloud9.com/streaming.php?id=MTIyNzQw", "https://vidcloud9.com/streaming.php?id=MTIyNzQx", "https://vidcloud9.com/streaming.php?id=MTIyNzQy", "https://vidcloud9.com/streaming.php?id=MTIyNzQz", "https://vidcloud9.com/streaming.php?id=MTIyNzQ0", "https://vidcloud9.com/streaming.php?id=MTIyNzQ1", "https://vidcloud9.com/streaming.php?id=MTIyNzQ2"],
+        seasons: ["/Netflix/Stranger-Things", "/Netflix/Stranger-Things2", "/Netflix/Stranger-Things3"]
+    });
+});
+
+router.get('/Stranger-Things3', (req, res) => {
+    res.render('shows', {
+        title: "Stranger Things S3",
+        img: "https://img.vxdn.net/cover/1440/stranger-things-3-28926.jpg",
+        desc: "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+        genre: "Supernatural, Drama, Horror Fiction",
+        eps: ["https://player.voxzer.org/view/2777612b04f6855e9c4bd5e0", "https://player.voxzer.org/view/93806c0d0714b6f21abef5e0", "https://player.voxzer.org/view/9e27652b04f68551dc5225e0", "https://player.voxzer.org/view/2407632b04f6855ccc4ea5e0", "https://player.voxzer.org/view/4cc7672b04f685549c5475e0", "https://player.voxzer.org/view/a3f7602b04f685505c4b25e0", "https://player.voxzer.org/view/1fa06b0d0714b6fedabb85e0", "https://vidnext.net/streaming.php?id=MjY5Njgy"],
+        seasons: ["/Netflix/Stranger-Things", "/Netflix/Stranger-Things2", "/Netflix/Stranger-Things3"]
     });
 });
 

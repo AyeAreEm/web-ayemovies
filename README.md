@@ -21,7 +21,6 @@
     - Watchmen
 
 ## Netflix Originals
-    - Stranger Things (next)
     - Lucifer
     - You
     - Apostle (maybe)
