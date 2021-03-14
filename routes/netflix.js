@@ -1,6 +1,13 @@
 const express = require('express');
 let router = express.Router();
 
+const netflix = [
+    {title: "The Witcher", link: "Netflix/The-Witcher", image: "https://img.vxdn.net/poster/200/The-Witcher-1-100248.jpg"},
+    {title: "Sex Educatioe", link: "Netflix/Sex-Education", image: "https://img.vxdn.net/poster/200/sex-education-season-1-27675.jpg"},
+    {title: "Bird Box", link: "Netflix/Bird-Box", image: "https://img.vxdn.net/poster/200/bird-box-27241.jpg"},,
+    {title: "The Queen's Gambit", link: "Netflix/Queens-Gambit", image: "https://images.123movieshub.tc/2020/10/qIITtEn253x1x7UTVb4g288xcxI.jpg"}
+]
+
 router.get('/The-Witcher', (req, res) => {
     res.render('shows', {
         title: "The Witcher",
@@ -53,4 +60,4 @@ router.get('/Queens-Gambit', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = {router: router, netflix: netflix};

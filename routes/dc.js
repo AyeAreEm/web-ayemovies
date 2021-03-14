@@ -1,6 +1,18 @@
 const express = require('express');
 let router = express.Router();
 
+const dc = [
+    {title: "Man of Steel", link: "DC/Man-Of-Steel", image: "https://img.vxdn.net/poster/200/man-of-steel-2164.jpg"},
+    {title: "Batman v Superman: Dawn of Justice", link: "DC/Batman-V-Superman", image: "https://img.vxdn.net/poster/200/batman-v-superman-dawn-of-justice-11024.jpg"},
+    {title: "Suicide Squad", link: "DC/Suicide-Squad", image: "https://img.vxdn.net/poster/200/suicide-squad--15185.jpg"},
+    {title: "Wonder Woman", link: "DC/Wonder-Woman", image: "https://img.vxdn.net/poster/200/wonder-woman-20963.jpg"}, {title: "Wonder Woman 1984", link: "DC/Wonder-Woman-1984", image: "https://img.vxdn.net/poster/200/wonder-woman-1984-101915.jpg"},
+    {title: "Justice League", link: "DC/Justice-League", image: "https://img.vxdn.net/poster/200/justice-league-22756.jpg"},
+    {title: "Aquaman", link: "DC/Aquaman", image: "https://img.vxdn.net/poster/200/aquaman-27124.jpg"},
+    {title: "Shazam!", link: "DC/Shazam!", image: "https://img.vxdn.net/poster/200/shazam-28369.jpg"},
+    {title: "Harley Quinn: Birds of Prey", link: "DC/Birds-Of-Prey", image: "https://img.vxdn.net/poster/200/birds-of-prey-100453.jpg"},
+    {title: "Joker", link: "DC/Joker", image: "https://img.vxdn.net/poster/200/Joker-2019-29553.jpg"}
+]
+
 router.get('/Man-Of-Steel', (req, res) => {
     res.render('dynamic', {
         title: "Man of Steel",
@@ -101,4 +113,4 @@ router.get('/Joker', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = {router: router, dc: dc};

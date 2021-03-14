@@ -1,6 +1,19 @@
 const express = require('express');
 let router = express.Router();
 
+const animation = [
+    {title: "Kung Fu Panda", link: "Animated/Kung-Fu-Panda", image: "https://img.vxdn.net/poster/200/kung-fu-panda-2420.jpg"}, {title: "Kung Fu Panda 2", link: "Animated/Kung-Fu-Panda2", image: "https://img.vxdn.net/poster/200/kung-fu-panda-2-2248.jpg"}, {title: "Kung Fu Panda 3", link: "Animated/Kung-Fu-Panda3", image: "https://img.vxdn.net/poster/200/kung-fu-panda-3-9053.jpg"},
+    {title: "Shrek", link: "Animated/Shrek", image: "https://img.vxdn.net/poster/200/shrek-4608.jpg"}, {title: "Shrek 2", link: "Animated/Shrek2", image: "https://img.vxdn.net/poster/200/shrek-2-4609.jpg"}, {title: "Shrek the Third", link: "Animated/Shrek3", image: "https://img.vxdn.net/poster/200/shrek-the-third-4610.jpg"}, {title: "Shrek Forever After", link: "Animated/Shrek4", image: "https://img.vxdn.net/poster/200/shrek-forever-after-4611.jpg"},
+    {title: "Spider-Man: Into the Spider-Verse", link: "Animated/Spider-Man-Into-the-Spider-Verse", image: "https://img.vxdn.net/poster/200/spider-man-into-the-spider-verse-27208.jpg"},
+    {title: "Big Hero 6", link: "Animated/Big-Hero-6", image: "https://img.vxdn.net/poster/200/big-hero-6-2043.jpg"},
+    {title: "How To Train Your Dragon", link: "Animated/How-To-Train-Your-Dragon", image: "https://img.moviesjoy.to/resize/188x288/ec/35/ec359f4bfd201710f78d41d381c9eeda/ec359f4bfd201710f78d41d381c9eeda.jpg"}, {title: "How To Train Your Dragon 2", link: "Animated/How-To-Train-Your-Dragon2", image: "https://img.moviesjoy.to/resize/188x288/72/3a/723adc6446687ea09ff1ae657c64ce0b/723adc6446687ea09ff1ae657c64ce0b.jpg"}, {title: "How To Train Your Dragon: The Hidden World", link: "Animated/How-To-Train-Your-Dragon3", image: "https://img.vxdn.net/poster/200/how-to-train-your-dragon-the-hidden-world-27688.jpg"},
+    {title: "Megamind", link: "Animated/Megamind", image: "https://img.vxdn.net/poster/200/megamind-2469.jpg"},
+    {title: "Rick And Morty", link: "Animated/Rick-And-Morty", image: "https://img.vxdn.net/poster/200/rick-and-morty-season-1-9011.jpg"},
+    {title: "Rio", link: "Animated/Rio", image: "https://img.vxdn.net/poster/200/rio-2057.jpg"}, {title: "Rio", link: "Animated/Rio2", image: "https://img.vxdn.net/poster/200/rio-2-2060.jpg"},
+    {title: "Mr. Peabody & Sherman", link: "Animated/Mr-Peabody-And-Sherman", image: "https://img.vxdn.net/poster/200/mr-peabody-sherman-1960.jpg"},
+    {title: "Despicable Me", link: "Animated/Despicable-Me", image: "https://img.vxdn.net/poster/200/despicable-me-4327.jpg"}, {title: "Despicable Me 2", link: "Animated/Despicable-Me2", image: "https://img.vxdn.net/poster/200/despicable-me-2-4328.jpg"}, {title: "Despicable Me 3", link: "Animated/Despicable-Me3", image: "https://img.vxdn.net/poster/200/despicable-me-3-21195.jpg"}
+]
+
 router.get('/Kung-Fu-Panda', (req, res) => {
     res.render('dynamic', {
         title: "Kung Fu Panda",
@@ -235,4 +248,4 @@ router.get('/Despicable-Me3', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = {router: router, animation: animation};

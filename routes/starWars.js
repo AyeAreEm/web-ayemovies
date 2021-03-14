@@ -1,6 +1,18 @@
 const express = require('express');
 let router = express.Router();
 
+const starWars = [
+    {title: "Star Wars: The Phantom Menace", link: "Star-Wars/The-Phantom-Menace", image: "https://img.vxdn.net/poster/200/star-wars-episode-i-the-phantom-menace-1915.jpg"},
+    {title: "Star Wars: Attack of the Clones", link: "Star-Wars/Attack-Of-The-Clones", image: "https://img.vxdn.net/poster/200/star-wars-episode-ii-attack-of-the-clones-1916.jpg"},
+    {title: "Star Wars: Revenge of the Sith", link: "Star-Wars/Revenge-Of-The-Sith", image: "https://img.vxdn.net/poster/200/star-wars-episode-iii-revenge-of-the-sith-2197.jpg"},
+    {title: "Star Wars: A New Hope", link: "Star-Wars/A-New-Hope", image: "https://img.vxdn.net/poster/200/star-wars-episode-iv-a-new-hope-2229.jpg"},
+    {title: "Star Wars: The Empire Strikes Back", link: "Star-Wars/The-Empire-Strikes-Back", image: "https://img.vxdn.net/poster/200/star-wars-episode-v-the-empire-strikes-back-2233.jpg"},
+    {title: "Star Wars: Return of the Jedi", link: "Star-Wars/Return-Of-The-Jedi", image: "https://img.vxdn.net/poster/200/star-wars-episode-vi-return-of-the-jedi-2238.jpg"},
+    {title: "Star Wars: The Force Awakens", link: "Star-Wars/The-Force-Awakens", image: "https://img.vxdn.net/poster/200/star-wars-the-force-awakens-7292.jpg"},
+    {title: "Star Wars: The Last Jedi", link: "Star-Wars/The-Last-Jedi", image: "https://img.vxdn.net/poster/200/star-wars-the-last-jedi-23033.jpg"},
+    {title: "Star Wars: The Rise of Skywalker", link: "Star-Wars/The-Rise-Of-Skywalker", image: "https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg"},
+]
+
 router.get('/A-New-Hope', (req, res) => {
     res.render('dynamic', {
         title: "Star Wars: A New Hope",
@@ -91,4 +103,4 @@ router.get('/The-Rise-Of-Skywalker', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = {router: router, starWars: starWars};
