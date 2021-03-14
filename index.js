@@ -9,6 +9,7 @@ const animatedRoute = require('./routes/animated')
 const app = express();
 
 app.use(compression());
+app.disable('x-powered-by');
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
