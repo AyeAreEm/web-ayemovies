@@ -12,7 +12,7 @@
 
 ## Marvel
     - X-Men
-    - WandaVision
+    - Loki (next)
 
 ## DC
     - The Dark Night

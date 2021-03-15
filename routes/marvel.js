@@ -15,7 +15,8 @@ const marvel = [
     {title: "Captain Marvel", link: "Marvel/Captain-Marvel", image: "https://img.vxdn.net/poster/200/captain-marvel-28165.jpg"},
     {title: "Deadpool", link: "Marvel/Deadpool", image: "https://img.vxdn.net/poster/200/deadpool-9802.jpg"}, {title: "Deadpool 2", link: "Marvel/Deadpool2", image: "https://img.vxdn.net/poster/200/deadpool-2-24922.jpg"},
     {title: "Spider-Man", link: "Marvel/Spider-Man", image: "https://img.vxdn.net/poster/200/spider-man-3337.jpg"}, {title: "Spider-Man 2", link: "Marvel/Spider-Man2", image: "https://img.vxdn.net/poster/200/spider-man-2-3338.jpg"}, {title: "Spider-Man 3", link: "Marvel/Spider-Man3", image: "https://img.vxdn.net/poster/200/spider-man-3-3339.jpg"},
-    {title: "The Amazing Spider-Man", link: "Marvel/The-Amazing-Spider-Man", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-1753.jpg"}, {title: "The Amazing Spider-Man 2", link: "Marvel/The-Amazing-Spider-Man2", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-2-1754.jpg"}
+    {title: "The Amazing Spider-Man", link: "Marvel/The-Amazing-Spider-Man", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-1753.jpg"}, {title: "The Amazing Spider-Man 2", link: "Marvel/The-Amazing-Spider-Man2", image: "https://img.vxdn.net/poster/200/the-amazing-spider-man-2-1754.jpg"},
+    {title: "WandaVision", link: "Marvel/WandaVision", image: "https://img.vxdn.net/poster/200/WandaVision-1-101990.jpg"}
 ]
 
 router.get('/Iron-Man', (req, res) => {
@@ -315,6 +316,16 @@ router.get('/The-Amazing-Spider-Man2', (req, res) => {
         img: "https://img.vxdn.net/cover/1440/the-amazing-spider-man-2-1754.jpg",
         desc: "Spider-Man embarks on a mission to protect his loved ones when OsCorp, owned by his childhood friend Harry Osborn, unleashes a slew of genetically-modified villains against him",
         genre: "Action, Sci-Fi"
+    });
+});
+
+router.get('/WandaVision', (req, res) => {
+    res.render('shows', {
+        title: "WandaVision",
+        img: "https://img.vxdn.net/cover/1440/WandaVision-1-101990.jpg",
+        desc: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.",
+        genre: "Sitcom",
+        eps: ["https://player.voxzer.org/view/5828bc0dcc3288e5ab3e7600", "https://player.voxzer.org/view/6308bc0dcc3288e24b561601", "https://player.voxzer.org/view/62e8bc0dcc3288e23b561601", "https://player.voxzer.org/view/62c8bc0dcc3288e21b561601", "https://player.voxzer.org/view/783c8f237d18b8b720ea8601", "https://player.voxzer.org/view/7fdc8f237d18b8bee07f0602", "https://vidnext.net/streaming.php?id=MzM3MTg3", "https://player.voxzer.org/view/89bc8f237d18b8ba90ba8603", "https://vidnext.net/streaming.php?id=MzM3NzY1"],
     });
 });
 
