@@ -37,4 +37,3 @@
     - Report a bug system
     - Notification system
     - Analytical system (maybe)
-    - Refactor code into api
