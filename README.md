@@ -9,6 +9,7 @@
 ## Animated
     - Avatar
     - Legend of Korra
+    - Gravity Falls (next)
 
 ## Marvel
     - X-Men
@@ -19,6 +20,7 @@
     - Green Lantern
     - Superman
     - Watchmen
+    - Zack Snyder's Justice League
 
 ## Netflix Originals
     - Lucifer
@@ -27,9 +29,12 @@
     - The Umbrella Academy (maybe)
     - Outer Banks
 
-## Fast and Furious
+## Fast and Furious (next)
 
 ## Harry Potter
 
 ## ToDo
     - Report a bug system
+    - Notification system
+    - Analytical system (maybe)
+    - Refactor code into api

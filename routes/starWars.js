@@ -2,104 +2,140 @@ const express = require('express');
 let router = express.Router();
 
 const starWars = [
-    {title: "Star Wars: The Phantom Menace", link: "Star-Wars/The-Phantom-Menace", image: "https://img.vxdn.net/poster/200/star-wars-episode-i-the-phantom-menace-1915.jpg"},
-    {title: "Star Wars: Attack of the Clones", link: "Star-Wars/Attack-Of-The-Clones", image: "https://img.vxdn.net/poster/200/star-wars-episode-ii-attack-of-the-clones-1916.jpg"},
-    {title: "Star Wars: Revenge of the Sith", link: "Star-Wars/Revenge-Of-The-Sith", image: "https://img.vxdn.net/poster/200/star-wars-episode-iii-revenge-of-the-sith-2197.jpg"},
-    {title: "Star Wars: A New Hope", link: "Star-Wars/A-New-Hope", image: "https://img.vxdn.net/poster/200/star-wars-episode-iv-a-new-hope-2229.jpg"},
-    {title: "Star Wars: The Empire Strikes Back", link: "Star-Wars/The-Empire-Strikes-Back", image: "https://img.vxdn.net/poster/200/star-wars-episode-v-the-empire-strikes-back-2233.jpg"},
-    {title: "Star Wars: Return of the Jedi", link: "Star-Wars/Return-Of-The-Jedi", image: "https://img.vxdn.net/poster/200/star-wars-episode-vi-return-of-the-jedi-2238.jpg"},
-    {title: "Star Wars: The Force Awakens", link: "Star-Wars/The-Force-Awakens", image: "https://img.vxdn.net/poster/200/star-wars-the-force-awakens-7292.jpg"},
-    {title: "Star Wars: The Last Jedi", link: "Star-Wars/The-Last-Jedi", image: "https://img.vxdn.net/poster/200/star-wars-the-last-jedi-23033.jpg"},
-    {title: "Star Wars: The Rise of Skywalker", link: "Star-Wars/The-Rise-Of-Skywalker", image: "https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg"},
+    {title: "Star Wars: The Phantom Menace", link: "Star-Wars/The-Phantom-Menace", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-i-the-phantom-menace-1915.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-i-the-phantom-menace-1915.jpg", src: "https://player.voxzer.org/view/f6d75f2b04f685570c4a25e0", desc: "After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: Attack of the Clones", link: "Star-Wars/Attack-Of-The-Clones", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-ii-attack-of-the-clones-1916.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-ii-attack-of-the-clones-1916.jpg", src: "https://player.voxzer.org/view/2df7682b04f6855d4c55a5e0", desc: "While pursuing an assassin, Obi Wan uncovers a sinister plot to destroy the Republic. With the fate of the galaxy hanging in the balance, the Jedi must defend the galaxy against the evil Sith.", genre: "Sco-Fi, Action, Adventure"},
+    {title: "Star Wars: Revenge of the Sith", link: "Star-Wars/Revenge-Of-The-Sith", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-iii-revenge-of-the-sith-2197.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-iii-revenge-of-the-sith-2197.jpg", src: "https://player.voxzer.org/view/8637602b04f685567c4af5e0", desc: "Anakin joins forces with Obi-Wan and sets Palpatine free from the evil clutches of Count Doku. However, he falls prey to Palpatine and the Jedis' mind games and gives into temptation.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: A New Hope", link: "Star-Wars/A-New-Hope", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-iv-a-new-hope-2229.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-iv-a-new-hope-2229.jpg", src: "https://player.voxzer.org/view/f6d75f2b04f685570c4a25e0", desc: "After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: The Empire Strikes Back", link: "Star-Wars/The-Empire-Strikes-Back", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-v-the-empire-strikes-back-2233.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-v-the-empire-strikes-back-2233.jpg", src: "https://player.voxzer.org/view/dec7682b04f685505c56a5e0", desc: "Darth Vader is adamant about turning Luke Skywalker to the dark side. Master Yoda trains Luke to become a Jedi Knight while his friends try to fend off the Imperial fleet.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: Return of the Jedi", link: "Star-Wars/Return-Of-The-Jedi", smallImg: "https://img.vxdn.net/poster/200/star-wars-episode-vi-return-of-the-jedi-2238.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-episode-vi-return-of-the-jedi-2238.jpg", src: "https://player.voxzer.org/view/613ee8b9f52338aa415a95e0", desc: "Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: The Force Awakens", link: "Star-Wars/The-Force-Awakens", smallImg: "https://img.vxdn.net/poster/200/star-wars-the-force-awakens-7292.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-the-force-awakens-7292.jpg", src: "https://player.voxzer.org/view/da30710d0714b6f09add75e0", desc: "A new order threatens to destroy the New Republic. Finn, Rey and Poe, backed by the Resistance and the Republic, must find a way to stop them and find Luke, the last surviving Jedi.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: The Last Jedi", link: "Star-Wars/The-Last-Jedi", smallImg: "https://img.vxdn.net/poster/200/star-wars-the-last-jedi-23033.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-the-last-jedi-23033.jpg", src: "https://player.voxzer.org/view/0e47602b04f68559ec4a45e0", desc: "Rey seeks to learn the ways of the Jedi under Luke Skywalker, its remaining member, to reinvigorate the Resistance's war against the First Order.", genre: "Sci-Fi, Action, Adventure"},
+    {title: "Star Wars: The Rise of Skywalker", link: "Star-Wars/The-Rise-Of-Skywalker", smallImg: "https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-the-rise-of-skywalker-100243.jpg", src: "https://player.voxzer.org/view/84be8f023ea48b6dd71d75e7", desc: "The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.", genre: "Sci-Fi, Action, Adventure"},
 ]
 
 router.get('/A-New-Hope', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: A New Hope"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: A New Hope",
-        src: "https://player.voxzer.org/view/f6d75f2b04f685570c4a25e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-iv-a-new-hope-2229.jpg",
-        desc: "After Princess Leia, the leader of the Rebel Alliance, is held hostage by Darth Vader, Luke and Han Solo must free her and destroy the powerful weapon created by the Galactic Empire.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/The-Empire-Strikes-Back', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: The Empire Strikes Back"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: The Empire Strikes Back",
-        src: "https://player.voxzer.org/view/dec7682b04f685505c56a5e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-v-the-empire-strikes-back-2233.jpg",
-        desc: "Darth Vader is adamant about turning Luke Skywalker to the dark side. Master Yoda trains Luke to become a Jedi Knight while his friends try to fend off the Imperial fleet.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/Return-Of-The-Jedi', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: Return of the Jedi"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: Return of the Jedi",
-        src: "https://player.voxzer.org/view/613ee8b9f52338aa415a95e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-vi-return-of-the-jedi-2238.jpg",
-        desc: "Luke Skywalker attempts to bring his father back to the light side of the Force. At the same time, the rebels hatch a plan to destroy the second Death Star.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre,
     });
 });
 
 router.get('/The-Phantom-Menace', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: The Phantom Menace"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: The Phantom Menace",
-        src: "https://player.voxzer.org/view/403ee8b9f52338ae415a65e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-i-the-phantom-menace-1915.jpg",
-        desc: "Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi set out to stop the Trade Federation from invading Naboo. While travelling, they come across a gifted boy, Anakin, and learn that the Sith have returned.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/Attack-Of-The-Clones', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: Attack of the Clones"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: Attack of the Clones",
-        src: "https://player.voxzer.org/view/2df7682b04f6855d4c55a5e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-ii-attack-of-the-clones-1916.jpg",
-        desc: "While pursuing an assassin, Obi Wan uncovers a sinister plot to destroy the Republic. With the fate of the galaxy hanging in the balance, the Jedi must defend the galaxy against the evil Sith.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/Revenge-Of-The-Sith', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: Revenge of the Sith"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: Revenge of the Sith",
-        src: "https://player.voxzer.org/view/8637602b04f685567c4af5e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-episode-iii-revenge-of-the-sith-2197.jpg",
-        desc: "Anakin joins forces with Obi-Wan and sets Palpatine free from the evil clutches of Count Doku. However, he falls prey to Palpatine and the Jedis' mind games and gives into temptation.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/The-Force-Awakens', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: The Force Awakens"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: The Force Awakens",
-        src: "https://player.voxzer.org/view/da30710d0714b6f09add75e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-the-force-awakens-7292.jpg",
-        desc: "A new order threatens to destroy the New Republic. Finn, Rey and Poe, backed by the Resistance and the Republic, must find a way to stop them and find Luke, the last surviving Jedi.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/The-Last-Jedi', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: The Last Jedi"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: The Last Jedi",
-        src: "https://player.voxzer.org/view/0e47602b04f68559ec4a45e0",
-        img: "https://img.vxdn.net/cover/1440/star-wars-the-last-jedi-23033.jpg",
-        desc: "Rey seeks to learn the ways of the Jedi under Luke Skywalker, its remaining member, to reinvigorate the Resistance's war against the First Order.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
 router.get('/The-Rise-Of-Skywalker', (req, res) => {
+    const foundIndex = starWars.findIndex((item) => {
+        return item.title === "Star Wars: The Rise of Skywalker"
+    });
+
     res.render('dynamic', {
-        title: "Star Wars: The Rise of Skywalker",
-        src: "https://player.voxzer.org/view/84be8f023ea48b6dd71d75e7",
-        img: "https://img.vxdn.net/cover/1440/star-wars-the-rise-of-skywalker-100243.jpg",
-        desc: "The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.",
-        genre: "Sci-Fi, Action, Adventure",
+        title: starWars[foundIndex].title,
+        src: starWars[foundIndex].src,
+        img: starWars[foundIndex].bigImg,
+        desc: starWars[foundIndex].desc,
+        genre: starWars[foundIndex].genre
     });
 });
 
