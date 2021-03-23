@@ -55,7 +55,7 @@
         <h1>DC</h1>
         <% dc.forEach(item => { %>
             <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
             <%}%>
         <%})%>
     </div>
@@ -64,7 +64,7 @@
         <h1>Netflix Originals</h1>
         <% netflix.forEach(item => { %>
             <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
             <%}%>
         <%})%>
     </div>
@@ -73,7 +73,7 @@
         <h1>Star Wars</h1>
         <% starWars.forEach(item => { %>
             <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
             <%}%>
         <%})%>
     </div>
@@ -82,7 +82,7 @@
         <h1>Animated</h1>
         <% animation.forEach(item => { %>
             <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
             <%}%>
         <%})%>
     </div>

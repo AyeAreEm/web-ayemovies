@@ -1,45 +1,10 @@
-# AyeMovies
-
-## Make a "best matches" page
-    - When a user enters in a movie or tv show into the search bar but doesn't fully match the spelling of the title
-    - Usually, it would go to '/{misspelledWord}' and throw a 404 error
-
-## Solution
-    - Make an app.get('/:id')
-    - get the id and run an algorithm to compare the id to the title names of every movie or tv show
-    - then send the most likely ones back to the web page with a res.render("matches", likelyItems);
-
-
-## Change routes
-    - I have hard coded each route for each movie and tv show
-    - in the long run, this makes it very hard to scale
-
-## Solution
-    - Make a route for each category. e.g. route for marvel, dc, star wars
-    - on the get in for example marvel, check the id and compare it to the titles in marvel
-    - so 
-        ```javascript
-        app.get('/Marvel/Movies/:id', (req, res) => {
-            // get the id and compare to the list of marvel movies and shows
-            // once it finds a match, return and save it to a variable (like foundItem)
-            res.render('dynamic', {
-                // then send the needed info
-            })
-        })
-
-        app.get('/Marvel/Shows/:id', (req, res) => {
-            // get the id and compare to the list of marvel movies and shows
-            // once it finds a match, return and save it to a variable (like foundItem)
-            res.render('shows', {
-                // then send the needed info
-            })
-        })
-        ```
-
-
 ## Lazy Loading
     - When loading the images and links on the home page, I load them all at the same time.
     - For now, this is fine but eventually, it won't scale
+
+## Problems
+    1. For the search suggestions, I use the data sent from the backend but if not all the data is loaded then not all the suggestions will exist.
+    2. Selecting a category won't be possible because when loading new data, I need to make a whole new category with the id as well. but if the data isn't loaded in, the category select won't have all the categories.
 
 ## Solution
     - When there is only one category showing, only get the data for that category
