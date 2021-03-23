@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search <%= search %></title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="/AyeAreEm.png" />
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1 onclick="window.location = '/'">AyeMovies</h1>
+
+        <!-- input for movies and tv shows -->
+        <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
+        <datalist id="moviesList">
+            <% marvel.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% dc.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% netflix.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% starWars.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+            <% animation.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
+        </datalist>
+    </div>
+
+    <div class="results" style="margin-top: 85px;">
+        <h1>Search results for <%= search %>: </h1>
+        <% results.forEach(item => { %>
+            <% if (item.display == null) {%>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+            <%}%>
+        <%})%>
+    </div>
+</body>
+</html>

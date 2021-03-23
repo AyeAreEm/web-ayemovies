@@ -37,13 +37,14 @@
 
 ## Planet of the apes
 
+## Cherry
+
 # ToDo
     - Report a bug system
     - Notification system
     - Analytical system (maybe)
     - reactive css
     - Mobile App (maybe)
-    - Refactor code into dynamic routes
     - Best Matches page
     - Lazy Loading home page
 

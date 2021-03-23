@@ -7,6 +7,12 @@ const starWarsRoute = require('./routes/starWars')
 const animatedRoute = require('./routes/animated')
 
 const app = express();
+let all = [];
+all = all.concat(marvelRoute.marvel)
+all = all.concat(netflixRoute.netflix)
+all = all.concat(dcRoute.dc)
+all = all.concat(starWarsRoute.starWars)
+all = all.concat(animatedRoute.animation)
 
 app.use(compression());
 app.disable('x-powered-by');
@@ -22,6 +28,26 @@ app.use("/animated", animatedRoute.router);
 
 app.get('/', (req, res) => {
     res.render('index', {
+        marvel: marvelRoute.marvel,
+        dc: dcRoute.dc,
+        netflix: netflixRoute.netflix,
+        starWars: starWarsRoute.starWars,
+        animation: animatedRoute.animation
+    });
+});
+
+app.get('/:id', (req, res) => {
+    let results = [];
+
+    all.forEach((item, index) => {
+        if (item.title.toLowerCase().includes(`${req.params.id.toLowerCase()}`)) {
+            results = [...results, item];
+        }
+    });
+
+    res.render('matches', {
+        search: req.params.id,
+        results: results,
         marvel: marvelRoute.marvel,
         dc: dcRoute.dc,
         netflix: netflixRoute.netflix,

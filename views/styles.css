@@ -53,10 +53,24 @@ select {
 
 .category {
     padding: 10px;
-    margin: 5%;
+    margin: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 .category h1 {
+    margin-bottom: 10px;
+    color: rgb(231, 231, 231);
+}
+
+.results {
+    padding: 10px;
+    margin: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.results h1 {
     margin-bottom: 10px;
     color: rgb(231, 231, 231);
 }
