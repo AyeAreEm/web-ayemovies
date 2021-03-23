@@ -18,7 +18,7 @@
     - Make a route for each category. e.g. route for marvel, dc, star wars
     - on the get in for example marvel, check the id and compare it to the titles in marvel
     - so 
-        ```js
+        ```javascript
         app.get('/Marvel/Movies/:id', (req, res) => {
             // get the id and compare to the list of marvel movies and shows
             // once it finds a match, return and save it to a variable (like foundItem)
@@ -45,10 +45,15 @@
     - When there is only one category showing, only get the data for that category
     - Then when the user scrolls down and reaches a new category, get the data for that category
 
+    OR
+
+    - use an observer and observe an element on the bottom of the page.
+    - if half of the element is in view, call a fetch request for more data (e.g. dc, netflix, etc.) 
+
     - send a fetch request when user reaches the (example) dc id to /DC
     - then on that get request, send back the data for dc and load it into the frontend
     - so for backend,
-        ```js
+        ```javascript
         app.get('/DC', (req, res) => {
             res.send(dc: dcRoute.dc)
         })

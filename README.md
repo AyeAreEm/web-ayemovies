@@ -9,7 +9,6 @@
 ## Animated
     - Avatar
     - Legend of Korra
-    - Gravity Falls (next)
 
 ## Marvel
     - X-Men
@@ -33,11 +32,17 @@
 
 ## Harry Potter
 
-## Sherlock
+## Crime
+    -Sherlock
+    -Cherry
 
 ## Planet of the apes
 
-## Cherry
+## Horror
+    - IT
+    - Us
+    - A Quiet Place
+    - Spilt
 
 # ToDo
     - Report a bug system
@@ -45,7 +50,6 @@
     - Analytical system (maybe)
     - reactive css
     - Mobile App (maybe)
-    - Best Matches page
     - Lazy Loading home page
 
     - More Genres / Categories 
