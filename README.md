@@ -14,13 +14,13 @@
 ## Marvel
     - X-Men
     - Loki (next)
+    - Falcon and the Winter Soldier
 
 ## DC
     - The Dark Night
     - Green Lantern
     - Superman
     - Watchmen
-    - Zack Snyder's Justice League
 
 ## Netflix Originals
     - Lucifer
@@ -33,7 +33,19 @@
 
 ## Harry Potter
 
-## ToDo
+## Sherlock
+
+## Planet of the apes
+
+# ToDo
     - Report a bug system
     - Notification system
     - Analytical system (maybe)
+    - reactive css
+    - Mobile App (maybe)
+    - Refactor code into dynamic routes
+    - Best Matches page
+    - Lazy Loading home page
+
+    - More Genres / Categories 
+        like Drama, Action, etc.
