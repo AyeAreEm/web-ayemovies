@@ -43,10 +43,7 @@
 
 ## Horror
     - Us
-    - A Quiet Place
-    - Spilt
     - Annabelle
-    - Invisible Man
 
 ## Action
     - John Wick
