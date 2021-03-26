@@ -16,7 +16,6 @@
     - Falcon and the Winter Soldier
 
 ## DC
-    - The Dark Night
     - Green Lantern
     - Superman
     - Watchmen
@@ -47,7 +46,10 @@
 
 ## Action
     - John Wick
-    - 
+    - Godzilla
+    - King Kong
+
+## Transformers
 
 # ToDo
     - Report a bug system

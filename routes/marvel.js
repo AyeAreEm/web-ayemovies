@@ -39,7 +39,7 @@ router.get('/Movies/:id', (req, res) => {
         return item.link === `Marvel/Movies/${req.params.id}`
     });
 
-    res.render('dynamic', {
+    res.render('movies', {
         title: marvel[foundIndex].title,
         src: marvel[foundIndex].src,
         img: marvel[foundIndex].bigImg,

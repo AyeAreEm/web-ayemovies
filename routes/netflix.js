@@ -12,6 +12,10 @@ const netflix = [
     {title: "Stranger Things S3", link: "Netflix/Shows/Stranger-Things3", bigImg: "https://img.vxdn.net/cover/1440/stranger-things-3-28926.jpg", desc: "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.", genre: "Supernatural, Drama, Horror Fiction", eps: ["https://player.voxzer.org/view/2777612b04f6855e9c4bd5e0", "https://player.voxzer.org/view/93806c0d0714b6f21abef5e0", "https://player.voxzer.org/view/9e27652b04f68551dc5225e0", "https://player.voxzer.org/view/2407632b04f6855ccc4ea5e0", "https://player.voxzer.org/view/4cc7672b04f685549c5475e0", "https://player.voxzer.org/view/a3f7602b04f685505c4b25e0", "https://player.voxzer.org/view/1fa06b0d0714b6fedabb85e0", "https://vidnext.net/streaming.php?id=MjY5Njgy"], seasons: ["/Netflix/Shows/Stranger-Things", "/Netflix/Shows/Stranger-Things2", "/Netflix/Shows/Stranger-Things3"], display: false}
 ]
 
+router.get('/', (req, res) => {
+    res.send(netflix);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = netflix.findIndex((item) => {
         return item.link === `Netflix/Shows/${req.params.id}`
@@ -32,7 +36,7 @@ router.get('/Movies/:id', (req, res) => {
         return item.link === `Netflix/Movies/${req.params.id}`
     });
 
-    res.render('dynamic', {
+    res.render('movies', {
         title: netflix[foundIndex].title,
         src: netflix[foundIndex].src,
         img: netflix[foundIndex].bigImg,

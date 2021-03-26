@@ -45,7 +45,7 @@
         </datalist>
     </div>
 
-    <div style="margin-left: 20px;">
+    <div id="container" style="margin-left: 20px;">
         <div id="Marvel" class="category" style="margin-top: 85px;">
             <h1>Marvel</h1>
             <% marvel.forEach(item => { %>
@@ -99,6 +99,8 @@
                 <%}%>
             <%})%>
         </div>
+
+        <button onclick="load()">Load more</button>
     </div>
 </body>
 </html>

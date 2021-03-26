@@ -61,5 +61,11 @@ app.get('/:id', (req, res) => {
     });
 });
 
+// app.get('/Page/:id', (req, res) => {
+//     if (req.params.id == "2") {
+//         res.render('dynamic', )
+//     }
+// });
+
 const port = process.env.PORT || 3000;
 app.listen(port);

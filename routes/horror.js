@@ -9,6 +9,10 @@ const horror = [
     {title: "The Invisible Man", link: "Horror/Movies/The-Invisible-man", smallImg: "https://img.vxdn.net/poster/200/the-invisible-man-100519.jpg", bigImg: "https://img.vxdn.net/cover/1440/the-invisible-man-100519.jpg", src: "https://vidnext.net/streaming.php?id=MzEwNjkw", desc: "Cecilia's abusive ex-boyfriend fakes his death and becomes invisible to stalk and torment her. She begins experiencing strange events and decides to hunt down the truth on her own.", genre: "Horror, Thriller"}
 ]
 
+router.get('/', (req, res) => {
+    res.send(horror);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = horror.findIndex((item) => {
         return item.link === `Horror/Shows/${req.params.id}`
@@ -29,7 +33,7 @@ router.get('/Movies/:id', (req, res) => {
         return item.link === `Horror/Movies/${req.params.id}`
     });
 
-    res.render('dynamic', {
+    res.render('movies', {
         title: horror[foundIndex].title,
         src: horror[foundIndex].src,
         img: horror[foundIndex].bigImg,
