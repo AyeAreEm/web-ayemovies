@@ -33,16 +33,24 @@
 ## Harry Potter
 
 ## Crime
-    -Sherlock
-    -Cherry
+    - Sherlock
+    - Cherry
+    - 21 Bridges
+    - Johnny Wick
+    - Brooklyn 99
 
 ## Planet of the apes
 
 ## Horror
-    - IT
     - Us
     - A Quiet Place
     - Spilt
+    - Annabelle
+    - Invisible Man
+
+## Action
+    - John Wick
+    - 
 
 # ToDo
     - Report a bug system

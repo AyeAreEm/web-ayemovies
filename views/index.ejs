@@ -39,52 +39,66 @@
             <% animation.forEach(item => {%>
                 <option data-value="<%= item.link %>"><%= item.title %></option>
             <%})%>
+            <% horror.forEach(item => {%>
+                <option data-value="<%= item.link %>"><%= item.title %></option>
+            <%})%>
         </datalist>
     </div>
 
-    <div id="Marvel" class="category" style="margin-top: 85px;">
-        <h1>Marvel</h1>
-        <% marvel.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
-            <%}%>
-        <%})%>
-    </div>
+    <div style="margin-left: 20px;">
+        <div id="Marvel" class="category" style="margin-top: 85px;">
+            <h1>Marvel</h1>
+            <% marvel.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <%}%>
+            <%})%>
+        </div>
 
-    <div id="DC" class="category">
-        <h1>DC</h1>
-        <% dc.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
-            <%}%>
-        <%})%>
-    </div>
+        <div id="DC" class="category">
+            <h1>DC</h1>
+            <% dc.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
+                <%}%>
+            <%})%>
+        </div>
 
-    <div id="Netflix-Originals" class="category">
-        <h1>Netflix Originals</h1>
-        <% netflix.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
-            <%}%>
-        <%})%>
-    </div>
+        <div id="Netflix-Originals" class="category">
+            <h1>Netflix Originals</h1>
+            <% netflix.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
+                <%}%>
+            <%})%>
+        </div>
 
-    <div id="Star-Wars" class="category">
-        <h1>Star Wars</h1>
-        <% starWars.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
-            <%}%>
-        <%})%>
-    </div>
+        <div id="Star-Wars" class="category">
+            <h1>Star Wars</h1>
+            <% starWars.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
+                <%}%>
+            <%})%>
+        </div>
 
-    <div id="Animated" class="category">
-        <h1>Animated</h1>
-        <% animation.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
-            <%}%>
-        <%})%>
+        <div id="Animated" class="category">
+            <h1>Animated</h1>
+            <% animation.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
+                <%}%>
+            <%})%>
+        </div>
+
+        <div id="Horror" class="category">
+            <h1>Horror</h1>
+            <% horror.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" loading="lazy"></a>
+                <%}%>
+            <%})%>
+        </div>
     </div>
 </body>
 </html>
