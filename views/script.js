@@ -11,10 +11,10 @@ function search(movie) {
 
 async function loadHandler(categories) {
     loaded++;
-    console.log(loaded);
+
+    // load in genre for all genres and categories being requested
     for (let i = 0; i < categories.length; i++) {
         await load(categories[i]);
-        console.log(i);
     }
 }
 
@@ -58,15 +58,15 @@ async function load(category) {
 
     let newLoadBtn = document.createElement("button");
 
+    // if this is the first time running the function, set newCategories to the next genre
     if (loaded == 0) {
         newCategories = [genres[1]];
         newLoadBtn.onclick = () => loadHandler(newCategories);
         newLoadBtn.textContent = "Load more";
-    } else {
+    } else { // else, say there is no more to be loaded
         newLoadBtn.onclick = () => newLoadBtn.textContent = "No more";
     }
 
-    console.log(newCategories);
     newLoadBtn.id = "loadBtn";
 
     moreContent.appendChild(newLoadBtn);
