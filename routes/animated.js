@@ -19,6 +19,10 @@ const animation = [
     {title: "Gravity Falls S2", link: "Animated/Shows/Gravity-Falls2", bigImg: "https://honey4pooh.files.wordpress.com/2015/02/gravity-falls-27598-1920x1080.jpg", desc: "Twins Dipper and Mabel travel to the mysterious town of Gravity Falls in Oregon for their summer vacations but are shocked after they discover some strange occurrences.", genre: "Mystery, Comedy, Fantasy, Adventure, Animation", eps: ["https://vidcloud9.com/streaming.php?id=NDE0OTU", "https://vidcloud9.com/streaming.php?id=NDE0OTY", "https://vidcloud9.com/streaming.php?id=NDE0OTc", "https://vidcloud9.com/streaming.php?id=NDE0OTg", "https://vidcloud9.com/streaming.php?id=NDE0OTk", "https://vidcloud9.com/streaming.php?id=NDE1MDA", "https://vidcloud9.com/streaming.php?id=NDE1MDE", "https://vidcloud9.com/streaming.php?id=NDE1MDI", "https://vidcloud9.com/streaming.php?id=NDE1MDM", "https://vidcloud9.com/streaming.php?id=NDE1MDQ", "https://vidcloud9.com/streaming.php?id=NDE1MDU", "https://vidcloud9.com/streaming.php?id=NDE1MDY", "https://vidcloud9.com/streaming.php?id=NDE1MDc", "https://vidcloud9.com/streaming.php?id=NDE1MDg", "https://vidcloud9.com/streaming.php?id=NDE1MDk", "https://vidcloud9.com/streaming.php?id=NDE1MTA", "https://vidcloud9.com/streaming.php?id=NDE1MTE", "https://vidcloud9.com/streaming.php?id=NDE1MTI", "https://vidcloud9.com/streaming.php?id=NDE1MTM", "https://vidcloud9.com/streaming.php?id=NDE1MTQ"], seasons: ["/Animated/Shows/Gravity-Falls", "/Animated/Shows/Gravity-Falls2"], display: false}
 ]
 
+router.get('/', (req, res) => {
+    res.send(animation);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = animation.findIndex((item) => {
         return item.link === `Animated/Shows/${req.params.id}`

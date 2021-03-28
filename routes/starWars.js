@@ -13,6 +13,10 @@ const starWars = [
     {title: "Star Wars: The Rise of Skywalker", link: "Star-Wars/Movies/The-Rise-Of-Skywalker", smallImg: "https://img.vxdn.net/poster/200/star-wars-the-rise-of-skywalker-100243.jpg", bigImg: "https://img.vxdn.net/cover/1440/star-wars-the-rise-of-skywalker-100243.jpg", src: "https://player.voxzer.org/view/84be8f023ea48b6dd71d75e7", desc: "The revival of Emperor Palpatine resurrects the battle between the Resistance and the First Order while the Jedi's legendary conflict with the Sith Lord comes to a head.", genre: "Sci-Fi, Action, Adventure"},
 ]
 
+router.get('/', (req, res) => {
+    res.send(starWars);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = starWars.findIndex((item) => {
         return item.link === `Star-Wars/Shows/${req.params.id}`

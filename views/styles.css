@@ -65,18 +65,6 @@ select {
     color: rgb(231, 231, 231);
 }
 
-.results {
-    padding: 10px;
-    margin: 1%;
-    margin-left: 4%;
-    margin-right: 4%;
-}
-
-.results h1 {
-    margin-bottom: 10px;
-    color: rgb(231, 231, 231);
-}
-
 .preview {
     height: 50vh;
     width: 70%;
@@ -104,7 +92,7 @@ select {
     align-items: center;
 }
 
-.eps {
+.epsBtn {
     background: white;
     border: 2px solid black;
     padding: 10px 20px;
@@ -115,7 +103,23 @@ select {
     color: black;
 }
 
-.eps:hover, .eps:active {
+.epsBtn:hover, .epsBtn:active {
     background: rgb(212, 35, 79);
     color: white;
+}
+
+#loadBtn, #newLoadBtn {
+    background: rgb(212, 35, 79);
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: white;
+}
+
+#loadBtn:hover, #loadBtn:active, #newLoadBtn:hover, #newLoadBtn:active {
+    background: white;
+    color: black;
 }

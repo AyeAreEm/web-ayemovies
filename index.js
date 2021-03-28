@@ -6,6 +6,8 @@ const dcRoute = require('./routes/dc');
 const starWarsRoute = require('./routes/starWars');
 const animatedRoute = require('./routes/animated');
 const horrorRoute = require('./routes/horror');
+const actionRoute = require('./routes/action');
+const crimeRoute = require('./routes/crime');
 
 const app = express();
 let all = [];
@@ -15,6 +17,8 @@ all = all.concat(dcRoute.dc);
 all = all.concat(starWarsRoute.starWars);
 all = all.concat(animatedRoute.animation);
 all = all.concat(horrorRoute.horror);
+all = all.concat(actionRoute.action);
+all = all.concat(crimeRoute.crime);
 
 app.use(compression());
 app.disable('x-powered-by');
@@ -28,6 +32,8 @@ app.use("/dc", dcRoute.router);
 app.use("/Star-Wars", starWarsRoute.router);
 app.use("/animated", animatedRoute.router);
 app.use("/horror", horrorRoute.router);
+app.use("/action", actionRoute.router);
+app.use("/crime", crimeRoute.router);
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -57,15 +63,11 @@ app.get('/:id', (req, res) => {
         netflix: netflixRoute.netflix,
         starWars: starWarsRoute.starWars,
         animation: animatedRoute.animation,
-        horror: horrorRoute.horror
+        horror: horrorRoute.horror,
+        action: actionRoute.action,
+        crime: crimeRoute.crime
     });
 });
-
-// app.get('/Page/:id', (req, res) => {
-//     if (req.params.id == "2") {
-//         res.render('dynamic', )
-//     }
-// });
 
 const port = process.env.PORT || 3000;
 app.listen(port);

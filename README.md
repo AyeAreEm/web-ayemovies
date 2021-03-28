@@ -14,6 +14,8 @@
     - X-Men
     - Loki (next)
     - Falcon and the Winter Soldier
+    - Venom
+    - Fantastic Four and the reboot
 
 ## DC
     - Green Lantern
@@ -27,29 +29,39 @@
     - The Umbrella Academy (maybe)
     - Outer Banks
 
+## Horror
+    - Us
+    - Annabelle
+    - Blair Witch Project
+
+
 ## Fast and Furious (next)
 
 ## Harry Potter
 
 ## Crime
-    - Sherlock
     - Cherry
     - 21 Bridges
-    - Johnny Wick
+    - Ocean's <number>
+
+## Sitcom
     - Brooklyn 99
-
-## Planet of the apes
-
-## Horror
-    - Us
-    - Annabelle
+    - The Big Bang Theory
+    - Friends
+    - Silicon Valley
+    - How I Met Your Mother
 
 ## Action
-    - John Wick
     - Godzilla
     - King Kong
+    - James Bond
+    - Mission Impossible
 
-## Transformers
+## Sci-Fi
+    - Transformers
+    - Martian
+    - Jurassic Park / World
+    - Independence day
 
 # ToDo
     - Report a bug system

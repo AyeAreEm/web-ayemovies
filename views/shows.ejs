@@ -18,7 +18,7 @@
     <div class="desc">
         <div class="episodeList">
             <% eps.forEach((ep, index) => {%>
-                <a class="eps" href="<%= ep %>">Episode <%= index+1 %></a>
+                <a class="epsBtn" href="<%= ep %>">Episode <%= index+1 %></a>
             <%})%>
         </div><br>
 
@@ -32,7 +32,7 @@
             <h1 style="text-align: center;">Seasons</h1>
             <div class="episodeList">
                 <% seasons.forEach((s, index) => {%>
-                    <a class="eps" href="<%= s %>">Seasons <%= index+1 %></a>
+                    <a class="epsBtn" href="<%= s %>">Seasons <%= index+1 %></a>
                 <%})%>
             </div>
         </div>

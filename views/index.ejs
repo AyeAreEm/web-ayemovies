@@ -16,10 +16,6 @@
 <body>
     <div class="header">
         <h1 onclick="window.location = '/'">AyeMovies</h1>
-        <!-- select categories -->
-        <select name="titles" id="titles" onchange="search(this.value)" style="margin-right: 10px;">
-            <option value disabled selected>-- select a category --</option>
-        </select>
 
         <!-- input for movies and tv shows -->
         <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
@@ -99,6 +95,8 @@
                 <%}%>
             <%})%>
         </div>
+
+        <button id="loadBtn" onclick="loadHandler(['Action'])">Load more</button>
     </div>
 </body>
 </html>

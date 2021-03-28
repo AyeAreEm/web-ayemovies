@@ -17,6 +17,10 @@ const dc = [
     {title: "The Dark Knight Rises", link: "DC/Movies/The-Dark-Knight-Rises", smallImg: "https://img.vxdn.net/poster/200/batman-the-dark-knight-rises-8430.jpg", bigImg: "https://img.vxdn.net/cover/1440/the-dark-knight-rises-2069.jpg", src: "https://player.voxzer.org/view/e637602b04f685516c4b85e0", desc: "Bane, an imposing terrorist, attacks Gotham City and disrupts its eight-year-long period of peace. This forces Bruce Wayne to come out of hiding and don the cape and cowl of Batman again.", genre: "Action, Thriller"}
 ]
 
+router.get('/', (req, res) => {
+    res.send(dc);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = dc.findIndex((item) => {
         return item.link === `DC/Shows/${req.params.id}`

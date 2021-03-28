@@ -19,6 +19,10 @@ const marvel = [
     {title: "WandaVision", link: "Marvel/Shows/WandaVision", smallImg: "https://img.vxdn.net/poster/200/WandaVision-1-101990.jpg", bigImg: "https://img.vxdn.net/cover/1440/WandaVision-1-101990.jpg", desc: "Living idealized suburban lives, super-powered beings Wanda and Vision begin to suspect that everything is not as it seems.", genre: "Sitcom", eps: ["https://player.voxzer.org/view/5828bc0dcc3288e5ab3e7600", "https://player.voxzer.org/view/6308bc0dcc3288e24b561601", "https://player.voxzer.org/view/62e8bc0dcc3288e23b561601", "https://player.voxzer.org/view/62c8bc0dcc3288e21b561601", "https://player.voxzer.org/view/783c8f237d18b8b720ea8601", "https://player.voxzer.org/view/7fdc8f237d18b8bee07f0602", "https://vidnext.net/streaming.php?id=MzM3MTg3", "https://player.voxzer.org/view/89bc8f237d18b8ba90ba8603", "https://vidnext.net/streaming.php?id=MzM3NzY1"]}
 ]
 
+router.get('/', (req, res) => {
+    res.send(marvel);
+});
+
 router.get('/Shows/:id', (req, res) => {
     const foundIndex = marvel.findIndex((item) => {
         return item.link === `Marvel/Shows/${req.params.id}`
