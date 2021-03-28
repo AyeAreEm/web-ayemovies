@@ -22,7 +22,7 @@ async function load(category) {
     let newCategories = [];
     let loadBtn = document.getElementById("loadBtn");
     // get json data for all movies in a certain category
-    let res = await fetch(`http://ayemovies.herokuapp.com/${category}`);
+    let res = await fetch(`https://ayemovies.herokuapp.com/${category}`);
     let result = await res.json();
 
     // create a div to surround the links
