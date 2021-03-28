@@ -40,7 +40,6 @@
 ## Harry Potter
 
 ## Crime
-    - Cherry
     - 21 Bridges
     - Ocean's <number>
 
