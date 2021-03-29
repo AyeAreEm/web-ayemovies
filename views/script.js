@@ -21,7 +21,10 @@ async function loadHandler(categories) {
 async function load(category) {
     let newCategories = [];
     let loadBtn = document.getElementById("loadBtn");
-    // get json data for all movies in a certain category
+    // get json data for all movies in a certain categor
+    y
+    // working version: https://ayemovies.herokuapp.com/
+    // testing version: http://192.168.68.105:3000
     let res = await fetch(`https://ayemovies.herokuapp.com/${category}`);
     let result = await res.json();
 
@@ -64,7 +67,7 @@ async function load(category) {
         newLoadBtn.onclick = () => loadHandler(newCategories);
         newLoadBtn.textContent = "Load more";
     } else { // else, say there is no more to be loaded
-        newLoadBtn.onclick = () => newLoadBtn.textContent = "No more";
+        newLoadBtn.textContent = "No more";
     }
 
     newLoadBtn.id = "loadBtn";
