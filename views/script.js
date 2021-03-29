@@ -23,8 +23,6 @@ async function load(category) {
     let loadBtn = document.getElementById("loadBtn");
     // get json data for all movies in a certain category
     
-    // working version: https://ayemovies.herokuapp.com/
-    // testing version: http://192.168.68.105:3000
     let res = await fetch(`https://ayemovies.herokuapp.com/${category}`);
     let result = await res.json();
 

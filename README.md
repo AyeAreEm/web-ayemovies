@@ -9,6 +9,7 @@
 ## Animated
     - Avatar
     - Legend of Korra
+    - Madagascar
 
 ## Marvel
     - X-Men

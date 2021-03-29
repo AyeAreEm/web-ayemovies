@@ -1,10 +1,11 @@
-## Loading
-    - Instead of loading everything into on page, like a single page application, make multiple pages.
-    - This way, there won't be any hard coded stuff on the index.ejs file.
+## API
+    So before, I refactored my code to become more friendly to work with, which basically meant I had to make an internal api.
+    But if I want to make a mobile app for this, I have to make an actual public api to use. Which means, anyone could use it.
 
 ## Problem
-    - The select category might not work anymore.
-    - The search suggests might also not work.
+    - Making new routes will be basically repeating code with slight adjustments
+    - It would be easier to say like `if (cors() == myMobileApp) { res.send(data) }`
 
-## How it would work
-    - no clue so far
+## Solution
+    - Make new routes but also keep the old routes.
+        (not the most optimal solution, i will keep researching to find a better way)

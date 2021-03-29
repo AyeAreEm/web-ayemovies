@@ -47,10 +47,6 @@ app.get('/', (req, res) => {
         animation: animatedRoute.animation,
         horror: horrorRoute.horror
     });
-
-    res.send({
-        test: "this is a test"
-    });
 });
 
 app.get('/:id', (req, res) => {
