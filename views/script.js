@@ -21,7 +21,7 @@ async function loadHandler(categories) {
 async function load(category) {
     let newCategories = [];
     let loadBtn = document.getElementById("loadBtn");
-    // get json data for all movies in a certain categor
+    // get json data for all movies in a certain category
     
     // working version: https://ayemovies.herokuapp.com/
     // testing version: http://192.168.68.105:3000

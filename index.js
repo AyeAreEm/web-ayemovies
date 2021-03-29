@@ -1,5 +1,7 @@
 const express = require('express');
 const compression = require('compression');
+const cors = require('cors');
+
 const netflixRoute = require('./routes/netflix');
 const marvelRoute = require('./routes/marvel');
 const dcRoute = require('./routes/dc');
@@ -21,6 +23,7 @@ all = all.concat(actionRoute.action);
 all = all.concat(crimeRoute.crime);
 
 app.use(compression());
+app.use(cors());
 app.disable('x-powered-by');
 
 app.set('views', './views');
@@ -43,6 +46,10 @@ app.get('/', (req, res) => {
         starWars: starWarsRoute.starWars,
         animation: animatedRoute.animation,
         horror: horrorRoute.horror
+    });
+
+    res.send({
+        test: "this is a test"
     });
 });
 
