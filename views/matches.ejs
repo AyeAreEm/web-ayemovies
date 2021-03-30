@@ -38,7 +38,7 @@
         <h1>Search results for <%= search %>: </h1>
         <% results.forEach(item => { %>
             <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>"></a>
+                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>"></a>
             <%}%>
         <%})%>
     </div>

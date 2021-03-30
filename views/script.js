@@ -2,8 +2,9 @@ const titles = document.getElementsByClassName("category");
 const select = document.getElementById("titles");
 const moreContent = document.getElementById("container");
 const loadBtn = document.getElementById("loadBtn");
+const dataList = document.getElementById("moviesList");
 const genres = ["Action", "Crime"];
-let loaded = -1;
+let loaded = 0;
 
 function search(movie) {
     window.location = `${movie}`;
@@ -51,6 +52,12 @@ async function load(category) {
 
             anchor.appendChild(img); // append image to the link
             div.appendChild(anchor); // then append link to div
+
+            let options = document.createElement("option");
+            options.dataset.value = result[i].link;
+            options.textContent = result[i].title;
+
+            dataList.appendChild(options);
         }
     }
 
@@ -60,7 +67,7 @@ async function load(category) {
     let newLoadBtn = document.createElement("button");
 
     // if this is the first time running the function, set newCategories to the next genre
-    if (loaded == 0) {
+    if (loaded == 1) {
         newCategories = [genres[1]];
         newLoadBtn.onclick = () => loadHandler(newCategories);
         newLoadBtn.textContent = "Load more";
@@ -69,7 +76,6 @@ async function load(category) {
     }
 
     newLoadBtn.id = "loadBtn";
-
     moreContent.appendChild(newLoadBtn);
 }
 

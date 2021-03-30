@@ -69,7 +69,6 @@
     - Analytical system (maybe)
     - reactive css
     - Mobile App (maybe)
-    - Lazy Loading home page
 
     - More Genres / Categories 
         like Drama, Action, etc.
