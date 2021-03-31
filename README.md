@@ -9,13 +9,12 @@
 ## Animated
     - Avatar
     - Legend of Korra
-    - Madagascar
 
 ## Marvel
     - X-Men
     - Loki (next)
     - Falcon and the Winter Soldier
-    - Venom
+    - Venom (next)
     - Fantastic Four and the reboot
 
 ## DC
@@ -42,7 +41,8 @@
 
 ## Crime
     - 21 Bridges
-    - Ocean's <number>
+    - Ocean's <number> (next)
+    - Game night (crime but more comedy)
 
 ## Sitcom
     - Brooklyn 99
@@ -50,12 +50,13 @@
     - Friends
     - Silicon Valley
     - How I Met Your Mother
+    - Community
 
 ## Action
     - Godzilla
     - King Kong
     - James Bond
-    - Mission Impossible
+    - Mission Impossible (next)
 
 ## Sci-Fi
     - Transformers
