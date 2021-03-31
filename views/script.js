@@ -47,6 +47,7 @@ async function load(category) {
             anchor.href = result[i].link; // set link to json link
             img.src = result[i].smallImg; // set src of image
             img.alt = result[i].title; // set alt of image
+            img.title = result[i].title; // set title of image
             img.loading = "lazy";
             img.style.marginLeft = "13px"; // set margin of image
 
