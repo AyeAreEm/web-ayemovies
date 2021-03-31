@@ -41,7 +41,6 @@
 
 ## Crime
     - 21 Bridges
-    - Ocean's <number> (next)
     - Game night (crime but more comedy)
 
 ## Sitcom
@@ -53,8 +52,6 @@
     - Community
 
 ## Action
-    - Godzilla
-    - King Kong
     - James Bond
     - Mission Impossible (next)
 
