@@ -18,7 +18,7 @@
         <h1 onclick="window.location = '/'">AyeMovies</h1>
 
         <!-- input for movies and tv shows -->
-        <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="type, click an option and hit enter..."/>
+        <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="you know what to do..."/>
         <datalist id="moviesList">
             <% marvel.forEach(item => {%>
                 <option data-value="<%= item.link %>"><%= item.title %></option>
