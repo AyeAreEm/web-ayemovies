@@ -40,7 +40,6 @@
 
 ## Crime
     - 21 Bridges
-    - Game night (crime but more comedy)
 
 ## Sitcom
     - Brooklyn 99
@@ -52,7 +51,6 @@
 
 ## Action
     - James Bond
-    - Mission Impossible (next)
 
 ## Sci-Fi
     - Transformers
