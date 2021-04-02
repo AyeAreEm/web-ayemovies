@@ -22,3 +22,15 @@
     3. Make my repo public and have them write an issue in the issue section.
 
     Not too sure which one I will use.
+
+## App
+    I want to make an app that anyone can use without the need of installing from an app store.
+    
+## Solution
+    - I make a react native app and share it through QR code. BUT, I am not sure if this would work because it might need a server to be continuously running
+     
+     OR
+
+     - Make the website a PWA. This would alway me to just write a manifest and service worker file, which means I don't have to start from scratch.
+     - This might be a hassle because my entire website needs wifi but the app should be able to load offline.
+     - Meaning I would have to do a lot of fetch request and etc. in the service worker.
