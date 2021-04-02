@@ -9,8 +9,7 @@
 ## Animated
     - Avatar
     - Legend of Korra
-    - Lion King
-
+    - Aladin
 ## Marvel
     - X-Men
     - Loki (next)
