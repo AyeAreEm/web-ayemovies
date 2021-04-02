@@ -4,6 +4,13 @@ const dataList = document.getElementById("moviesList");
 const genres = ["Action", "Crime"];
 let loaded = 0;
 
+// register service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log("service worker registered", reg))
+        .catch((err) => console.log("service worker is not registered", err));
+}
+
 function search(movie) {
     window.location = `${movie}`;
 }
