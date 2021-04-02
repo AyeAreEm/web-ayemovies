@@ -10,6 +10,7 @@
     - Avatar
     - Legend of Korra
     - Aladin
+    
 ## Marvel
     - X-Men
     - Loki (next)
