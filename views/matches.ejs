@@ -40,13 +40,15 @@
         </datalist>
     </div>
 
-    <div class="category" style="margin-top: 85px;">
+    <div id="container" style="margin-top: 85px;">
         <h1>Search results for <%= search %>: </h1>
-        <% results.forEach(item => { %>
-            <% if (item.display == null) {%>
-                <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>"></a>
-            <%}%>
-        <%})%>
+        <div class="category">
+            <% results.forEach(item => { %>
+                <% if (item.display == null) {%>
+                    <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>"></a>
+                <%}%>
+            <%})%>
+        </div>
     </div>
 </body>
 </html>
