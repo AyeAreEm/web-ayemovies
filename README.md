@@ -9,6 +9,7 @@
 ## Animated
     - Avatar
     - Legend of Korra
+    - Lion King
 
 ## Marvel
     - X-Men
@@ -62,7 +63,6 @@
     - Report a bug system
     - Notification system
     - Analytical system (maybe)
-    - reactive css
     - Mobile App (maybe)
 
     - More Genres / Categories 

@@ -1,5 +1,3 @@
-const titles = document.getElementsByClassName("category");
-const select = document.getElementById("titles");
 const moreContent = document.getElementById("container");
 const loadBtn = document.getElementById("loadBtn");
 const dataList = document.getElementById("moviesList");
@@ -35,7 +33,7 @@ async function load(category) {
     div.className = "category";
     header.textContent = `${category}`;
 
-    div.appendChild(header); // add h1 to the div
+    moreContent.appendChild(header); // add h1 to the main
 
     for (let i = 0; i < result.length; i++) {
         // if display doesn't exists
@@ -49,7 +47,7 @@ async function load(category) {
             img.alt = result[i].title; // set alt of image
             img.title = result[i].title; // set title of image
             img.loading = "lazy";
-            img.style.marginLeft = "13px"; // set margin of image
+            img.style.marginLeft = (window.innerWidth < 501) ? "3px" : "13px"; // set margin of image
 
             anchor.appendChild(img); // append image to the link
             div.appendChild(anchor); // then append link to div

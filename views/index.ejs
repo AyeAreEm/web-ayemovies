@@ -9,7 +9,8 @@
     <meta property="og:title" content="No Ads. No Viruses. Just Movies">
     <meta property="og:image" content="/AyeAreEm.png">
     <title>AyeMovies</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 501px)" href="/styles.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 320px) and (max-device-width: 500px)" href="/mobile.css">
     <link rel="shortcut icon" href="/AyeAreEm.png" />
     <script defer src="script.js"></script>
 </head>
@@ -41,9 +42,9 @@
         </datalist>
     </div>
 
-    <div id="container" style="margin-left: 20px;">
-        <div id="Marvel" class="category" style="margin-top: 85px;">
-            <h1>Marvel</h1>
+    <div id="container" style="margin-top: 85px;">
+        <h1>Marvel</h1>
+        <div class="category">
             <% marvel.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>"></a>
@@ -51,8 +52,8 @@
             <%})%>
         </div>
 
-        <div id="DC" class="category">
-            <h1>DC</h1>
+        <h1>DC</h1>
+        <div class="category">
             <% dc.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>" loading="lazy"></a>
@@ -60,8 +61,8 @@
             <%})%>
         </div>
 
-        <div id="Netflix-Originals" class="category">
-            <h1>Netflix Originals</h1>
+        <h1>Netflix Originals</h1>
+        <div class="category">
             <% netflix.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>" loading="lazy"></a>
@@ -69,8 +70,8 @@
             <%})%>
         </div>
 
-        <div id="Star-Wars" class="category">
-            <h1>Star Wars</h1>
+        <h1>Star Wars</h1>
+        <div class="category">
             <% starWars.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>" loading="lazy"></a>
@@ -78,8 +79,8 @@
             <%})%>
         </div>
 
-        <div id="Animated" class="category">
-            <h1>Animated</h1>
+        <h1>Animated</h1>
+        <div class="category">
             <% animation.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>" loading="lazy"></a>
@@ -87,8 +88,8 @@
             <%})%>
         </div>
 
-        <div id="Horror" class="category">
-            <h1>Horror</h1>
+        <h1>Horror</h1>
+        <div class="category">
             <% horror.forEach(item => { %>
                 <% if (item.display == null) {%>
                     <a href="<%= item.link %>"><img src="<%= item.smallImg %>" alt="<%= item.title %>" title="<%= item.title %>" loading="lazy"></a>

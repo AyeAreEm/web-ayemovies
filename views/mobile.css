@@ -12,19 +12,17 @@ body {
 }
 
 img {
-    height: 30vh;
-    width: 20vh;
+    height: 20vh;
+    width: 15vh;
     border-radius: 5px;
-    margin-left: 10px;
     margin-bottom: 10px;
+    display: inline-block;
 }
 
 /* maybe change image height and width and all that if the screen is small */
 
 input {
     margin-top: 10px;
-    margin-right: 10px;
-    float: right;
     width: 265px;
     height: 3vh;
     border-radius: 5px;
@@ -47,27 +45,27 @@ select {
     position: fixed;
     top: 0;
     width: 100%;
+    text-align: center;
 }
 
 .header h1 {
     font-size: 40px;
-    margin-left: 1%;
-    float: left;
 }
 
 .category {
     padding: 15px;
     margin-left: 4%;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 #container h1 {
-    margin-bottom: 10px;
     color: rgb(231, 231, 231);
     margin-left: 4%;
 }
 
 .preview {
-    height: 50vh;
+    height: 30vh;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
