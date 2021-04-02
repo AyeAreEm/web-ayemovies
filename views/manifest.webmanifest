@@ -1,0 +1,51 @@
+{
+    "name": "AyeMovies",
+    "short_name": "AyeMovies",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#d4234f",
+    "theme_color": "#d4234f",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/AyeAreEm-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/img/AyeAreEm-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/img/AyeAreEm-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/img/AyeAreEm-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/img/AyeAreEm-152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/img/AyeAreEm-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/img/AyeAreEm-384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/img/AyeAreEm-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
