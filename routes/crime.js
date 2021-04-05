@@ -19,32 +19,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = crime.findIndex((item) => {
-        return item.link === `Crime/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: crime[foundIndex].title,
-        img: crime[foundIndex].bigImg,
-        desc: crime[foundIndex].desc,
-        genre: crime[foundIndex].genre,
-        eps: crime[foundIndex].eps,
-        seasons: crime[foundIndex].seasons ? crime[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = crime.findIndex((item) => {
+            return item.link === `Crime/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: crime[foundIndex].title,
+            img: crime[foundIndex].bigImg,
+            desc: crime[foundIndex].desc,
+            genre: crime[foundIndex].genre,
+            eps: crime[foundIndex].eps,
+            seasons: crime[foundIndex].seasons ? crime[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = crime.findIndex((item) => {
-        return item.link === `Crime/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: crime[foundIndex].title,
-        src: crime[foundIndex].src,
-        img: crime[foundIndex].bigImg,
-        desc: crime[foundIndex].desc,
-        genre: crime[foundIndex].genre
-    });
+    try {
+        const foundIndex = crime.findIndex((item) => {
+            return item.link === `Crime/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: crime[foundIndex].title,
+            src: crime[foundIndex].src,
+            img: crime[foundIndex].bigImg,
+            desc: crime[foundIndex].desc,
+            genre: crime[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, crime: crime};

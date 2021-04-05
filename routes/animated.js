@@ -31,32 +31,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = animation.findIndex((item) => {
-        return item.link === `Animated/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: animation[foundIndex].title,
-        img: animation[foundIndex].bigImg,
-        desc: animation[foundIndex].desc,
-        genre: animation[foundIndex].genre,
-        eps: animation[foundIndex].eps,
-        seasons: animation[foundIndex].seasons ? animation[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = animation.findIndex((item) => {
+            return item.link === `Animated/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: animation[foundIndex].title,
+            img: animation[foundIndex].bigImg,
+            desc: animation[foundIndex].desc,
+            genre: animation[foundIndex].genre,
+            eps: animation[foundIndex].eps,
+            seasons: animation[foundIndex].seasons ? animation[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = animation.findIndex((item) => {
-        return item.link === `Animated/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: animation[foundIndex].title,
-        src: animation[foundIndex].src,
-        img: animation[foundIndex].bigImg,
-        desc: animation[foundIndex].desc,
-        genre: animation[foundIndex].genre
-    });
+    try {
+        const foundIndex = animation.findIndex((item) => {
+            return item.link === `Animated/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: animation[foundIndex].title,
+            src: animation[foundIndex].src,
+            img: animation[foundIndex].bigImg,
+            desc: animation[foundIndex].desc,
+            genre: animation[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, animation: animation};

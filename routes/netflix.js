@@ -17,32 +17,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = netflix.findIndex((item) => {
-        return item.link === `Netflix/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: netflix[foundIndex].title,
-        img: netflix[foundIndex].bigImg,
-        desc: netflix[foundIndex].desc,
-        genre: netflix[foundIndex].genre,
-        eps: netflix[foundIndex].eps,
-        seasons: netflix[foundIndex].seasons ? netflix[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = netflix.findIndex((item) => {
+            return item.link === `Netflix/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: netflix[foundIndex].title,
+            img: netflix[foundIndex].bigImg,
+            desc: netflix[foundIndex].desc,
+            genre: netflix[foundIndex].genre,
+            eps: netflix[foundIndex].eps,
+            seasons: netflix[foundIndex].seasons ? netflix[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "You are not allowed to view this because you are not a developer."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = netflix.findIndex((item) => {
-        return item.link === `Netflix/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: netflix[foundIndex].title,
-        src: netflix[foundIndex].src,
-        img: netflix[foundIndex].bigImg,
-        desc: netflix[foundIndex].desc,
-        genre: netflix[foundIndex].genre
-    });
+    try {
+        const foundIndex = netflix.findIndex((item) => {
+            return item.link === `Netflix/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: netflix[foundIndex].title,
+            src: netflix[foundIndex].src,
+            img: netflix[foundIndex].bigImg,
+            desc: netflix[foundIndex].desc,
+            genre: netflix[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, netflix: netflix};

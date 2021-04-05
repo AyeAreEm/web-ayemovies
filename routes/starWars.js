@@ -18,32 +18,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = starWars.findIndex((item) => {
-        return item.link === `Star-Wars/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: starWars[foundIndex].title,
-        img: starWars[foundIndex].bigImg,
-        desc: starWars[foundIndex].desc,
-        genre: starWars[foundIndex].genre,
-        eps: starWars[foundIndex].eps,
-        seasons: starWars[foundIndex].seasons ? starWars[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = starWars.findIndex((item) => {
+            return item.link === `Star-Wars/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: starWars[foundIndex].title,
+            img: starWars[foundIndex].bigImg,
+            desc: starWars[foundIndex].desc,
+            genre: starWars[foundIndex].genre,
+            eps: starWars[foundIndex].eps,
+            seasons: starWars[foundIndex].seasons ? starWars[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = starWars.findIndex((item) => {
-        return item.link === `Star-Wars/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: starWars[foundIndex].title,
-        src: starWars[foundIndex].src,
-        img: starWars[foundIndex].bigImg,
-        desc: starWars[foundIndex].desc,
-        genre: starWars[foundIndex].genre
-    });
+    try {
+        const foundIndex = starWars.findIndex((item) => {
+            return item.link === `Star-Wars/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: starWars[foundIndex].title,
+            src: starWars[foundIndex].src,
+            img: starWars[foundIndex].bigImg,
+            desc: starWars[foundIndex].desc,
+            genre: starWars[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, starWars: starWars};

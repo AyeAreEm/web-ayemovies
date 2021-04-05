@@ -26,32 +26,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = marvel.findIndex((item) => {
-        return item.link === `Marvel/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: marvel[foundIndex].title,
-        img: marvel[foundIndex].bigImg,
-        desc: marvel[foundIndex].desc,
-        genre: marvel[foundIndex].genre,
-        eps: marvel[foundIndex].eps,
-        seasons: marvel[foundIndex].seasons ? marvel[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = marvel.findIndex((item) => {
+            return item.link === `Marvel/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: marvel[foundIndex].title,
+            img: marvel[foundIndex].bigImg,
+            desc: marvel[foundIndex].desc,
+            genre: marvel[foundIndex].genre,
+            eps: marvel[foundIndex].eps,
+            seasons: marvel[foundIndex].seasons ? marvel[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = marvel.findIndex((item) => {
-        return item.link === `Marvel/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: marvel[foundIndex].title,
-        src: marvel[foundIndex].src,
-        img: marvel[foundIndex].bigImg,
-        desc: marvel[foundIndex].desc,
-        genre: marvel[foundIndex].genre
-    });
+    try {
+        const foundIndex = marvel.findIndex((item) => {
+            return item.link === `Marvel/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: marvel[foundIndex].title,
+            src: marvel[foundIndex].src,
+            img: marvel[foundIndex].bigImg,
+            desc: marvel[foundIndex].desc,
+            genre: marvel[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, marvel: marvel};

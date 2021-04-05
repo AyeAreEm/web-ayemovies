@@ -24,7 +24,7 @@
         <h1 onclick="window.location = '/'">AyeMovies</h1>
 
         <!-- input for movies and tv shows -->
-        <input list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="you know what to do..."/>
+        <input class="search" list="moviesList" type="text" onkeyup="if (event.key == 'Enter') search(this.value)" placeholder="you know what to do..."/>
         <datalist id="moviesList">
             <% marvel.forEach(item => {%>
                 <option data-value="<%= item.link %>"><%= item.title %></option>
@@ -103,6 +103,14 @@
         </div>
 
         <button id="loadBtn" onclick="loadHandler(['Action'])">Load more</button>
+    </div>
+
+    <div class="bottomNav">
+        <p><a class="extra" href="/report-bug">Report a bug</a></p>
+        <p>No Ads. No Viruses. Just Movies</p>
+        <br>
+
+        <h4>Copyright &#169; AyeMovies</h4>
     </div>
 </body>
 </html>

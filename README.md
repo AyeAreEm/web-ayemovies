@@ -63,7 +63,6 @@
     - Report a bug system
     - Notification system
     - Analytical system (maybe)
-    - Mobile App (maybe)
 
     - More Genres / Categories 
         like Drama, Action, etc.

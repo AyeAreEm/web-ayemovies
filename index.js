@@ -1,7 +1,14 @@
+// dependencies
 const express = require('express');
 const compression = require('compression');
 const cors = require('cors');
+const Datastore = require('nedb');
 
+const app = express();
+const db = new Datastore('database.nedb');
+db.loadDatabase(); 
+
+// routes
 const netflixRoute = require('./routes/netflix');
 const marvelRoute = require('./routes/marvel');
 const dcRoute = require('./routes/dc');
@@ -11,7 +18,6 @@ const horrorRoute = require('./routes/horror');
 const actionRoute = require('./routes/action');
 const crimeRoute = require('./routes/crime');
 
-const app = express();
 let all = [];
 all = all.concat(marvelRoute.marvel);
 all = all.concat(netflixRoute.netflix);
@@ -24,11 +30,15 @@ all = all.concat(crimeRoute.crime);
 
 app.use(compression());
 app.use(cors());
+app.use(express.json({ limit: '10MB'}));
 app.disable('x-powered-by');
 
+// ejs view engine
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
+
+// set routes
 app.use("/netflix", netflixRoute.router);
 app.use("/marvel", marvelRoute.router);
 app.use("/dc", dcRoute.router);
@@ -47,6 +57,44 @@ app.get('/', (req, res) => {
         animation: animatedRoute.animation,
         horror: horrorRoute.horror
     });
+});
+
+// report a bug system
+app.get('/report-bug', (req, res) => {
+    res.render('report');
+});
+
+app.post('/report-bug', (req, res) => {
+    try {
+        res.sendStatus(200);
+        db.insert(req.body);
+    } catch (err) {
+        res.sendStatus(409);
+    }
+});
+
+app.get('/issues', (req, res) => {
+    if (req.query.dev == "true") {
+        db.find({}, (err, docs) => {
+            res.render('issues', {
+                issues: docs 
+            });
+        });   
+    } else {
+        res.render('error', {
+            error: "You are not allowed to view this because you are not a developer."
+        });
+    }
+});
+
+app.post('/issues', (req, res) => {
+    if (req.query.dev == "true") {
+        db.remove({ _id: req.body.delete }, () => {
+            res.sendStatus(200);
+        });
+    } else {
+        res.sendStatus(401);
+    }
 });
 
 app.get('/:id', (req, res) => {

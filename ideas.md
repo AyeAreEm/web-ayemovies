@@ -1,16 +1,3 @@
-## API
-    So before, I refactored my code to become more friendly to work with, which basically meant I had to make an internal api.
-    But if I want to make a mobile app for this, I have to make an actual public api to use. Which means, anyone could use it.
-
-## Problem
-    - Making new routes will be basically repeating code with slight adjustments
-    - It would be easier to say like `if (cors() == myMobileApp) { res.send(data) }`
-
-## Solution
-    - Make new routes but also keep the old routes.
-        (not the most optimal solution, i will keep researching to find a better way)
-    
-
 ## Report a bug
     Have a user friendly way for someone to report a bug within the website.
 
@@ -23,14 +10,21 @@
 
     Not too sure which one I will use.
 
-## App
-    I want to make an app that anyone can use without the need of installing from an app store.
-    
-## Solution
-    - I make a react native app and share it through QR code. BUT, I am not sure if this would work because it might need a server to be continuously running
-     
-     OR
+## Issues
+    Show all the bugs that people have reported.
 
-     - Make the website a PWA. This would alway me to just write a manifest and service worker file, which means I don't have to start from scratch.
-     - This might be a hassle because my entire website needs wifi but the app should be able to load offline.
-     - Meaning I would have to do a lot of fetch request and etc. in the service worker.
+## Problem
+    I need to make it so only I can go to /issues and other can't
+    But I don't want to make accounts
+
+## Solution
+    1. in the url, have /issues/dev=true or something like that. so if dev is false or doesn't exist then say that the user is not allowed to view this.
+
+
+## Offline
+    I want to be able to view the website fully offline 
+    So all the images are loaded, all the videos are loaded in (prolly have to use an iframe)
+
+## Problem
+    I might have to change the list of movies and shit into a json file that then is converted to a list of objects.
+    

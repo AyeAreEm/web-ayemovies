@@ -6,15 +6,14 @@ let loaded = 0;
 
 // register service worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-        .then((reg) => console.log("service worker registered", reg))
-        .catch((err) => console.log("service worker is not registered", err));
+    navigator.serviceWorker.register('/sw.js');
 }
 
 function search(movie) {
     window.location = `${movie}`;
 }
 
+// load more section
 async function loadHandler(categories) {
     loaded++;
 
@@ -85,6 +84,7 @@ async function load(category) {
     moreContent.appendChild(newLoadBtn);
 }
 
+// datalist option value
 const des = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
 Object.defineProperty(HTMLInputElement.prototype, 'value', {
     get: function() {
@@ -97,3 +97,36 @@ Object.defineProperty(HTMLInputElement.prototype, 'value', {
         return value;
 	}
 });
+
+// report a bug to the server
+async function sendBug() {
+    let subjectBug = document.getElementById("subject");
+    let mainBug = document.getElementById("main");
+
+    fetch(`${window.location.href}`, {
+        method: "post",
+        headers: {
+            "Accept": "application/json, text/plan, */*",
+            'Content-Type': "application/json"    
+        },
+        body: JSON.stringify({subject: subjectBug.value, main: mainBug.value})
+    });
+
+    subjectBug.value = '';
+    mainBug.value = '';
+}
+
+// delete an issue
+async function deleteIssue(elem) {
+    let parent = elem.parentNode;
+    parent.remove();
+
+    fetch(`${window.location.href}`, {
+        method: "post",
+        headers: {
+            "Accept": "application/json, text/plan, */*",
+            'Content-Type': "application/json"    
+        },
+        body: JSON.stringify({dev: "true", delete: parent.id})
+    })
+}

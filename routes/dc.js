@@ -22,32 +22,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = dc.findIndex((item) => {
-        return item.link === `DC/Shows/${req.params.id}`
-    });
-
-    res.render('shows', {
-        title: dc[foundIndex].title,
-        img: dc[foundIndex].bigImg,
-        desc: dc[foundIndex].desc,
-        genre: dc[foundIndex].genre,
-        eps: dc[foundIndex].eps,
-        seasons: dc[foundIndex].seasons ? dc[foundIndex].seasons : null
-    });
+    try {
+        const foundIndex = dc.findIndex((item) => {
+            return item.link === `DC/Shows/${req.params.id}`
+        });
+    
+        res.render('shows', {
+            title: dc[foundIndex].title,
+            img: dc[foundIndex].bigImg,
+            desc: dc[foundIndex].desc,
+            genre: dc[foundIndex].genre,
+            eps: dc[foundIndex].eps,
+            seasons: dc[foundIndex].seasons ? dc[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = dc.findIndex((item) => {
-        return item.link === `DC/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: dc[foundIndex].title,
-        src: dc[foundIndex].src,
-        img: dc[foundIndex].bigImg,
-        desc: dc[foundIndex].desc,
-        genre: dc[foundIndex].genre
-    });
+    try {
+        const foundIndex = dc.findIndex((item) => {
+            return item.link === `DC/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: dc[foundIndex].title,
+            src: dc[foundIndex].src,
+            img: dc[foundIndex].bigImg,
+            desc: dc[foundIndex].desc,
+            genre: dc[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, dc: dc};

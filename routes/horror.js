@@ -14,32 +14,44 @@ router.get('/', (req, res) => {
 });
 
 router.get('/Shows/:id', (req, res) => {
-    const foundIndex = horror.findIndex((item) => {
-        return item.link === `Horror/Shows/${req.params.id}`
-    });
+    try {
+        const foundIndex = horror.findIndex((item) => {
+            return item.link === `Horror/Shows/${req.params.id}`
+        });
 
-    res.render('shows', {
-        title: horror[foundIndex].title,
-        img: horror[foundIndex].bigImg,
-        desc: horror[foundIndex].desc,
-        genre: horror[foundIndex].genre,
-        eps: horror[foundIndex].eps,
-        seasons: horror[foundIndex].seasons ? horror[foundIndex].seasons : null
-    });
+        res.render('shows', {
+            title: horror[foundIndex].title,
+            img: horror[foundIndex].bigImg,
+            desc: horror[foundIndex].desc,
+            genre: horror[foundIndex].genre,
+            eps: horror[foundIndex].eps,
+            seasons: horror[foundIndex].seasons ? horror[foundIndex].seasons : null
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 router.get('/Movies/:id', (req, res) => {
-    const foundIndex = horror.findIndex((item) => {
-        return item.link === `Horror/Movies/${req.params.id}`
-    });
-
-    res.render('movies', {
-        title: horror[foundIndex].title,
-        src: horror[foundIndex].src,
-        img: horror[foundIndex].bigImg,
-        desc: horror[foundIndex].desc,
-        genre: horror[foundIndex].genre
-    });
+    try {
+        const foundIndex = horror.findIndex((item) => {
+            return item.link === `Horror/Movies/${req.params.id}`
+        });
+    
+        res.render('movies', {
+            title: horror[foundIndex].title,
+            src: horror[foundIndex].src,
+            img: horror[foundIndex].bigImg,
+            desc: horror[foundIndex].desc,
+            genre: horror[foundIndex].genre
+        });
+    } catch (err) {
+        res.render('error', {
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
+        });
+    }
 });
 
 module.exports = {router: router, horror: horror};

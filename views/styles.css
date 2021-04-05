@@ -19,26 +19,32 @@ img {
     margin-bottom: 10px;
 }
 
-/* maybe change image height and width and all that if the screen is small */
-
 input {
-    margin-top: 10px;
-    margin-right: 10px;
-    float: right;
     width: 265px;
     height: 3vh;
     border-radius: 5px;
     border: none;
 }
 
-/* need to change input if screen is small */
-
-select {
-    float: left;
-    margin-top: 10px;
-    margin-left: 20px;
-    height: 3vh;
+textarea {
+    width: 265px;
+    height: 8vh;
+    border-radius: 5px;
     border: none;
+}
+
+input.search {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: right;
+}
+
+button {
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
     border-radius: 5px;
 }
 
@@ -95,12 +101,6 @@ select {
 
 .epsBtn {
     background: white;
-    border: 2px solid black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
     color: black;
 }
 
@@ -111,16 +111,64 @@ select {
 
 #loadBtn, #newLoadBtn {
     background: rgb(212, 35, 79);
-    border: 2px solid black;
-    padding: 10px 20px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px;
     color: white;
+    margin-bottom: 2%;
 }
 
 #loadBtn:hover, #loadBtn:active, #newLoadBtn:hover, #newLoadBtn:active {
     background: white;
     color: black;
+}
+
+.report {
+    margin: auto;
+    text-align: center;
+    background: rgb(212, 35, 79);
+    border-radius: 5px;
+    width: 30%;
+    height: 25%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.formInput {
+    margin-top: 10px;
+}
+
+.issue {
+    margin: auto;
+    text-align: center;
+    background: rgb(212, 35, 79);
+    border-radius: 5px;
+    width: 30%;
+    height: 25%;
+    margin-bottom: 20px;
+}
+
+.bottomNav {
+    background-color: rgb(22, 22, 22);
+    bottom: 0;
+    width: 100%;
+    color: rgb(46, 46, 46);
+    text-align: center;
+}
+
+.bottomNav p {
+    font-size: 25px;
+    margin-bottom: 1%;
+}
+
+.bottomNav .extra {
+    text-decoration: underline;
+    color: rgb(46, 46, 46);
+}
+
+.bottomNav .extra:hover {
+    color: rgb(83, 83, 83);
 }
