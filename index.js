@@ -66,7 +66,6 @@ app.get('/report-bug', (req, res) => {
 
 app.post('/report-bug', (req, res) => {
     try {
-        res.sendStatus(200);
         db.insert(req.body);
     } catch (err) {
         res.sendStatus(409);
@@ -90,9 +89,7 @@ app.get('/issues', (req, res) => {
 app.post('/issues', (req, res) => {
     if (req.query.dev == "true") {
         console.log(req.body.delete);
-        db.remove({ _id: req.body.delete }, () => {
-            res.sendStatus(200);
-        });
+        db.remove({ _id: req.body.delete });
     } else {
         res.sendStatus(401);
     }
