@@ -1,12 +1,16 @@
 const moreContent = document.getElementById("container");
 const loadBtn = document.getElementById("loadBtn");
 const dataList = document.getElementById("moviesList");
+const subjectBug = document.getElementById("subject");
+const mainBug = document.getElementById("main");
 const genres = ["Action", "Crime"];
 let loaded = 0;
 
 // register service worker
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
+    navigator.serviceWorker.register('/sw.js').then(registration => {
+        registration.update();
+    });
 }
 
 function search(movie) {
@@ -100,10 +104,7 @@ Object.defineProperty(HTMLInputElement.prototype, 'value', {
 
 // report a bug to the server
 async function sendBug() {
-    let subjectBug = document.getElementById("subject");
-    let mainBug = document.getElementById("main");
-
-    fetch(`${window.location.href}`, {
+    fetch("https://ayemovies.herokuapp.com/report-bug", {
         method: "post",
         headers: {
             "Accept": "application/json, text/plan, */*",
@@ -121,12 +122,12 @@ async function deleteIssue(elem) {
     let parent = elem.parentNode;
     parent.remove();
 
-    fetch(`${window.location.href}`, {
+    fetch("https://ayemovies.herokuapp.com/issues?dev=true", {
         method: "post",
         headers: {
             "Accept": "application/json, text/plan, */*",
             'Content-Type': "application/json"    
         },
         body: JSON.stringify({dev: "true", delete: parent.id})
-    })
+    });
 }

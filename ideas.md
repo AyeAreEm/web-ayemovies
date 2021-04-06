@@ -1,15 +1,3 @@
-## Report a bug
-    Have a user friendly way for someone to report a bug within the website.
-
-## Solution
-    Well I have three ideas.
-
-    1. Have them send through email to my account (they do not need to sign in, it could just use like a ten-min account to send me the description of the bug)
-    2. Make an internal system where the bug description is saved to a database that then can be seen by going to /issues
-    3. Make my repo public and have them write an issue in the issue section.
-
-    Not too sure which one I will use.
-
 ## Issues
     Show all the bugs that people have reported.
 

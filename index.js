@@ -89,6 +89,7 @@ app.get('/issues', (req, res) => {
 
 app.post('/issues', (req, res) => {
     if (req.query.dev == "true") {
+        console.log(req.body.delete);
         db.remove({ _id: req.body.delete }, () => {
             res.sendStatus(200);
         });
