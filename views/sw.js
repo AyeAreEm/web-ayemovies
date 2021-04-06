@@ -1,4 +1,4 @@
-const cacheName = "ayeCache 1.0.5";
+const cacheName = "ayeCache 1.0.6";
 const dynamicCache = "ayeDynamic 1.0.0";
 const assets = [
     "/",
@@ -39,6 +39,10 @@ self.addEventListener('activate', event => {
 
 // fetch event
 self.addEventListener('fetch', evt => {
+    if (evt.request.url.indexOf('/issues?dev=true') !== -1) {
+        return false;
+    }
+
     evt.respondWith(
         caches.match(evt.request).then((cacheRes) => {
             return cacheRes || fetch(evt.request).then(async fetchRes => {
