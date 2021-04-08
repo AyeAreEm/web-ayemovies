@@ -1,14 +1,3 @@
-## Issues
-    Show all the bugs that people have reported.
-
-## Problem
-    I need to make it so only I can go to /issues and other can't
-    But I don't want to make accounts
-
-## Solution
-    1. in the url, have /issues/dev=true or something like that. so if dev is false or doesn't exist then say that the user is not allowed to view this.
-
-
 ## Offline
     I want to be able to view the website fully offline 
     So all the images are loaded, all the videos are loaded in (prolly have to use an iframe)
@@ -16,3 +5,15 @@
 ## Problem
     I might have to change the list of movies and shit into a json file that then is converted to a list of objects.
     
+
+## Viewing the movie / show
+    So, the website redirects the user to where the actual video is being held.
+    But it doesn't look great on mobile. It's alright with desktop so there is no need to change it there.
+
+## Solution
+    For tv shows on mobile,
+        - When the episode button is clicked, get the preview image and replace it with an iframe with the src (with can be passed in as a parameter)
+
+    For movies on mobile
+        - When the preview img is clicked, replace it with an iframe with the src 
+        - Maybe use a dataset on the img and get it from the function

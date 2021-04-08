@@ -9,7 +9,6 @@
 ## Animated
     - Avatar
     - Legend of Korra
-    - Aladin
     
 ## Marvel
     - X-Men
@@ -58,9 +57,9 @@
     - Martian
     - Jurassic Park / World
     - Independence day
+    - Men in black
 
 # ToDo
-    - Report a bug system
     - Notification system
     - Analytical system (maybe)
 
