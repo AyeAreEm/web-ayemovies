@@ -32,7 +32,7 @@ router.get('/Shows/:id', (req, res) => {
         });
     } catch (err) {
         res.render('error', {
-            error: "You are not allowed to view this because you are not a developer."
+            error: "Sorry, we weren't able find your request. Make sure you only use the image links instead of directly typing a url."
         });
     }
 });

@@ -41,7 +41,6 @@
 ## Harry Potter
 
 ## Crime
-    - 21 Bridges (next)
 
 ## Sitcom
     - Brooklyn 99
@@ -58,9 +57,8 @@
 ## Sci-Fi
     - Transformers
     - Martian
-    - Jurassic Park / World
     - Independence day
-    - Men in black
+    - Journey
 
 ## Anime
     - JoJo
