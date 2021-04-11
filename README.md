@@ -9,6 +9,8 @@
 ## Animated
     - Avatar
     - Legend of Korra
+    - Family Guy
+    - Simpsons (unlikely)
     
 ## Marvel
     - X-Men
@@ -39,7 +41,7 @@
 ## Harry Potter
 
 ## Crime
-    - 21 Bridges
+    - 21 Bridges (next)
 
 ## Sitcom
     - Brooklyn 99
@@ -48,6 +50,7 @@
     - Silicon Valley
     - How I Met Your Mother
     - Community
+    - The Office
 
 ## Action
     - James Bond
@@ -59,6 +62,20 @@
     - Independence day
     - Men in black
 
+## Anime
+    - JoJo
+    - Attack on Titan
+    - Death Note
+    - Tokyo Ghoul
+
+## Game of thrones
+
+## Comedy
+    - Tower Heist
+    - Impractical Jokers
+    - White Chicks
+    - Jumanji
+    
 # ToDo
     - Notification system
     - Analytical system (maybe)

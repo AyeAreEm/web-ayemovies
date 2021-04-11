@@ -95,6 +95,7 @@ app.post('/issues', (req, res) => {
     }
 });
 
+// the search page
 app.get('/:id', (req, res) => {
     let results = [];
 
