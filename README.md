@@ -11,6 +11,15 @@
     - Legend of Korra
     - Family Guy
     - Simpsons (unlikely)
+    - Barbie
+    - Incredible(s)
+    - Moana
+    - Toy Story
+    - Inside Out
+    - Finding Nemo
+    - The smurfs
+    - Wreck-it Ralph
+    - Minions
     
 ## Marvel
     - X-Men
@@ -66,17 +75,20 @@
     - Death Note
     - Tokyo Ghoul
 
-## Game of thrones
+## Game of thrones (action maybe)
 
 ## Comedy
     - Tower Heist
     - Impractical Jokers
     - White Chicks
     - Jumanji
+    - Central Intelligence
+    - Tag
     
 # ToDo
     - Notification system
     - Analytical system (maybe)
+    - Refactor code to make showing results faster. (with a binary search.)
 
     - More Genres / Categories 
         like Drama, Action, etc.
