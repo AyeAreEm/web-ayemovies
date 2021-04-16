@@ -111,14 +111,7 @@ app.get('/:id', (req, res) => {
     res.render('matches', {
         search: req.params.id,
         results: results,
-        marvel: marvelRoute.marvel,
-        dc: dcRoute.dc,
-        netflix: netflixRoute.netflix,
-        starWars: starWarsRoute.starWars,
-        animation: animatedRoute.animation,
-        horror: horrorRoute.horror,
-        action: actionRoute.action,
-        crime: crimeRoute.crime
+        all: all
     });
 });
 

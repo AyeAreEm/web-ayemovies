@@ -1,11 +1,3 @@
-## Offline
-    I want to be able to view the website fully offline 
-    So all the images are loaded, all the videos are loaded in (prolly have to use an iframe)
-
-## Problem
-    I might have to change the list of movies and shit into a json file that then is converted to a list of objects.
-    
-
 ## Viewing the movie / show
     So, the website redirects the user to where the actual video is being held.
     But it doesn't look great on mobile. It's alright with desktop so there is no need to change it there.
