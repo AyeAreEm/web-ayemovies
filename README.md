@@ -1,10 +1,6 @@
 # web-ayemovies
 123movies but without ads or viruses.
 
-# How it works
-- First it gets movies from an external website
-- Then it uses a dynamic ejs file and puts the url of the movie into the source
-
 # Movies and Tv Shows that I plan to add
 ## Animated
     - Avatar
@@ -20,6 +16,7 @@
     - The smurfs
     - Wreck-it Ralph
     - Minions
+    - Coco
     
 ## Marvel
     - X-Men
@@ -89,6 +86,7 @@
     - Notification system
     - Analytical system (maybe)
     - Refactor code to make showing results faster. (with a binary search.)
+    - Make repo public and put a link to it on the website.
 
     - More Genres / Categories 
         like Drama, Action, etc.
