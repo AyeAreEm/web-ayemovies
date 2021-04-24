@@ -16,6 +16,7 @@
     - Wreck-it Ralph
     - Minions
     - Coco
+    - Cloudy with a chance of meatballs
     
 ## Marvel
     - X-Men
@@ -58,7 +59,6 @@
 
 ## Action
     - James Bond
-    - Mortal Kombat
 
 ## Sci-Fi
     - Transformers
@@ -71,6 +71,7 @@
     - Attack on Titan
     - Death Note
     - Tokyo Ghoul
+    - One Punch Man
 
 ## Game of thrones (action maybe)
 
@@ -81,7 +82,7 @@
     - Jumanji
     - Central Intelligence
     - Tag
-    
+
 # ToDo
     - Notification system
     - Analytical system (maybe)
