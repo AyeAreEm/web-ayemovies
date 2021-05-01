@@ -21,7 +21,6 @@
 ## Marvel
     - X-Men
     - Loki (next)
-    - Falcon and the Winter Soldier
     - Fantastic Four and the reboot
 
 ## DC
