@@ -18,6 +18,7 @@ const horrorRoute = require('./routes/horror');
 const actionRoute = require('./routes/action');
 const crimeRoute = require('./routes/crime');
 const sciFiRoute = require('./routes/scifi');
+const comedyRoute = require('./routes/comedy');
 
 let all = [];
 all = all.concat(marvelRoute.marvel);
@@ -29,6 +30,7 @@ all = all.concat(horrorRoute.horror);
 all = all.concat(actionRoute.action);
 all = all.concat(crimeRoute.crime);
 all = all.concat(sciFiRoute.sciFi);
+all = all.concat(comedyRoute.comedy);
 
 app.use(compression());
 app.use(cors());
@@ -50,6 +52,7 @@ app.use("/horror", horrorRoute.router);
 app.use("/action", actionRoute.router);
 app.use("/crime", crimeRoute.router);
 app.use("/sci-fi", sciFiRoute.router);
+app.use("/comedy", comedyRoute.router);
 
 app.get('/', (req, res) => {
     res.render('index', {
