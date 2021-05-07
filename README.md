@@ -76,12 +76,14 @@
 ## Game of thrones (action maybe)
 
 ## Comedy
-    - Tower Heist
     - Impractical Jokers
-    - White Chicks
     - Jumanji
     - Central Intelligence
-    - Tag
+    - Grown Ups
+    - Mall Cop
+    - Daddy's Home
+    - Little Fockers
+    - Why Him?
 
 # ToDo
     - Notification system

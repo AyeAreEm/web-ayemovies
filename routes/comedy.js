@@ -4,7 +4,7 @@ let router = express.Router();
 const comedy = [
     {title: "White Chicks", link: "Comedy/Movies/White-Chicks", smallImg: "https://img.vxdn.net/poster/200/white-chicks-8465.jpg", bigImg: "https://img.vxdn.net/cover/1440/white-chicks-8465.jpg", src: "https://player.voxzer.org/view/e1b0720d0714b6f16aee95e0", desc: "Two disgraced FBI agents, Kevin Copeland and Marcus Copeland, are assigned a new case where they must protect Tiffany and Brittany Wilson, two cruise line heiresses, from getting abducted.", genre: "Comedy, Crime"},
     {title: "Tower Heist", link: "Comedy/Movies/Tower-Heist", smallImg: "https://img.vxdn.net/poster/200/tower-heist-5731.jpg", bigImg: "https://img.vxdn.net/cover/1440/tower-heist-5731.jpg", src: "https://vidnext.net/streaming.php?id=NTUwNQ==", desc: "A group of hardworking men fall prey to a scam conspired by a wealthy businessman. Furious and desperate for revenge, they come together and plan a heist against him.", genre: "Comedy, Crime"},
-    
+    {title: "Tag", link: "Comedy/Movies/Tag", smallImg: "https://img.vxdn.net/poster/200/tag-25489.jpg", bigImg: "https://img.vxdn.net/cover/1440/tag-25489.jpg", src: "https://player.voxzer.org/view/ee806b0d0714b6f35abd75e0", desc: "A group of five friends, who have been playing the game of tag for 30 years, decide to play one last game before the wedding of their undefeated player.", genre: "Comedy"},
 ];
 
 router.get('/', (req, res) => {
