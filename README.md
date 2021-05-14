@@ -2,7 +2,7 @@
 123movies but without ads or viruses.
 
 # Movies and Tv Shows that I plan to add
-## Animated
+## Animated / 
     - Avatar
     - Legend of Korra
     - Family Guy
@@ -17,6 +17,8 @@
     - Minions
     - Coco
     - Cloudy with a chance of meatballs
+    - Spy Kids
+    - Wall-E
     
 ## Marvel
     - X-Men
@@ -59,6 +61,7 @@
 
 ## Action
     - James Bond
+    - Pirate of the caribbean
 
 ## Sci-Fi
     - Transformers
@@ -78,12 +81,10 @@
 ## Comedy
     - Impractical Jokers
     - Jumanji
-    - Central Intelligence
     - Grown Ups
     - Mall Cop
     - Daddy's Home
     - Little Fockers
-    - Why Him?
 
 # ToDo
     - Notification system
