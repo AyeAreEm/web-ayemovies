@@ -23,6 +23,7 @@
 ## Marvel
     - X-Men
     - Loki (next)
+    - Black Widow
     - Fantastic Four and the reboot
 
 ## DC
@@ -62,6 +63,7 @@
 ## Action
     - James Bond
     - Pirate of the caribbean
+    - Baby Driver
 
 ## Sci-Fi
     - Transformers
@@ -75,6 +77,7 @@
     - Death Note
     - Tokyo Ghoul
     - One Punch Man
+    - Jujutsu Kaisen
 
 ## Game of thrones (action maybe)
 
