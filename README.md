@@ -64,6 +64,7 @@
     - James Bond
     - Pirate of the caribbean
     - Baby Driver
+    - Kick-Ass
 
 ## Sci-Fi
     - Transformers
