@@ -43,9 +43,6 @@
     - Annabelle
     - Blair Witch Project
 
-
-## Fast and Furious (next)
-
 ## Harry Potter
 
 ## Crime
