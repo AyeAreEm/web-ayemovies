@@ -15,7 +15,6 @@
     - The smurfs
     - Wreck-it Ralph
     - Minions
-    - Coco
     - Cloudy with a chance of meatballs
     - Spy Kids
     - Wall-E
