@@ -21,8 +21,6 @@
     
 ## Marvel
     - X-Men
-    - Loki (next)
-    - Black Widow
     - Fantastic Four and the reboot
 
 ## DC
@@ -41,10 +39,12 @@
     - Us
     - Annabelle
     - Blair Witch Project
+    - A Quiet Place II
 
 ## Harry Potter
 
 ## Crime
+    -
 
 ## Sitcom
     - Brooklyn 99
@@ -58,7 +58,6 @@
 
 ## Action
     - James Bond
-    - Pirate of the caribbean
     - Baby Driver
     - Kick-Ass
 
