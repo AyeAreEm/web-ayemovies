@@ -16,12 +16,15 @@
     - Wreck-it Ralph
     - Minions
     - Cloudy with a chance of meatballs
-    - Spy Kids
     - Wall-E
+    - Hercules
+    - Rise of the Guardians
     
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
+    - Shang-chi
+    - What if...?
 
 ## DC
     - Green Lantern
@@ -34,6 +37,7 @@
     - Apostle (maybe)
     - The Umbrella Academy (maybe)
     - Outer Banks
+    - Fear Street
 
 ## Horror
     - Us
@@ -58,7 +62,6 @@
 
 ## Action
     - James Bond
-    - Baby Driver
     - Kick-Ass
 
 ## Sci-Fi
@@ -74,6 +77,7 @@
     - Tokyo Ghoul
     - One Punch Man
     - Jujutsu Kaisen
+    - Another
 
 ## Game of thrones (action maybe)
 
@@ -84,6 +88,7 @@
     - Mall Cop
     - Daddy's Home
     - Little Fockers
+    - Free Guy
 
 # ToDo
     - Notification system
