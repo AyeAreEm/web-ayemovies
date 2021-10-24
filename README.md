@@ -9,22 +9,20 @@
     - Simpsons (unlikely)
     - Barbie
     - Moana
-    - Toy Story
     - Inside Out
     - Finding Nemo
     - The smurfs
     - Wreck-it Ralph
     - Minions
     - Cloudy with a chance of meatballs
-    - Wall-E
     - Hercules
     - Rise of the Guardians
+    - Night Before Christmas
     
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
     - Shang-chi
-    - What if...?
 
 ## DC
     - Green Lantern
