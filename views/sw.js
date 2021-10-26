@@ -1,4 +1,4 @@
-const cacheName = "ayeCache 1.2.4";
+const cacheName = "ayeCache 1.2.5";
 const dynamicCache = "ayeDynamic 1.0.0";
 const assets = [
     "/",
