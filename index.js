@@ -20,6 +20,7 @@ const crimeRoute = require('./routes/crime');
 const sciFiRoute = require('./routes/scifi');
 const comedyRoute = require('./routes/comedy');
 const fnfRoute = require('./routes/fnf');
+const animeRoute = require('./routes/anime');
 
 let all = [];
 all = all.concat(marvelRoute.marvel);
@@ -33,6 +34,7 @@ all = all.concat(crimeRoute.crime);
 all = all.concat(sciFiRoute.sciFi);
 all = all.concat(comedyRoute.comedy);
 all = all.concat(fnfRoute.fnf);
+all = all.concat(animeRoute.anime);
 
 app.use(compression());
 app.use(cors());
@@ -56,6 +58,7 @@ app.use("/crime", crimeRoute.router);
 app.use("/sci-fi", sciFiRoute.router);
 app.use("/comedy", comedyRoute.router);
 app.use("/fnf", fnfRoute.router);
+app.use("/anime", animeRoute.router);
 
 app.get('/', (req, res) => {
     res.render('index', {

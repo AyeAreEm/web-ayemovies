@@ -73,9 +73,9 @@
     - Attack on Titan
     - Death Note
     - Tokyo Ghoul
-    - One Punch Man
     - Jujutsu Kaisen
     - Another
+    - Demon Slayer
 
 ## Game of thrones (action maybe)
 

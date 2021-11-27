@@ -3,7 +3,7 @@ const loadBtn = document.getElementById("loadBtn");
 const dataList = document.getElementById("moviesList");
 const subjectBug = document.getElementById("subject");
 const mainBug = document.getElementById("main");
-const genres = ["Action", "Crime", "Sci-Fi", "Comedy", "Fnf"];
+const genres = ["Action", "Crime", "Sci-Fi", "Comedy", "Fnf", "Anime"];
 let loaded = 0;
 
 // register service worker
@@ -81,7 +81,7 @@ async function load(category) {
         newLoadBtn.onclick = async () => await loadHandler(newCategories);
         newLoadBtn.textContent = "Load more";
     } else if (loaded == 2) {
-        newCategories = [genres[4]];
+        newCategories = [genres[4], genres[5]];
         newLoadBtn.onclick = async () => await loadHandler(newCategories);
         newLoadBtn.textContent = "Load more";
     } else { // else, say there is no more to be loaded
