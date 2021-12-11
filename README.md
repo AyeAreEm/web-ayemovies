@@ -22,7 +22,7 @@
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
-    - Shang-chi
+    - Eternals
 
 ## DC
     - Green Lantern
@@ -41,7 +41,6 @@
     - Us
     - Annabelle
     - Blair Witch Project
-    - A Quiet Place II
 
 ## Harry Potter
 
