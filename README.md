@@ -17,14 +17,12 @@
     - Cloudy with a chance of meatballs
     - Hercules
     - Rise of the Guardians
-    - Night Before Christmas
     
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
     - Eternals
-    - Venom
-    - Spiderman
+    - Spiderman: no way home
 
 ## DC
     - Green Lantern
