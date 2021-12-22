@@ -23,6 +23,8 @@
     - X-Men
     - Fantastic Four and the reboot
     - Eternals
+    - Venom
+    - Spiderman
 
 ## DC
     - Green Lantern
