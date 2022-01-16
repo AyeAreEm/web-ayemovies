@@ -21,8 +21,6 @@
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
-    - Eternals
-    - Spiderman: no way home
 
 ## DC
     - Green Lantern
