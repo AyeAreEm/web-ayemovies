@@ -87,9 +87,3 @@
 
 # ToDo
     - Notification system
-    - Analytical system (maybe)
-    - Make repo public and put a link to it on the website.
-    - Use svelte for front end framework (maybe)
-
-    - More Genres / Categories 
-        like Drama, Action, etc.
