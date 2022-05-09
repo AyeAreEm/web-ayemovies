@@ -84,6 +84,3 @@
     - Daddy's Home
     - Little Fockers
     - Free Guy
-
-# ToDo
-    - Notification system
