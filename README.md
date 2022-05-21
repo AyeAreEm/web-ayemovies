@@ -21,6 +21,7 @@
 ## Marvel
     - X-Men
     - Fantastic Four and the reboot
+    - Multiverse of madness
 
 ## DC
     - Green Lantern

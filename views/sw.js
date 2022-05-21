@@ -1,4 +1,4 @@
-const cacheName = "ayeCache 1.3.7";
+const cacheName = "ayeCache 1.3.8";
 const dynamicCache = "ayeDynamic 1.0.1";
 const assets = [
     "/",
@@ -21,7 +21,6 @@ self.addEventListener('install', evt => {
         })
     );
 });
-
 // activate event
 self.addEventListener('activate', event => {
     // delete any caches that aren't in expectedCaches
